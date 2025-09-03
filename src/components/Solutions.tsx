@@ -76,24 +76,11 @@ const Solutions = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               </div>
 
-              {/* Animated Insight */}
-              <div className="bg-secondary/50 rounded-lg p-4 mb-6">
-                <div className="text-sm text-primary font-semibold mb-1">Market Insight</div>
-                <div className="text-foreground transition-opacity duration-500">
-                  {insights[activeInsight]}
-                </div>
-              </div>
-
-              {/* Q&A Animation */}
-              <div className="space-y-3">
-                <div className="bg-muted/30 rounded-lg p-4">
-                  <div className="text-sm font-semibold text-accent mb-2">Q:</div>
-                  <div className="text-foreground">{qaData[activeQA].question}</div>
-                </div>
-                <div className="bg-primary/10 rounded-lg p-4">
-                  <div className="text-sm font-semibold text-primary mb-2">A:</div>
-                  <div className="text-foreground">{qaData[activeQA].answer}</div>
-                </div>
+              {/* Feature Description */}
+              <div className="bg-secondary/30 rounded-lg p-6">
+                <p className="text-foreground leading-relaxed">
+                  Instantly understand market shifts. Hover over a candle or highlight multiple to reveal AI-driven explanations behind price movements for smarter trading decisions.
+                </p>
               </div>
             </CardContent>
           </Card>
