@@ -40,14 +40,10 @@ const Hero = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto">
             Tracr is an all-in-one trading and market analysis platform with every tool a trader would ever need.
           </p>
           
-          {/* Key Message */}
-          <p className="text-lg md:text-xl text-foreground mb-12 max-w-4xl mx-auto">
-            Trade smarter with tracr ai. With tracr, you save time, cut out the noise, and make trading decisions backed by data and AI insights, not emotions.
-          </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
