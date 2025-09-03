@@ -161,7 +161,14 @@ const Solutions = () => {
                             <div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
                           </div>
                         </div>
-                      </div>
+              </div>
+
+              {/* Feature Description */}
+              <div className="bg-secondary/30 rounded-lg p-6">
+                <p className="text-foreground leading-relaxed">
+                  Get instant, AI-powered support. Ask questions, gain insights, and receive personalized recommendations to improve your trading.
+                </p>
+              </div>
                     </div>
                   )}
                 </div>
