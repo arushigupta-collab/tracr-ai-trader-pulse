@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Linkedin, Twitter, TrendingUp, Zap, Shield, Target, BarChart3, Brain } from 'lucide-react';
+import { Linkedin, Twitter, Instagram, TrendingUp, Zap, Shield, Target, BarChart3, Brain } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -9,15 +9,17 @@ const About = () => {
       name: "Fahad Masroor",
       role: "CEO",
       photo: "/lovable-uploads/378e11d9-4a45-488d-9116-7e20d5c1391f.png",
-      linkedin: "#",
-      twitter: "#"
+      linkedin: "https://www.linkedin.com/in/fahad-masroor/",
+      twitter: "https://x.com/tracr_ai",
+      instagram: "https://www.instagram.com/tracr.ai/"
     },
     {
       name: "Marcus Johnson",
       role: "COO",
       photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
       linkedin: "#",
-      twitter: "#"
+      twitter: "#",
+      instagram: "#"
     }
   ];
 
@@ -201,6 +203,15 @@ const About = () => {
                       >
                         <Twitter className="h-4 w-4" />
                       </a>
+                      {member.instagram && (
+                        <a
+                          href={member.instagram}
+                          className="p-3 bg-secondary/50 rounded-lg hover:bg-success hover:text-success-foreground transition-all duration-300 hover:scale-110"
+                          aria-label={`${member.name}'s Instagram`}
+                        >
+                          <Instagram className="h-4 w-4" />
+                        </a>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
