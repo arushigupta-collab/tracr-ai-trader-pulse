@@ -184,10 +184,6 @@ const About = () => {
           
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="text-center mb-16 animate-fade-in">
-              <div className="inline-flex items-center px-6 py-3 bg-card/80 backdrop-blur-sm rounded-full border border-accent/30 mb-8">
-                <Brain className="h-4 w-4 text-accent mr-2" />
-                <span className="text-sm text-accent font-semibold">Expert Trading Team</span>
-              </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Meet Our <span className="text-gradient">Trading Experts</span>
               </h2>
