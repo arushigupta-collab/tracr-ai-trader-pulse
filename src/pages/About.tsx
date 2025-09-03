@@ -8,7 +8,7 @@ const About = () => {
     {
       name: "Fahad Masroor",
       role: "CEO",
-      photo: "/lovable-uploads/7f1439a3-3d72-4a06-8d77-731a7ad88487.png",
+      photo: "/lovable-uploads/378e11d9-4a45-488d-9116-7e20d5c1391f.png",
       linkedin: "#",
       twitter: "#"
     },
