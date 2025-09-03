@@ -111,29 +111,6 @@ const Solutions = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               </div>
 
-              {/* Chat Preview */}
-              <div className="space-y-4">
-                <div className="flex justify-end">
-                  <div className="bg-primary text-primary-foreground rounded-lg px-4 py-2 max-w-xs">
-                    How should I analyze this market movement?
-                  </div>
-                </div>
-                <div className="flex justify-start">
-                  <div className="bg-secondary text-secondary-foreground rounded-lg px-4 py-2 max-w-xs">
-                    Based on the current RSI and volume indicators, this movement shows strong momentum. Consider looking at the 4H timeframe for better entry points.
-                  </div>
-                </div>
-                <div className="flex justify-end">
-                  <div className="bg-primary text-primary-foreground rounded-lg px-4 py-2 max-w-xs">
-                    What's the risk-reward ratio?
-                  </div>
-                </div>
-                <div className="flex justify-start">
-                  <div className="bg-secondary text-secondary-foreground rounded-lg px-4 py-2 max-w-xs">
-                    Current setup offers a 1:3 risk-reward ratio with strong support at the 50 EMA.
-                  </div>
-                </div>
-              </div>
             </CardContent>
           </Card>
         </div>
