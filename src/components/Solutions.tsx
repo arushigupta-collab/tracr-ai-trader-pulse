@@ -67,13 +67,14 @@ const Solutions = () => {
               </div>
 
               {/* Chart Preview */}
-              <div className="relative mb-6 rounded-lg overflow-hidden">
+              <div className="relative mb-6 rounded-lg overflow-hidden animate-fade-in hover-scale group cursor-pointer">
                 <img 
                   src={aiCandlesImage} 
                   alt="AI Candle Analysis"
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover transition-all duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent group-hover:from-background/60 transition-all duration-500" />
+                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
 
               {/* Feature Description */}
