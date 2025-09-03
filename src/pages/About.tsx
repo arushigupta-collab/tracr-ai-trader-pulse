@@ -185,7 +185,7 @@ const About = () => {
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="text-center mb-16 animate-fade-in">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Meet Our <span className="text-gradient">Trading Experts</span>
+                Our <span className="text-gradient">Team</span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 The passionate professionals revolutionizing the future of AI-powered trading
