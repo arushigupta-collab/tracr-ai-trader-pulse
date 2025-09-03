@@ -63,13 +63,13 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden animate-fade-in">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-card rounded-lg mt-2 shadow-card">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2 shadow-lg">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-primary ${
-                    isActive(item.href) ? 'text-primary' : 'text-muted-foreground'
+                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-white ${
+                    isActive(item.href) ? 'text-white' : 'text-slate-300'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -77,8 +77,8 @@ const Navbar = () => {
                 </Link>
               ))}
               <Link to="/register" onClick={() => setIsOpen(false)}>
-                <Button variant="hero" size="lg" className="w-full mt-4">
-                  Register Interest
+                <Button variant="outline" size="sm" className="w-full mt-4 bg-white text-slate-900 border-white hover:bg-slate-100">
+                  Sign Up
                 </Button>
               </Link>
             </div>
