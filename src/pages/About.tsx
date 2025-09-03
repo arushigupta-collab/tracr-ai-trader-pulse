@@ -172,8 +172,6 @@ const About = () => {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardContent className="p-8 text-center relative">
-                    {/* Trading Indicator */}
-                    <div className="absolute top-4 right-4 w-3 h-3 bg-primary rounded-full animate-pulse" />
                     
                     <div className="relative mb-6">
                       <div className="w-24 h-24 mx-auto relative">
@@ -182,9 +180,6 @@ const About = () => {
                           alt={member.name}
                           className="w-full h-full rounded-full object-cover border-2 border-primary/30 group-hover:border-primary transition-colors duration-300"
                         />
-                        <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                          <TrendingUp className="h-3 w-3 text-primary-foreground" />
-                        </div>
                       </div>
                     </div>
                     
