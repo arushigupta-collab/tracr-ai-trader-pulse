@@ -7,43 +7,15 @@ const About = () => {
   const teamMembers = [
     {
       name: "Sarah Chen",
-      role: "CEO & Co-Founder",
+      role: "CEO",
       photo: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=400&h=400&fit=crop&crop=face",
       linkedin: "#",
       twitter: "#"
     },
     {
       name: "Marcus Johnson",
-      role: "CTO & Co-Founder",
+      role: "COO",
       photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      linkedin: "#",
-      twitter: "#"
-    },
-    {
-      name: "Elena Rodriguez",
-      role: "Head of AI Research",
-      photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face",
-      linkedin: "#",
-      twitter: "#"
-    },
-    {
-      name: "David Kim",
-      role: "Head of Product",
-      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      linkedin: "#",
-      twitter: "#"
-    },
-    {
-      name: "Amanda Foster",
-      role: "Head of Trading Strategy",
-      photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      linkedin: "#",
-      twitter: "#"
-    },
-    {
-      name: "James Wilson",
-      role: "Lead Engineer",
-      photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
       linkedin: "#",
       twitter: "#"
     }
@@ -192,7 +164,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               {teamMembers.map((member, index) => (
                 <Card 
                   key={index} 
