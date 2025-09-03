@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Brain, MessageSquare, User, Bot } from 'lucide-react';
 import aiCandlesImage from '@/assets/ai-candles.jpg';
 import aiChatbotImage from '@/assets/ai-chatbot.jpg';
+import userProfileImage from '@/assets/user-profile.jpg';
 
 const Solutions = () => {
   const [activeInsight, setActiveInsight] = useState(0);
@@ -125,15 +126,18 @@ const Solutions = () => {
                       className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}
                       style={{ animationDelay: `${index * 0.5}s` }}
                     >
-                      <div className={`flex items-start space-x-2 max-w-xs ${msg.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
-                        <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                          msg.sender === 'user' ? 'bg-primary' : 'bg-accent'
-                        }`}>
-                          {msg.sender === 'user' ? 
-                            <User className="h-4 w-4 text-primary-foreground" /> : 
-                            <Bot className="h-4 w-4 text-accent-foreground" />
-                          }
-                        </div>
+                       <div className={`flex items-start space-x-2 max-w-xs ${msg.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
+                         {msg.sender === 'user' ? (
+                           <img 
+                             src={userProfileImage} 
+                             alt="User Profile"
+                             className="flex-shrink-0 w-8 h-8 rounded-full object-cover"
+                           />
+                         ) : (
+                           <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                             <Bot className="h-4 w-4 text-accent-foreground" />
+                           </div>
+                         )}
                         <div className={`rounded-lg px-3 py-2 ${
                           msg.sender === 'user' 
                             ? 'bg-primary text-primary-foreground' 
