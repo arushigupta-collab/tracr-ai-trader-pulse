@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Brain, MessageSquare } from 'lucide-react';
+import { Brain, MessageSquare, User, Bot } from 'lucide-react';
 import aiCandlesImage from '@/assets/ai-candles.jpg';
 import aiChatbotImage from '@/assets/ai-chatbot.jpg';
 
 const Solutions = () => {
   const [activeInsight, setActiveInsight] = useState(0);
-  const [activeQA, setActiveQA] = useState(0);
+  const [chatMessages, setChatMessages] = useState<Array<{id: number, sender: 'user' | 'ai', message: string, visible: boolean}>>([]);
 
   const insights = [
     "JPY Bullish: BOJ's Kimino comments 'Appropriate to raise rates'",
@@ -14,28 +14,43 @@ const Solutions = () => {
     "EUR Weakness: ECB maintains dovish policy outlook"
   ];
 
-  const qaData = [
-    {
-      question: "What is a Doji candle?",
-      answer: "A Doji candlestick is a common pattern in technical analysis that signals indecision in the market."
-    },
-    {
-      question: "Where did this happen on the chart?",
-      answer: "A Doji candle appeared on 24th August 2025."
-    },
-    {
-      question: "What does this pattern indicate?",
-      answer: "This pattern suggests potential trend reversal or continuation depending on context."
-    }
+  const chatConversation = [
+    { id: 1, sender: 'user' as const, message: "What is a Doji candle?" },
+    { id: 2, sender: 'ai' as const, message: "A Doji candlestick is a common pattern in technical analysis that signals indecision in the market." },
+    { id: 3, sender: 'user' as const, message: "Where did this happen on the chart?" },
+    { id: 4, sender: 'ai' as const, message: "A Doji candle appeared on 24th August 2025." }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveInsight((prev) => (prev + 1) % insights.length);
-      setActiveQA((prev) => (prev + 1) % qaData.length);
     }, 3000);
 
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    // Reset chat messages
+    setChatMessages([]);
+    
+    // Add messages one by one with delays
+    chatConversation.forEach((msg, index) => {
+      setTimeout(() => {
+        setChatMessages(prev => [...prev, { ...msg, visible: true }]);
+      }, index * 2000);
+    });
+
+    // Reset the conversation every 10 seconds
+    const resetInterval = setInterval(() => {
+      setChatMessages([]);
+      chatConversation.forEach((msg, index) => {
+        setTimeout(() => {
+          setChatMessages(prev => [...prev, { ...msg, visible: true }]);
+        }, index * 2000);
+      });
+    }, 10000);
+
+    return () => clearInterval(resetInterval);
   }, []);
 
   return (
@@ -101,14 +116,53 @@ const Solutions = () => {
                 </div>
               </div>
 
-              {/* Chatbot Preview */}
-              <div className="relative mb-6 rounded-lg overflow-hidden">
-                <img 
-                  src={aiChatbotImage} 
-                  alt="AI Chatbot Interface"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+              {/* Animated Chat Interface */}
+              <div className="bg-muted/20 rounded-lg p-4 h-64 overflow-y-auto mb-6">
+                <div className="space-y-4">
+                  {chatMessages.map((msg, index) => (
+                    <div 
+                      key={msg.id}
+                      className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}
+                      style={{ animationDelay: `${index * 0.5}s` }}
+                    >
+                      <div className={`flex items-start space-x-2 max-w-xs ${msg.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
+                        <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                          msg.sender === 'user' ? 'bg-primary' : 'bg-accent'
+                        }`}>
+                          {msg.sender === 'user' ? 
+                            <User className="h-4 w-4 text-primary-foreground" /> : 
+                            <Bot className="h-4 w-4 text-accent-foreground" />
+                          }
+                        </div>
+                        <div className={`rounded-lg px-3 py-2 ${
+                          msg.sender === 'user' 
+                            ? 'bg-primary text-primary-foreground' 
+                            : 'bg-secondary text-secondary-foreground'
+                        }`}>
+                          <p className="text-sm">{msg.message}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                  
+                  {/* Typing indicator when no messages or waiting for next */}
+                  {chatMessages.length === 0 && (
+                    <div className="flex justify-start">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                          <Bot className="h-4 w-4 text-accent-foreground" />
+                        </div>
+                        <div className="bg-secondary rounded-lg px-3 py-2">
+                          <div className="flex space-x-1">
+                            <div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse"></div>
+                            <div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                            <div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
 
             </CardContent>
