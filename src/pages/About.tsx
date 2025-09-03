@@ -6,9 +6,9 @@ import Footer from '@/components/Footer';
 const About = () => {
   const teamMembers = [
     {
-      name: "Sarah Chen",
+      name: "Fahad Masroor",
       role: "CEO",
-      photo: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=400&h=400&fit=crop&crop=face",
+      photo: "/lovable-uploads/7f1439a3-3d72-4a06-8d77-731a7ad88487.png",
       linkedin: "#",
       twitter: "#"
     },
