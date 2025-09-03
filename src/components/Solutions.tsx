@@ -31,25 +31,23 @@ const Solutions = () => {
   }, []);
 
   useEffect(() => {
-    // Reset chat messages
-    setChatMessages([]);
-    
-    // Add messages one by one with delays
-    chatConversation.forEach((msg, index) => {
-      setTimeout(() => {
-        setChatMessages(prev => [...prev, { ...msg, visible: true }]);
-      }, index * 2000);
-    });
-
-    // Reset the conversation every 10 seconds
-    const resetInterval = setInterval(() => {
+    const startChatAnimation = () => {
       setChatMessages([]);
+      
       chatConversation.forEach((msg, index) => {
         setTimeout(() => {
           setChatMessages(prev => [...prev, { ...msg, visible: true }]);
         }, index * 2000);
       });
-    }, 10000);
+    };
+
+    // Start initial animation
+    startChatAnimation();
+
+    // Reset and restart animation every 12 seconds (after all messages are shown)
+    const resetInterval = setInterval(() => {
+      startChatAnimation();
+    }, 12000);
 
     return () => clearInterval(resetInterval);
   }, []);
