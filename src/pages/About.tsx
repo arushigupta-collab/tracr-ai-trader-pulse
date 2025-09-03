@@ -68,23 +68,16 @@ const About = () => {
               </div>
             </div>
             {/* Floating Charts */}
-            <div className="absolute top-10 left-10 w-20 h-20 bg-primary/10 rounded-lg flex items-center justify-center animate-bounce">
-              <TrendingUp className="h-8 w-8 text-primary" />
-            </div>
             <div className="absolute top-20 right-20 w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center animate-pulse">
               <BarChart3 className="h-6 w-6 text-accent" />
             </div>
-            <div className="absolute bottom-20 left-20 w-18 h-18 bg-success/10 rounded-lg flex items-center justify-center animate-bounce" style={{ animationDelay: '1s' }}>
+            <div className="absolute bottom-20 right-20 w-18 h-18 bg-success/10 rounded-lg flex items-center justify-center animate-bounce" style={{ animationDelay: '1s' }}>
               <Brain className="h-7 w-7 text-success" />
             </div>
           </div>
 
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="animate-fade-in">
-              <div className="inline-flex items-center px-6 py-3 bg-card/80 backdrop-blur-sm rounded-full border border-primary/30 mb-8">
-                <TrendingUp className="h-4 w-4 text-primary mr-2" />
-                <span className="text-sm text-primary font-semibold">Trading Innovation Leaders</span>
-              </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                 About <span className="text-gradient">tracr</span>
               </h1>
@@ -100,15 +93,6 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 animate-pulse" />
           <div className="max-w-6xl mx-auto relative z-10">
             <div className="text-center mb-16 animate-fade-in">
-              <div className="inline-flex items-center space-x-2 mb-8">
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                <div className="w-2 h-2 bg-accent rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
-                <div className="w-2 h-2 bg-success rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-                <span className="text-sm font-semibold text-muted-foreground mx-4">MARKET VISION</span>
-                <div className="w-2 h-2 bg-success rounded-full animate-pulse" style={{ animationDelay: '1.5s' }} />
-                <div className="w-2 h-2 bg-accent rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse" style={{ animationDelay: '2.5s' }} />
-              </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
                 Revolutionizing Trading Through <span className="text-gradient">AI Intelligence</span>
               </h2>
