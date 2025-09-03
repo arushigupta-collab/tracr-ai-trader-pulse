@@ -16,25 +16,33 @@ const Navbar = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <nav className="fixed w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className="fixed w-full z-50 bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-gradient">tracr</div>
+          <Link to="/" className="flex items-center group">
+            <div className="relative">
+              <div className="text-3xl font-bold text-gradient tracking-tight group-hover:scale-105 transition-transform duration-300">
+                tracr
+              </div>
+              <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-12">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`relative text-sm font-semibold transition-all duration-300 hover:text-primary group ${
                   isActive(item.href) ? 'text-primary' : 'text-muted-foreground'
                 }`}
               >
                 {item.name}
+                <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-primary transform transition-transform duration-300 origin-left rounded-full ${
+                  isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                }`}></span>
               </Link>
             ))}
           </div>
@@ -42,7 +50,11 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:flex">
             <Link to="/register">
-              <Button variant="hero" size="lg">
+              <Button 
+                variant="hero" 
+                size="lg"
+                className="hover:scale-105 hover:shadow-glow transition-all duration-300 font-semibold px-8"
+              >
                 Register Interest
               </Button>
             </Link>
