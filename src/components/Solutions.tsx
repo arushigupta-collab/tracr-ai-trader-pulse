@@ -66,8 +66,8 @@ const Solutions = () => {
         {/* Solutions Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* AI Candle Insights */}
-          <Card className="bg-card-gradient border-border card-hover group">
-            <CardContent className="p-8">
+          <Card className="bg-card-gradient border-border card-hover group h-full">
+            <CardContent className="p-8 h-full flex flex-col">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-primary/10 rounded-lg mr-4">
                   <Brain className="h-8 w-8 text-primary" />
@@ -85,7 +85,7 @@ const Solutions = () => {
                 <img 
                   src={aiCandlesImage} 
                   alt="AI Candle Analysis"
-                  className="w-full h-48 object-cover transition-all duration-500 group-hover:scale-110"
+                  className="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent group-hover:from-background/60 transition-all duration-500" />
                 <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -101,8 +101,8 @@ const Solutions = () => {
           </Card>
 
           {/* AI Chatbot */}
-          <Card className="bg-card-gradient border-border card-hover group">
-            <CardContent className="p-8">
+          <Card className="bg-card-gradient border-border card-hover group h-full">
+            <CardContent className="p-8 h-full flex flex-col">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-accent/10 rounded-lg mr-4">
                   <MessageSquare className="h-8 w-8 text-accent" />
