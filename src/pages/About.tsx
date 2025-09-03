@@ -68,12 +68,6 @@ const About = () => {
               </div>
             </div>
             {/* Floating Charts */}
-            <div className="absolute top-20 right-20 w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center animate-pulse">
-              <BarChart3 className="h-6 w-6 text-accent" />
-            </div>
-            <div className="absolute bottom-20 right-20 w-18 h-18 bg-success/10 rounded-lg flex items-center justify-center animate-bounce" style={{ animationDelay: '1s' }}>
-              <Brain className="h-7 w-7 text-success" />
-            </div>
           </div>
 
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
