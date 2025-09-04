@@ -82,8 +82,8 @@ const About = () => {
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               {/* Core Values Section - Left (Full Height to match Mission + Story) */}
-              <div className="h-full">
-                <Card className="bg-card border-border card-hover group h-full">
+              <div className="h-full animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                <Card className="bg-card border-border card-hover group h-full animate-scale-in" style={{ animationDelay: '0.2s' }}>
                   <CardContent className="p-8 h-full flex flex-col">
                     <div className="mb-6">
                       <h3 className="text-3xl font-bold text-foreground">Core Values</h3>
@@ -114,7 +114,7 @@ const About = () => {
               {/* Mission & Story Section - Right */}
               <div className="space-y-8">
                 {/* Mission Card */}
-                <Card className="bg-card border-border card-hover group">
+                <Card className="bg-card border-border card-hover group animate-fade-in animate-scale-in" style={{ animationDelay: '0.3s' }}>
                   <CardContent className="p-8">
                     <div className="mb-6">
                       <h3 className="text-3xl font-bold text-foreground">Our Mission</h3>
@@ -126,7 +126,7 @@ const About = () => {
                 </Card>
 
                 {/* Story Card */}
-                <Card className="bg-card border-border card-hover group">
+                <Card className="bg-card border-border card-hover group animate-fade-in animate-scale-in" style={{ animationDelay: '0.4s' }}>
                   <CardContent className="p-8">
                     <div className="mb-6">
                       <h3 className="text-3xl font-bold text-foreground">Our Story</h3>
