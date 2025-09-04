@@ -139,49 +139,50 @@ const Blog = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.slice(0, visiblePosts).map((post, index) => (
-                <Card 
-                  key={post.id}
-                  className="bg-card-gradient border-border card-hover group cursor-pointer animate-scale-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="aspect-video overflow-hidden rounded-t-lg">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-4 line-clamp-3">
-                      {post.description}
-                    </p>
-                    
-                    {/* Author and Meta */}
-                    <div className="flex items-center justify-between pt-4 border-t border-border">
-                      <div className="flex items-center space-x-3">
-                        <img
-                          src={post.author.photo}
-                          alt={post.author.name}
-                          className="w-8 h-8 rounded-full object-cover"
-                        />
-                        <span className="text-sm font-medium">{post.author.name}</span>
-                      </div>
-                      <div className="flex items-center space-x-4 text-xs text-muted-foreground">
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="w-3 h-3" />
-                          <span>{formatDate(post.publishedDate)}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Clock className="w-3 h-3" />
-                          <span>{post.readTime}</span>
-                        </div>
-                      </div>
+                <Link key={post.id} to={`/blog/${post.id}`}>
+                  <Card 
+                    className="bg-card-gradient border-border card-hover group cursor-pointer animate-scale-in h-full"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="aspect-video overflow-hidden rounded-t-lg">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
-                  </CardContent>
-                </Card>
+                    <CardContent className="p-6 flex flex-col h-full">
+                      <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors flex-grow">
+                        {post.title}
+                      </h3>
+                      <p className="text-muted-foreground mb-4 line-clamp-3 flex-grow">
+                        {post.description}
+                      </p>
+                      
+                      {/* Author and Meta */}
+                      <div className="flex items-center justify-between pt-4 border-t border-border mt-auto">
+                        <div className="flex items-center space-x-3">
+                          <img
+                            src={post.author.photo}
+                            alt={post.author.name}
+                            className="w-8 h-8 rounded-full object-cover"
+                          />
+                          <span className="text-sm font-medium">{post.author.name}</span>
+                        </div>
+                        <div className="flex items-center space-x-4 text-xs text-muted-foreground">
+                          <div className="flex items-center space-x-1">
+                            <Calendar className="w-3 h-3" />
+                            <span>{formatDate(post.publishedDate)}</span>
+                          </div>
+                          <div className="flex items-center space-x-1">
+                            <Clock className="w-3 h-3" />
+                            <span>{post.readTime}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
 
