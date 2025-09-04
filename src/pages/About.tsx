@@ -81,15 +81,15 @@ const About = () => {
           
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              {/* Core Values Section - Left */}
-              <div className="animate-fade-in mt-[calc(theme(spacing.32)+theme(spacing.8))]" style={{ animationDelay: '0.1s' }}>
-                <Card className="bg-card border-border card-hover group animate-scale-in" style={{ animationDelay: '0.2s' }}>
-                  <CardContent className="p-8">
+              {/* Core Values Section - Left (Full Height to match Mission + Story) */}
+              <div className="h-full animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                <Card className="bg-card border-border card-hover group h-full animate-scale-in" style={{ animationDelay: '0.2s' }}>
+                  <CardContent className="p-8 h-full flex flex-col">
                     <div className="mb-6">
                       <h3 className="text-3xl font-bold text-foreground">Core Values</h3>
                     </div>
                     
-                    <div className="space-y-6">
+                    <div className="space-y-8 flex-1 flex flex-col justify-around">
                       {[
                         { icon: Zap, title: "Innovation & Automation", desc: "building smarter, faster ways to trade" },
                         { icon: TrendingUp, title: "Empowerment", desc: "giving traders clarity and control" },
