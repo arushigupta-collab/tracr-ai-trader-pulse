@@ -89,35 +89,64 @@ const BlogPost = () => {
       publishedDate: "2025-01-10",
       readTime: "5 min read",
       fullContent: {
-        intro: "Every trader knows the feeling: staring at charts for hours, drawing lines, juggling indicators — yet still second-guessing every move. The truth is, complexity isn't what makes you profitable. Clarity does.",
+        intro: "Trading often feels like trying to solve a puzzle with missing pieces. Charts tell part of the story, indicators add another layer, and news headlines create noise that can distract more than they help. What traders truly need isn't more tools — it's clarity.\n\nThis is the philosophy behind tracr: giving traders the context they need to understand markets without drowning in complexity.",
         sections: [
           {
-            title: "Why Traders Struggle",
+            title: "Why Complexity Hurts Traders",
             content: [
               {
-                text: "Most platforms throw data at you, but not context. Without context, it's easy to misinterpret signals."
+                subtitle: "Too Many Indicators",
+                text: "Traders often believe adding more indicators means better decisions. In reality, it usually leads to conflicting signals and paralysis."
+              },
+              {
+                subtitle: "Conflicting Opinions",
+                text: "Open Twitter or YouTube and you'll find endless hot takes on where the market is going. One says \"bullish,\" another screams \"crash incoming.\" The result? Confusion and hesitation."
+              },
+              {
+                subtitle: "Short-Term Guesswork",
+                text: "Many traders focus on the next five minutes rather than the bigger picture, losing sight of trends and drivers."
               }
             ]
           },
           {
-            title: "Insights that Explain, Not Confuse",
+            title: "The Value of Clarity",
             content: [
               {
-                text: "tracr's AI Candle Insights tell you what happened in the market and why, in simple terms. That clarity makes it easier to build confidence in your decisions."
+                text: "Clarity doesn't mean simplicity for its own sake. It means stripping away noise and focusing on what matters:"
+              },
+              {
+                text: "• Why did the price move?\n• What factors influenced the candle?\n• How does this fit into the broader trend?"
+              },
+              {
+                text: "With tracr's AI Candle Insights, traders can see exactly that. Instead of staring at a green or red candle and guessing, you get a clear explanation that connects technical, fundamental, and sentiment data."
               }
             ]
           },
           {
-            title: "Learn While You Trade",
+            title: "Learning While You Trade",
             content: [
               {
-                text: "Instead of guessing, traders can connect the dots between fundamentals, sentiment, and technicals — all explained by AI as the market moves."
+                text: "Perhaps the biggest advantage of clarity is education. With every explained move, traders absorb lessons faster. Over time, patterns emerge:"
+              },
+              {
+                text: "• Which events consistently move certain markets\n• How sentiment shifts before major breakouts\n• When technical patterns align with fundamentals"
+              },
+              {
+                text: "This learning curve is shortened dramatically when guided by AI."
+              }
+            ]
+          },
+          {
+            title: "Why tracr Is Built Around Clarity",
+            content: [
+              {
+                text: "Our vision isn't to overwhelm traders with endless features. It's to build the cleanest, most effective platform for learning and improving as you trade. By focusing on context, tracr ensures you make decisions with confidence rather than doubt."
               }
             ]
           }
         ],
-        conclusion: "Clarity is the trader's true edge. With tracr, you don't just see the chart — you understand it.",
-        cta: "Be the first to experience AI Candle Insights. Join the waitlist now."
+        conclusion: "Complexity doesn't make you profitable — clarity does. By explaining the story behind every move, tracr gives traders the knowledge and confidence they need to succeed.",
+        cta: "Join our waitlist today and experience the power of AI-driven clarity."
       }
     },
     {
