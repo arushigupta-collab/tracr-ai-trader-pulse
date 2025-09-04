@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -12,9 +13,10 @@ const Register = () => {
     name: '',
     email: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.email) {
@@ -25,13 +27,46 @@ const Register = () => {
       return;
     }
 
-    // Simulate form submission
-    toast({
-      title: "Interest Registered!",
-      description: "We'll notify you when tracr launches.",
-    });
+    setIsSubmitting(true);
 
-    setFormData({ name: '', email: '' });
+    try {
+      const { error } = await supabase
+        .from('registration_interests')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email
+          }
+        ]);
+
+      if (error) {
+        // Handle duplicate email error specifically
+        if (error.code === '23505' && error.message.includes('email')) {
+          toast({
+            title: "Email already registered",
+            description: "This email is already registered for updates.",
+            variant: "destructive"
+          });
+        } else {
+          throw error;
+        }
+      } else {
+        toast({
+          title: "Interest Registered!",
+          description: "We'll notify you when tracr launches.",
+        });
+        setFormData({ name: '', email: '' });
+      }
+    } catch (error) {
+      console.error('Error registering interest:', error);
+      toast({
+        title: "Registration failed",
+        description: "Please try again later.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -124,8 +159,8 @@ const Register = () => {
                       />
                     </div>
 
-                    <Button type="submit" variant="hero" size="lg" className="w-full">
-                      Register Interest
+                    <Button type="submit" variant="hero" size="lg" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? "Registering..." : "Register Interest"}
                     </Button>
 
                     <p className="text-xs text-muted-foreground text-center">
