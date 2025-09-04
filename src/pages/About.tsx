@@ -2,6 +2,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Linkedin, Twitter, Instagram, TrendingUp, Zap, Shield, Target, BarChart3, Brain } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ourStoryImage from '@/assets/our-story.jpg';
+import ourMissionImage from '@/assets/our-mission.jpg';
+import coreValuesImage from '@/assets/core-values.jpg';
 
 const About = () => {
   const teamMembers = [
@@ -86,8 +89,8 @@ const About = () => {
                 <Card className="bg-card border-border card-hover group">
                   <CardContent className="p-8">
                     <div className="flex items-center mb-6">
-                      <div className="p-4 bg-muted rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <Shield className="h-8 w-8 text-foreground" />
+                      <div className="w-16 h-16 mr-4 rounded-xl overflow-hidden group-hover:scale-110 transition-transform duration-300">
+                        <img src={coreValuesImage} alt="Core Values" className="w-full h-full object-cover" />
                       </div>
                       <h3 className="text-3xl font-bold text-foreground">Core Values</h3>
                     </div>
@@ -120,8 +123,8 @@ const About = () => {
                 <Card className="bg-card border-border card-hover group">
                   <CardContent className="p-8">
                     <div className="flex items-center mb-6">
-                      <div className="p-4 bg-muted rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <Target className="h-8 w-8 text-foreground" />
+                      <div className="w-16 h-16 mr-4 rounded-xl overflow-hidden group-hover:scale-110 transition-transform duration-300">
+                        <img src={ourMissionImage} alt="Our Mission" className="w-full h-full object-cover" />
                       </div>
                       <h3 className="text-3xl font-bold text-foreground">Our Mission</h3>
                     </div>
@@ -135,8 +138,8 @@ const About = () => {
                 <Card className="bg-card border-border card-hover group">
                   <CardContent className="p-8">
                     <div className="flex items-center mb-6">
-                      <div className="p-4 bg-muted rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <BarChart3 className="h-8 w-8 text-foreground" />
+                      <div className="w-16 h-16 mr-4 rounded-xl overflow-hidden group-hover:scale-110 transition-transform duration-300">
+                        <img src={ourStoryImage} alt="Our Story" className="w-full h-full object-cover" />
                       </div>
                       <h3 className="text-3xl font-bold text-foreground">Our Story</h3>
                     </div>
