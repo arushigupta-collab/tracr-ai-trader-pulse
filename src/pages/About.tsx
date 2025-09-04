@@ -80,16 +80,16 @@ const About = () => {
           </div>
           
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              {/* Core Values Section - Left */}
-              <div className="animate-fade-in pb-8 mt-[200px]" style={{ animationDelay: '0.1s' }}>
-                <Card className="bg-card border-border card-hover group animate-scale-in" style={{ animationDelay: '0.2s' }}>
-                  <CardContent className="p-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+              {/* Core Values Section - Left Column */}
+              <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                <Card className="bg-card border-border card-hover group h-full animate-scale-in" style={{ animationDelay: '0.2s' }}>
+                  <CardContent className="p-8 h-full flex flex-col">
                     <div className="mb-6">
                       <h3 className="text-3xl font-bold text-foreground">Core Values</h3>
                     </div>
                     
-                    <div className="space-y-6">
+                    <div className="space-y-6 flex-1 flex flex-col justify-around">
                       {[
                         { icon: Zap, title: "Innovation & Automation", desc: "building smarter, faster ways to trade" },
                         { icon: TrendingUp, title: "Empowerment", desc: "giving traders clarity and control" },
@@ -111,11 +111,11 @@ const About = () => {
                 </Card>
               </div>
 
-              {/* Mission & Story Section - Right */}
-              <div className="space-y-8">
+              {/* Mission & Story Section - Right Column */}
+              <div className="space-y-8 flex flex-col h-full">
                 {/* Mission Card */}
-                <Card className="bg-card border-border card-hover group animate-fade-in animate-scale-in" style={{ animationDelay: '0.3s' }}>
-                  <CardContent className="p-8">
+                <Card className="bg-card border-border card-hover group animate-fade-in animate-scale-in flex-1" style={{ animationDelay: '0.3s' }}>
+                  <CardContent className="p-8 h-full flex flex-col justify-center">
                     <div className="mb-6">
                       <h3 className="text-3xl font-bold text-foreground">Our Mission</h3>
                     </div>
@@ -126,8 +126,8 @@ const About = () => {
                 </Card>
 
                 {/* Story Card */}
-                <Card className="bg-card border-border card-hover group animate-fade-in animate-scale-in" style={{ animationDelay: '0.4s' }}>
-                  <CardContent className="p-8">
+                <Card className="bg-card border-border card-hover group animate-fade-in animate-scale-in flex-1" style={{ animationDelay: '0.4s' }}>
+                  <CardContent className="p-8 h-full flex flex-col justify-center">
                     <div className="mb-6">
                       <h3 className="text-3xl font-bold text-foreground">Our Story</h3>
                     </div>
