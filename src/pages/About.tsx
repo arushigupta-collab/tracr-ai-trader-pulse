@@ -80,29 +80,29 @@ const About = () => {
           </div>
           
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-              {/* Core Values Section - Left (Full Height) */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              {/* Core Values Section - Left */}
               <div className="space-y-8">
-                <Card className="bg-card border-border card-hover group h-full flex flex-col">
-                  <CardContent className="p-8 flex-1 flex flex-col">
+                <Card className="bg-card border-border card-hover group">
+                  <CardContent className="p-8">
                     <div className="mb-6">
                       <h3 className="text-3xl font-bold text-foreground">Core Values</h3>
                     </div>
                     
-                    <div className="space-y-4 flex-1">
+                    <div className="space-y-6">
                       {[
                         { icon: Zap, title: "Innovation & Automation", desc: "building smarter, faster ways to trade" },
                         { icon: TrendingUp, title: "Empowerment", desc: "giving traders clarity and control" },
                         { icon: Target, title: "Precision", desc: "ensuring accuracy in every feature" },
                         { icon: Brain, title: "Simplicity", desc: "easy to use without sacrificing depth" }
                       ].map((value, index) => (
-                        <div key={index} className="flex items-start space-x-3 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-all duration-300">
+                        <div key={index} className="flex items-start space-x-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-all duration-300">
                           <div className="p-2 bg-background rounded-lg">
                             <value.icon className="h-4 w-4 text-foreground" />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-foreground text-sm">{value.title}</h4>
-                            <p className="text-xs text-muted-foreground">{value.desc}</p>
+                            <h4 className="font-semibold text-foreground text-base">{value.title}</h4>
+                            <p className="text-sm text-muted-foreground mt-1">{value.desc}</p>
                           </div>
                         </div>
                       ))}
