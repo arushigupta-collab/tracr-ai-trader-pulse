@@ -80,16 +80,16 @@ const About = () => {
           </div>
           
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              {/* Core Values Section - Left */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+              {/* Core Values Section - Left (Full Height) */}
               <div className="space-y-8">
-                <Card className="bg-card border-border card-hover group">
-                  <CardContent className="p-8">
+                <Card className="bg-card border-border card-hover group h-full flex flex-col">
+                  <CardContent className="p-8 flex-1 flex flex-col">
                     <div className="mb-6">
                       <h3 className="text-3xl font-bold text-foreground">Core Values</h3>
                     </div>
                     
-                    <div className="space-y-4">
+                    <div className="space-y-4 flex-1">
                       {[
                         { icon: Zap, title: "Innovation & Automation", desc: "building smarter, faster ways to trade" },
                         { icon: TrendingUp, title: "Empowerment", desc: "giving traders clarity and control" },
