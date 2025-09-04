@@ -139,11 +139,12 @@ const Blog = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.slice(0, visiblePosts).map((post, index) => (
-                <Link key={post.id} to={`/blog/${post.id}`}>
-                  <Card 
-                    className="bg-card-gradient border-border card-hover group cursor-pointer animate-scale-in h-full"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
+                <Card 
+                  key={post.id}
+                  className="bg-card-gradient border-border card-hover group cursor-pointer animate-scale-in h-full flex flex-col"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <Link to={`/blog/${post.id}`} className="flex flex-col h-full">
                     <div className="aspect-video overflow-hidden rounded-t-lg">
                       <img
                         src={post.image}
@@ -151,8 +152,8 @@ const Blog = () => {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <CardContent className="p-6 flex flex-col h-full">
-                      <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors flex-grow">
+                    <CardContent className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors">
                         {post.title}
                       </h3>
                       <p className="text-muted-foreground mb-4 line-clamp-3 flex-grow">
@@ -181,8 +182,8 @@ const Blog = () => {
                         </div>
                       </div>
                     </CardContent>
-                  </Card>
-                </Link>
+                  </Link>
+                </Card>
               ))}
             </div>
 
