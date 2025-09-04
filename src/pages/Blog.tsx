@@ -7,104 +7,101 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const Blog = () => {
-  const [visiblePosts, setVisiblePosts] = useState(6);
+  const [visiblePosts, setVisiblePosts] = useState(3);
 
   const blogPosts = [
     {
       id: 1,
-      title: "The Future of AI in Trading: How Machine Learning is Revolutionizing Market Analysis",
-      description: "Explore how artificial intelligence is transforming the way traders analyze markets, identify opportunities, and manage risk in today's fast-paced financial environment.",
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop",
+      title: "Why Most Traders Lose — and How AI Can Help You Win",
+      description: "It's no secret that most retail traders lose money. The reasons vary — from emotional decisions to overcomplicating strategies — but the result is the same: frustration. At tracr, we believe AI can change that.",
+      image: "/src/assets/ai-candles.jpg",
       author: {
-        name: "Sarah Chen",
-        photo: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=100&h=100&fit=crop&crop=face"
+        name: "tracr Team",
+        photo: "/src/assets/user-profile.jpg"
       },
-      publishedDate: "2025-03-15",
-      readTime: "8 min read"
+      publishedDate: "2025-01-15",
+      readTime: "6 min read",
+      fullContent: {
+        intro: "It's no secret that most retail traders lose money. The reasons vary — from emotional decisions to overcomplicating strategies — but the result is the same: frustration. At tracr, we believe AI can change that.",
+        sections: [
+          {
+            title: "The Emotional Trap",
+            content: "Fear and greed cause traders to abandon plans and chase trades."
+          },
+          {
+            title: "Information Overload",
+            content: "Too many indicators, conflicting opinions, and noisy news feeds make it hard to focus."
+          },
+          {
+            title: "How AI Levels the Field",
+            content: "tracr's AI Candle Insights cut through the noise, explaining why price moved in plain language, helping traders learn faster and avoid impulsive mistakes."
+          }
+        ],
+        conclusion: "Trading doesn't need to feel like guesswork. With AI insights, every candle tells a story you can understand.",
+        cta: "Join tracr's waitlist today and start seeing behind the trade."
+      }
     },
     {
       id: 2,
-      title: "Understanding Market Psychology: Why Emotions Are Your Biggest Trading Enemy",
-      description: "Learn how to overcome emotional decision-making in trading and develop a systematic approach to market analysis that removes bias from your investment strategy.",
-      image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&h=400&fit=crop",
+      title: "The Power of Clarity in Trading",
+      description: "Every trader knows the feeling: staring at charts for hours, drawing lines, juggling indicators — yet still second-guessing every move. The truth is, complexity isn't what makes you profitable. Clarity does.",
+      image: "/src/assets/ai-chatbot.jpg",
       author: {
-        name: "Marcus Johnson",
-        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+        name: "tracr Team",
+        photo: "/src/assets/user-profile.jpg"
       },
-      publishedDate: "2025-03-12",
-      readTime: "6 min read"
+      publishedDate: "2025-01-10",
+      readTime: "5 min read",
+      fullContent: {
+        intro: "Every trader knows the feeling: staring at charts for hours, drawing lines, juggling indicators — yet still second-guessing every move. The truth is, complexity isn't what makes you profitable. Clarity does.",
+        sections: [
+          {
+            title: "Why Traders Struggle",
+            content: "Most platforms throw data at you, but not context. Without context, it's easy to misinterpret signals."
+          },
+          {
+            title: "Insights that Explain, Not Confuse",
+            content: "tracr's AI Candle Insights tell you what happened in the market and why, in simple terms. That clarity makes it easier to build confidence in your decisions."
+          },
+          {
+            title: "Learn While You Trade",
+            content: "Instead of guessing, traders can connect the dots between fundamentals, sentiment, and technicals — all explained by AI as the market moves."
+          }
+        ],
+        conclusion: "Clarity is the trader's true edge. With tracr, you don't just see the chart — you understand it.",
+        cta: "Be the first to experience AI Candle Insights. Join the waitlist now."
+      }
     },
     {
       id: 3,
-      title: "Risk Management Strategies Every Trader Should Master",
-      description: "Discover essential risk management techniques that professional traders use to protect their capital and maximize long-term profitability in volatile markets.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      title: "The Future of Trading is AI-Powered",
+      description: "For years, traders have relied on raw charts and lagging indicators. But markets move faster now, and traders need more than lines and numbers. The future of trading lies in AI — not to replace traders, but to make them smarter.",
+      image: "/src/assets/our-mission.jpg",
       author: {
-        name: "Amanda Foster",
-        photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+        name: "tracr Team",
+        photo: "/src/assets/user-profile.jpg"
       },
-      publishedDate: "2025-03-10",
-      readTime: "10 min read"
-    },
-    {
-      id: 4,
-      title: "Cryptocurrency Trading: Navigating the Digital Asset Revolution",
-      description: "A comprehensive guide to trading cryptocurrencies, including analysis techniques, risk factors, and strategies for both beginners and experienced traders.",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop",
-      author: {
-        name: "David Kim",
-        photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
-      },
-      publishedDate: "2025-03-08",
-      readTime: "12 min read"
-    },
-    {
-      id: 5,
-      title: "Technical Analysis Fundamentals: Reading Charts Like a Pro",
-      description: "Master the basics of technical analysis with our comprehensive guide to chart patterns, indicators, and trend analysis techniques used by professional traders.",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
-      author: {
-        name: "Elena Rodriguez",
-        photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face"
-      },
-      publishedDate: "2025-03-05",
-      readTime: "15 min read"
-    },
-    {
-      id: 6,
-      title: "Building Your First Trading Strategy: A Step-by-Step Guide",
-      description: "Learn how to develop, test, and implement your own trading strategy with our detailed walkthrough of the strategy development process.",
-      image: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=600&h=400&fit=crop",
-      author: {
-        name: "James Wilson",
-        photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face"
-      },
-      publishedDate: "2025-03-03",
-      readTime: "9 min read"
-    },
-    {
-      id: 7,
-      title: "The Psychology of Successful Traders: Mindset and Discipline",
-      description: "Explore the mental frameworks and psychological principles that separate successful traders from the rest, including discipline, patience, and emotional control.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
-      author: {
-        name: "Sarah Chen",
-        photo: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=100&h=100&fit=crop&crop=face"
-      },
-      publishedDate: "2025-03-01",
-      readTime: "7 min read"
-    },
-    {
-      id: 8,
-      title: "Market Volatility: How to Profit from Uncertain Times",
-      description: "Learn strategies for trading in volatile markets, including how to identify opportunities during market uncertainty and protect your portfolio.",
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop",
-      author: {
-        name: "Marcus Johnson",
-        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
-      },
-      publishedDate: "2025-02-28",
-      readTime: "11 min read"
+      publishedDate: "2025-01-05",
+      readTime: "7 min read",
+      fullContent: {
+        intro: "For years, traders have relied on raw charts and lagging indicators. But markets move faster now, and traders need more than lines and numbers. The future of trading lies in AI — not to replace traders, but to make them smarter.",
+        sections: [
+          {
+            title: "The Old Way",
+            content: "Guessing based on gut feel, late signals, or crowded trading forums."
+          },
+          {
+            title: "The New Edge",
+            content: "AI that translates complex data into clear, actionable insights — showing traders what really drives market moves."
+          },
+          {
+            title: "How tracr Fits In",
+            content: "With AI Candle Insights, live charts, and trader-focused analytics, tracr gives retail traders tools that once felt out of reach."
+          }
+        ],
+        conclusion: "The future of trading is already here — and it's powered by AI. Don't get left behind.",
+        cta: "Sign up today and see behind the trade with tracr."
+      }
     }
   ];
 
