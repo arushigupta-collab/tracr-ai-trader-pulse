@@ -60,7 +60,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`relative text-sm font-medium transition-all duration-300 hover:text-primary group px-3 py-2 ${
+                className={`relative text-base font-medium transition-all duration-300 hover:text-primary group px-3 py-2 ${
                   isActive(item.href) ? 'text-primary' : 'text-foreground/80 hover:text-foreground'
                 }`}
               >
@@ -114,7 +114,7 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-6 py-3 text-base font-medium transition-all duration-300 border-l-4 ${
+                  className={`block px-6 py-3 text-lg font-medium transition-all duration-300 border-l-4 ${
                     isActive(item.href) 
                       ? 'text-primary border-primary bg-primary/5' 
                       : 'text-foreground/80 border-transparent hover:text-primary hover:border-primary/50 hover:bg-primary/5'
