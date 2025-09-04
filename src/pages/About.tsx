@@ -141,6 +141,38 @@ const About = () => {
           </div>
         </section>
 
+        {/* Join Our Waitlist Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 animate-pulse" style={{ animationDuration: '3s' }} />
+          
+          <div className="max-w-4xl mx-auto relative z-10">
+            <Card className="bg-gradient-to-br from-card via-card/90 to-primary/5 border-primary/20 card-hover group animate-fade-in animate-scale-in">
+              <CardContent className="p-12 text-center">
+                <div className="mb-6">
+                  <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                    Ready to Transform Your Trading?
+                  </h3>
+                  <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                    Join thousands of traders who are already on the waitlist. Be the first to experience the future of AI-powered trading analytics.
+                  </p>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <a
+                    href="/register"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg group-hover:shadow-primary/20"
+                  >
+                    Join Our Waitlist
+                  </a>
+                  <p className="text-sm text-muted-foreground">
+                    Early access • No commitment • Free to join
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
         {/* Team Section with Market Theme */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-background via-primary/5 to-background animate-pulse" style={{ animationDuration: '4s' }} />
