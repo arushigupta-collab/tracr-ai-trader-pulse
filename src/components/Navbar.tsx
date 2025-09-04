@@ -39,8 +39,8 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg' 
-        : 'bg-background/80 backdrop-blur-md'
+        ? 'bg-background/60 backdrop-blur-xl border-b border-border/30 shadow-lg' 
+        : 'bg-background/40 backdrop-blur-md'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -108,7 +108,7 @@ const Navbar = () => {
             ? 'opacity-100 translate-y-0 visible' 
             : 'opacity-0 -translate-y-4 invisible'
         }`}>
-          <div className="bg-background/95 backdrop-blur-xl border border-border/50 rounded-lg mx-4 mt-2 shadow-xl overflow-hidden">
+          <div className="bg-background/70 backdrop-blur-xl border border-border/30 rounded-lg mx-4 mt-2 shadow-xl overflow-hidden">
             <div className="py-4">
               {navigation.map((item, index) => (
                 <Link
