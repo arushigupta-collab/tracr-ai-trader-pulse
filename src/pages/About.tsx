@@ -14,7 +14,7 @@ const About = () => {
       instagram: "https://www.instagram.com/tracr.ai/"
     },
     {
-      name: "Marcus Johnson",
+      name: "Archit Patel",
       role: "COO",
       photo: "/lovable-uploads/37ef7d83-1d4e-4ff7-a05c-fcd643af8deb.png",
       linkedin: "https://www.linkedin.com/in/archit-patel-64995017b/",
