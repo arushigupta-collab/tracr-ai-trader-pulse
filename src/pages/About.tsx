@@ -183,7 +183,7 @@ const About = () => {
                 Our <span className="text-gradient">Team</span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                The passionate professionals revolutionizing the future of AI-powered trading
+                The passionate professionals revolutionizing the future of AI-powered trading by empowering investors with intelligence, speed and trust. With every step, we are building a smarter, more transparent, and more accessible future for global trading
               </p>
             </div>
 
