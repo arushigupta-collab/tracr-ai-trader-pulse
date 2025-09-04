@@ -16,10 +16,10 @@ const About = () => {
     {
       name: "Marcus Johnson",
       role: "COO",
-      photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      linkedin: "#",
-      twitter: "#",
-      instagram: "#"
+      photo: "/lovable-uploads/37ef7d83-1d4e-4ff7-a05c-fcd643af8deb.png",
+      linkedin: "https://www.linkedin.com/in/archit-patel-64995017b/",
+      twitter: "https://x.com/tracr_ai",
+      instagram: "https://www.instagram.com/tracr.ai/"
     }
   ];
 
