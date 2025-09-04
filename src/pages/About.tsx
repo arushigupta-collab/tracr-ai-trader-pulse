@@ -81,45 +81,8 @@ const About = () => {
           
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              {/* Story Section - Left */}
+              {/* Core Values Section - Left */}
               <div className="space-y-8">
-                <Card className="bg-gradient-to-br from-success/20 via-success/10 to-transparent border-success/30 card-hover group relative overflow-hidden">
-                  <div className="absolute bottom-0 right-0 w-36 h-36 bg-gradient-to-tl from-success/30 to-transparent rounded-full transform translate-x-18 translate-y-18" />
-                  <CardContent className="p-8 relative z-10">
-                    <div className="flex items-center mb-6">
-                      <div className="p-4 bg-success/20 rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <BarChart3 className="h-8 w-8 text-success" />
-                      </div>
-                      <h3 className="text-3xl font-bold text-success">Our Story</h3>
-                    </div>
-                    <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                      Our story began with a frustration every trader knows: strategies that work on paper often fail in practice. After years of trading and research, we realised the missing link was a platform that combined live analysis, and AI-driven insights all in one place. That vision became tracr, a platform built by traders, for traders, to help you see behind the trade.
-                    </p>
-                    <div className="h-1 bg-gradient-to-r from-success to-success/50 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Mission & Values Section - Right */}
-              <div className="space-y-8">
-                {/* Mission Card */}
-                <Card className="bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border-primary/30 card-hover group relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/30 to-transparent rounded-full transform translate-x-16 -translate-y-16" />
-                  <CardContent className="p-8 relative z-10">
-                    <div className="flex items-center mb-6">
-                      <div className="p-4 bg-primary/20 rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <Target className="h-8 w-8 text-primary" />
-                      </div>
-                      <h3 className="text-3xl font-bold text-primary">Our Mission</h3>
-                    </div>
-                    <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                      To level the playing field for retail traders by providing professional-grade tools that are intuitive, accessible, and powered by AI. We believe trading should be guided by insight, not emotion.
-                    </p>
-                    <div className="h-1 bg-gradient-primary rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                  </CardContent>
-                </Card>
-
-                {/* Core Values Card */}
                 <Card className="bg-gradient-to-br from-accent/20 via-accent/10 to-transparent border-accent/30 card-hover group relative overflow-hidden">
                   <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-br from-accent/30 to-transparent rounded-full transform -translate-x-20 -translate-y-20" />
                   <CardContent className="p-8 relative z-10">
@@ -149,6 +112,43 @@ const About = () => {
                       ))}
                     </div>
                     <div className="mt-6 h-1 bg-gradient-to-r from-accent to-accent/50 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Mission & Story Section - Right */}
+              <div className="space-y-8">
+                {/* Mission Card */}
+                <Card className="bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border-primary/30 card-hover group relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/30 to-transparent rounded-full transform translate-x-16 -translate-y-16" />
+                  <CardContent className="p-8 relative z-10">
+                    <div className="flex items-center mb-6">
+                      <div className="p-4 bg-primary/20 rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                        <Target className="h-8 w-8 text-primary" />
+                      </div>
+                      <h3 className="text-3xl font-bold text-primary">Our Mission</h3>
+                    </div>
+                    <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                      To level the playing field for retail traders by providing professional-grade tools that are intuitive, accessible, and powered by AI. We believe trading should be guided by insight, not emotion.
+                    </p>
+                    <div className="h-1 bg-gradient-primary rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                  </CardContent>
+                </Card>
+
+                {/* Story Card */}
+                <Card className="bg-gradient-to-br from-success/20 via-success/10 to-transparent border-success/30 card-hover group relative overflow-hidden">
+                  <div className="absolute bottom-0 right-0 w-36 h-36 bg-gradient-to-tl from-success/30 to-transparent rounded-full transform translate-x-18 translate-y-18" />
+                  <CardContent className="p-8 relative z-10">
+                    <div className="flex items-center mb-6">
+                      <div className="p-4 bg-success/20 rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                        <BarChart3 className="h-8 w-8 text-success" />
+                      </div>
+                      <h3 className="text-3xl font-bold text-success">Our Story</h3>
+                    </div>
+                    <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                      Our story began with a frustration every trader knows: strategies that work on paper often fail in practice. After years of trading and research, we realised the missing link was a platform that combined live analysis, and AI-driven insights all in one place. That vision became tracr, a platform built by traders, for traders, to help you see behind the trade.
+                    </p>
+                    <div className="h-1 bg-gradient-to-r from-success to-success/50 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                   </CardContent>
                 </Card>
               </div>
