@@ -5,6 +5,10 @@ import { Calendar, Clock, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import aiCandlesImg from '@/assets/ai-candles.jpg';
+import aiChatbotImg from '@/assets/ai-chatbot.jpg';
+import ourMissionImg from '@/assets/our-mission.jpg';
+import userProfileImg from '@/assets/user-profile.jpg';
 
 const Blog = () => {
   const [visiblePosts, setVisiblePosts] = useState(3);
@@ -14,10 +18,10 @@ const Blog = () => {
       id: 1,
       title: "Why Most Traders Lose — and How AI Can Help You Win",
       description: "It's no secret that most retail traders lose money. The reasons vary — from emotional decisions to overcomplicating strategies — but the result is the same: frustration. At tracr, we believe AI can change that.",
-      image: "/src/assets/ai-candles.jpg",
+      image: aiCandlesImg,
       author: {
         name: "tracr Team",
-        photo: "/src/assets/user-profile.jpg"
+        photo: userProfileImg
       },
       publishedDate: "2025-01-15",
       readTime: "6 min read",
@@ -45,10 +49,10 @@ const Blog = () => {
       id: 2,
       title: "The Power of Clarity in Trading",
       description: "Every trader knows the feeling: staring at charts for hours, drawing lines, juggling indicators — yet still second-guessing every move. The truth is, complexity isn't what makes you profitable. Clarity does.",
-      image: "/src/assets/ai-chatbot.jpg",
+      image: aiChatbotImg,
       author: {
         name: "tracr Team",
-        photo: "/src/assets/user-profile.jpg"
+        photo: userProfileImg
       },
       publishedDate: "2025-01-10",
       readTime: "5 min read",
@@ -76,10 +80,10 @@ const Blog = () => {
       id: 3,
       title: "The Future of Trading is AI-Powered",
       description: "For years, traders have relied on raw charts and lagging indicators. But markets move faster now, and traders need more than lines and numbers. The future of trading lies in AI — not to replace traders, but to make them smarter.",
-      image: "/src/assets/our-mission.jpg",
+      image: ourMissionImg,
       author: {
         name: "tracr Team",
-        photo: "/src/assets/user-profile.jpg"
+        photo: userProfileImg
       },
       publishedDate: "2025-01-05",
       readTime: "7 min read",
