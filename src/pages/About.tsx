@@ -82,7 +82,7 @@ const About = () => {
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               {/* Core Values Section - Left */}
-              <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="animate-fade-in mt-[calc(theme(spacing.32)+theme(spacing.8))]" style={{ animationDelay: '0.1s' }}>
                 <Card className="bg-card border-border card-hover group animate-scale-in" style={{ animationDelay: '0.2s' }}>
                   <CardContent className="p-8">
                     <div className="mb-6">
