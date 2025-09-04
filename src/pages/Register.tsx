@@ -77,7 +77,7 @@ const Register = () => {
                 </div>
 
                 <div className="bg-accent/10 rounded-lg p-6 border border-accent/20">
-                  <h4 className="text-lg font-semibold text-accent mb-2">🚀 Platform Launch Notification</h4>
+                  <h4 className="text-lg font-semibold text-accent mb-2">Platform Launch Notification</h4>
                   <p className="text-foreground">
                     We're putting the finishing touches on tracr. Register your interest now to be notified 
                     the moment we go live, plus get exclusive access to beta features and early-bird pricing.
