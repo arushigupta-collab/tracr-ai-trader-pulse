@@ -161,35 +161,64 @@ const BlogPost = () => {
       publishedDate: "2025-01-05",
       readTime: "7 min read",
       fullContent: {
-        intro: "For years, traders have relied on raw charts and lagging indicators. But markets move faster now, and traders need more than lines and numbers. The future of trading lies in AI — not to replace traders, but to make them smarter.",
+        intro: "For decades, traders have relied on charts, indicators, and gut instinct to navigate markets. While these tools have their place, the landscape has changed. Markets now move at lightning speed, influenced by everything from central bank announcements to social media sentiment. To keep up, traders need more than lines on a chart — they need AI.\n\nAt tracr, we see AI not as a replacement for traders, but as the next evolution in trading tools.",
         sections: [
           {
-            title: "The Old Way",
+            title: "The Limitations of Traditional Trading",
             content: [
               {
-                text: "Guessing based on gut feel, late signals, or crowded trading forums."
+                subtitle: "Charts Alone Aren't Enough",
+                text: "Charts show historical price action but say little about why it happened."
+              },
+              {
+                subtitle: "Indicators Lag",
+                text: "Most technical indicators are lagging. By the time they flash a signal, the move is often already in motion."
+              },
+              {
+                subtitle: "Human Bias",
+                text: "Even with the best tools, human psychology often gets in the way. Confirmation bias, fear, and greed can distort judgment."
               }
             ]
           },
           {
-            title: "The New Edge",
+            title: "How AI Is Redefining Trading",
             content: [
               {
-                text: "AI that translates complex data into clear, actionable insights — showing traders what really drives market moves."
+                text: "AI thrives where humans struggle: processing vast amounts of data quickly and objectively. In trading, this means:"
+              },
+              {
+                text: "• Analysing technical, fundamental, and sentiment data together\n• Explaining market moves in real-time\n• Highlighting patterns humans might overlook"
+              },
+              {
+                text: "tracr's AI Candle Insights are built exactly for this — transforming raw market data into clear, human-readable explanations."
               }
             ]
           },
           {
-            title: "How tracr Fits In",
+            title: "Democratizing Advanced Tools",
             content: [
               {
-                text: "With AI Candle Insights, live charts, and trader-focused analytics, tracr gives retail traders tools that once felt out of reach."
+                text: "Until now, tools this powerful were reserved for hedge funds and institutions. tracr brings them to retail traders. Whether you trade US stocks, major FX pairs, cryptocurrencies, or US indices, you'll have access to insights that help you compete on a higher level."
+              }
+            ]
+          },
+          {
+            title: "The Road Ahead",
+            content: [
+              {
+                text: "tracr's launch focuses on AI insights and analytics, but our vision goes further. Soon, traders will be able to:"
+              },
+              {
+                text: "• Backtest strategies without coding\n• Journal trades seamlessly\n• Transition from analysis to live trading in one platform"
+              },
+              {
+                text: "The goal is simple: an all-in-one environment where traders can learn, refine, and execute with confidence."
               }
             ]
           }
         ],
-        conclusion: "The future of trading is already here — and it's powered by AI. Don't get left behind.",
-        cta: "Sign up today and see behind the trade with tracr."
+        conclusion: "The future of trading won't be about who has the fastest charting software. It will be about who can understand and act on information the quickest. With AI at your side, that future is within reach.",
+        cta: "Be part of the future of trading — join tracr's waitlist today."
       }
     }
   ];
