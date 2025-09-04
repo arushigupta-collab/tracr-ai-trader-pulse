@@ -80,19 +80,20 @@ const FAQ = () => {
           </p>
         </div>
 
-        {/* FAQ Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* FAQ Accordion */}
+        <div className="space-y-4">
           {faqData.map((item, index) => (
             <Card 
               key={index}
-              className={`bg-card-gradient border-border cursor-pointer transition-all duration-300 hover:shadow-card ${
-                expandedItem === index ? 'ring-2 ring-primary/20' : ''
+              className={`bg-card border-border cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-primary/30 animate-fade-in ${
+                expandedItem === index ? 'ring-2 ring-primary/20 shadow-lg' : ''
               }`}
+              style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => toggleExpand(index)}
             >
               <CardContent className="p-6">
-                <div className="flex justify-between items-start">
-                  <h3 className="text-lg font-semibold text-foreground pr-4">
+                <div className="flex justify-between items-center">
+                  <h3 className="text-lg font-semibold text-foreground pr-4 flex-1">
                     {item.question}
                   </h3>
                   <ChevronDown 
@@ -103,13 +104,13 @@ const FAQ = () => {
                 </div>
                 
                 <div 
-                  className={`overflow-hidden transition-all duration-300 ${
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
                     expandedItem === index 
-                      ? 'max-h-96 opacity-100 mt-4' 
+                      ? 'max-h-[500px] opacity-100 mt-4' 
                       : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="text-muted-foreground">
+                  <div className="text-muted-foreground leading-relaxed">
                     {typeof item.answer === 'string' ? (
                       <p>{item.answer}</p>
                     ) : (
