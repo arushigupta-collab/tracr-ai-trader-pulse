@@ -191,53 +191,35 @@ const About = () => {
               {teamMembers.map((member, index) => (
                 <Card 
                   key={index} 
-                  className="bg-gradient-to-br from-card via-card/80 to-card/60 border-border/50 card-hover group animate-scale-in hover:animate-pulse hover:-translate-y-2 transform transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20"
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                  className="bg-gradient-to-br from-card via-card/80 to-card/60 border-border/50 card-hover group animate-scale-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <CardContent className="p-8 text-center relative overflow-hidden">
-                    {/* Floating background elements */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <div className="absolute top-4 right-4 w-8 h-8 bg-primary/20 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
-                      <div className="absolute bottom-4 left-4 w-6 h-6 bg-accent/20 rounded-full animate-bounce" style={{ animationDelay: '0.3s' }} />
-                      <div className="absolute top-1/2 left-8 w-4 h-4 bg-secondary/20 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }} />
-                    </div>
+                  <CardContent className="p-8 text-center relative">
                     
                     <div className="relative mb-6">
-                      <div className="w-24 h-24 mx-auto relative group/avatar">
-                        {/* Animated border ring */}
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 group-hover:animate-spin transition-opacity duration-300" style={{ animationDuration: '3s' }} />
-                        <div className="absolute inset-1 rounded-full bg-background" />
+                      <div className="w-24 h-24 mx-auto relative">
                         <img
                           src={member.photo}
                           alt={member.name}
-                          className="relative w-22 h-22 rounded-full object-cover border-2 border-primary/30 group-hover:border-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 transform"
+                          className="w-full h-full rounded-full object-cover border-2 border-primary/30 group-hover:border-primary transition-colors duration-300"
                         />
-                        {/* Floating sparkles */}
-                        <div className="absolute -top-2 -right-2 opacity-0 group-hover/avatar:opacity-100 transition-opacity duration-300">
-                          <div className="w-3 h-3 bg-primary rounded-full animate-ping" />
-                        </div>
-                        <div className="absolute -bottom-2 -left-2 opacity-0 group-hover/avatar:opacity-100 transition-opacity duration-300" style={{ animationDelay: '0.2s' }}>
-                          <div className="w-2 h-2 bg-accent rounded-full animate-ping" />
-                        </div>
                       </div>
                     </div>
                     
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors group-hover:animate-pulse">{member.name}</h3>
-                    <p className="text-primary font-medium text-sm mb-6 group-hover:scale-105 transition-transform duration-300">{member.role}</p>
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{member.name}</h3>
+                    <p className="text-primary font-medium text-sm mb-6">{member.role}</p>
                     
                     <div className="flex justify-center space-x-3">
                       <a
                         href={member.linkedin}
-                        className="p-3 bg-secondary/50 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-125 hover:rotate-12 transform hover:shadow-lg group-hover:animate-bounce"
-                        style={{ animationDelay: '0.1s' }}
+                        className="p-3 bg-secondary/50 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
                         aria-label={`${member.name}'s LinkedIn`}
                       >
                         <Linkedin className="h-4 w-4" />
                       </a>
                       <a
                         href={member.twitter}
-                        className="p-3 bg-secondary/50 rounded-lg hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-125 hover:-rotate-12 transform hover:shadow-lg group-hover:animate-bounce"
-                        style={{ animationDelay: '0.2s' }}
+                        className="p-3 bg-secondary/50 rounded-lg hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
                         aria-label={`${member.name}'s Twitter`}
                       >
                         <Twitter className="h-4 w-4" />
@@ -245,8 +227,7 @@ const About = () => {
                       {member.instagram && (
                         <a
                           href={member.instagram}
-                          className="p-3 bg-secondary/50 rounded-lg hover:bg-success hover:text-success-foreground transition-all duration-300 hover:scale-125 hover:rotate-12 transform hover:shadow-lg group-hover:animate-bounce"
-                          style={{ animationDelay: '0.3s' }}
+                          className="p-3 bg-secondary/50 rounded-lg hover:bg-success hover:text-success-foreground transition-all duration-300 hover:scale-110"
                           aria-label={`${member.name}'s Instagram`}
                         >
                           <Instagram className="h-4 w-4" />
