@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Linkedin, Twitter, Instagram, TrendingUp, Zap, Shield, Target, BarChart3, Brain } from 'lucide-react';
+import { Linkedin, X, Instagram, TrendingUp, Zap, Shield, Target, BarChart3, Brain } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -220,9 +220,9 @@ const About = () => {
                       <a
                         href={member.twitter}
                         className="p-3 bg-secondary/50 rounded-lg hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
-                        aria-label={`${member.name}'s Twitter`}
+                        aria-label={`${member.name}'s X`}
                       >
-                        <Twitter className="h-4 w-4" />
+                        <X className="h-4 w-4" />
                       </a>
                       {member.instagram && (
                         <a

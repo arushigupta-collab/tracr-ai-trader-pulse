@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, X, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -48,9 +48,9 @@ const Footer = () => {
               <a 
                 href="#" 
                 className="p-2 bg-secondary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Twitter"
+                aria-label="X (formerly Twitter)"
               >
-                <Twitter className="h-5 w-5" />
+                <X className="h-5 w-5" />
               </a>
             </div>
           </div>

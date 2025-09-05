@@ -100,7 +100,7 @@ const BlogPost = () => {
               },
               {
                 subtitle: "Conflicting Opinions",
-                text: "Open Twitter or YouTube and you'll find endless hot takes on where the market is going. One says \"bullish,\" another screams \"crash incoming.\" The result? Confusion and hesitation."
+                text: "Open X or YouTube and you'll find endless hot takes on where the market is going. One says \"bullish,\" another screams \"crash incoming.\" The result? Confusion and hesitation."
               },
               {
                 subtitle: "Short-Term Guesswork",
