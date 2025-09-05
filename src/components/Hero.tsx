@@ -53,7 +53,7 @@ const Hero = () => {
               </Button>
             </Link>
             <Button 
-              variant="hero-secondary" 
+              variant="hero-bw" 
               size="xl" 
               onClick={scrollToSolutions}
             >
