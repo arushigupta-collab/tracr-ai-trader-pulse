@@ -97,9 +97,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Risk Disclosure
-                </a>
+                <Link to="/cookie-policy" className="text-muted-foreground hover:text-primary transition-colors">
+                  Cookie Policy
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
