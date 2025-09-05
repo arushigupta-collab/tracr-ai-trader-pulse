@@ -11,8 +11,8 @@ const TermsOfService = () => {
           
           <div className="space-y-6 text-muted-foreground">
             <div>
-              <p><strong>Effective Date:</strong> [Insert Date]</p>
-              <p><strong>Last Updated:</strong> [Insert Date]</p>
+              <p><strong>Effective Date:</strong> 09.08.2025</p>
+              <p><strong>Last Updated:</strong> 09.08.2025</p>
             </div>
 
             <p>
