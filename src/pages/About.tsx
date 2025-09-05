@@ -47,7 +47,7 @@ const About = () => {
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="animate-fade-in">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                About <span className="text-gradient">tracr</span>
+                About <span className="text-gradient">tracr ai</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
                 Building smarter tools so every trader can see behind the trade.
@@ -66,7 +66,7 @@ const About = () => {
               </h2>
               <div className="max-w-4xl mx-auto">
                 <p className="text-xl text-foreground leading-relaxed">
-                  At tracr, we believe trading should be smarter, simpler, and more accessible. Born from years of experience in the markets, our mission is to give traders the tools they need to cut through noise and trade with confidence. By combining AI-driven insights and powerful analytics, we empower traders to understand the 'why' behind every market move. Our vision is to shorten the learning curve, reduce costly mistakes, and help every trader — from beginner to advanced — to see behind the trade.
+                  At tracr ai, we believe trading should be smarter, simpler, and more accessible. Born from years of experience in the markets, our mission is to give traders the tools they need to cut through noise and trade with confidence. By combining AI-driven insights and powerful analytics, we empower traders to understand the 'why' behind every market move. Our vision is to shorten the learning curve, reduce costly mistakes, and help every trader — from beginner to advanced — to see behind the trade.
                 </p>
               </div>
             </div>
@@ -132,7 +132,7 @@ const About = () => {
                       <h3 className="text-3xl font-bold text-foreground">Our Story</h3>
                     </div>
                     <p className="text-muted-foreground text-lg leading-relaxed">
-                      Our story began with a frustration every trader knows: strategies that work on paper often fail in practice. After years of trading and research, we realised the missing link was a platform that combined live analysis, and AI-driven insights all in one place. That vision became tracr, a platform built by traders, for traders, to help you see behind the trade.
+                      Our story began with a frustration every trader knows: strategies that work on paper often fail in practice. After years of trading and research, we realised the missing link was a platform that combined live analysis, and AI-driven insights all in one place. That vision became tracr ai, a platform built by traders, for traders, to help you see behind the trade.
                     </p>
                   </CardContent>
                 </Card>

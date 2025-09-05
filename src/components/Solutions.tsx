@@ -59,7 +59,7 @@ const Solutions = () => {
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Discover the Future of Trading with{' '}
-            <span className="text-gradient">tracr</span>
+            <span className="text-gradient">tracr ai</span>
           </h2>
         </div>
 

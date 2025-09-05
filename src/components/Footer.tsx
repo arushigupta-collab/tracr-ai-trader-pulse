@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="text-2xl font-bold text-gradient">tracr</div>
+              <div className="text-2xl font-bold text-gradient">tracr ai</div>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-md">
               Trade smarter with tracr AI. Cut out the noise and make trading decisions backed by data and insights, not emotions.
@@ -113,7 +113,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © 2025 Tracr. All rights reserved.
+            © 2025 Tracr AI. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm mt-4 md:mt-0">
             Trading involves risk. Please trade responsibly.

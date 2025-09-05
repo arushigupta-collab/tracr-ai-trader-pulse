@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tracr Trading Platform Design System
+/* Tracr AI Trading Platform Design System
 Professional financial colors, gradients, and animations
 All colors MUST be HSL.
 */
@@ -21,7 +21,7 @@ All colors MUST be HSL.
     --popover: 224 47% 9%;
     --popover-foreground: 213 27% 94%;
 
-    /* Primary brand colors - Tracr Blue */
+    /* Primary brand colors - Tracr AI Blue */
     --primary: 221 83% 53%;
     --primary-foreground: 213 27% 94%;
     --primary-glow: 221 83% 70%;

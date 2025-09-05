@@ -16,16 +16,16 @@ const BlogPost = () => {
     {
       id: 1,
       title: "Why Most Traders Lose — and How AI Can Help You Win",
-      description: "It's no secret that most retail traders lose money. The reasons vary — from emotional decisions to overcomplicating strategies — but the result is the same: frustration. At tracr, we believe AI can change that.",
+      description: "It's no secret that most retail traders lose money. The reasons vary — from emotional decisions to overcomplicating strategies — but the result is the same: frustration. At tracr ai, we believe AI can change that.",
       image: aiCandlesImg,
       author: {
-        name: "tracr Team",
+        name: "tracr ai Team",
         photo: userProfileImg
       },
       publishedDate: "2025-01-15",
       readTime: "6 min read",
       fullContent: {
-        intro: "If you've been trading for any length of time, you've probably heard the statistic: most retail traders lose money. In fact, studies consistently show that upwards of 70% of retail traders fail to achieve consistent profitability. The reasons are numerous, but at the core lies a simple truth: human decision-making is flawed.\n\nAt tracr, we believe that with the right tools — particularly those powered by artificial intelligence — traders can shift the odds back in their favour.",
+        intro: "If you've been trading for any length of time, you've probably heard the statistic: most retail traders lose money. In fact, studies consistently show that upwards of 70% of retail traders fail to achieve consistent profitability. The reasons are numerous, but at the core lies a simple truth: human decision-making is flawed.\n\nAt tracr ai, we believe that with the right tools — particularly those powered by artificial intelligence — traders can shift the odds back in their favour.",
         sections: [
           {
             title: "Why Most Traders Struggle",
@@ -51,7 +51,7 @@ const BlogPost = () => {
                 text: "AI has already transformed industries from healthcare to logistics. In trading, its potential is even greater. Rather than replacing traders, AI acts as a co-pilot — helping you understand the market and make informed decisions."
               },
               {
-                text: "With tracr's AI Candle Insights, every price movement is explained in plain language. Imagine looking at a candlestick chart and instantly seeing:"
+                text: "With tracr ai's AI Candle Insights, every price movement is explained in plain language. Imagine looking at a candlestick chart and instantly seeing:"
               },
               {
                 text: "• Which economic event or sentiment shift drove the move\n• Whether technical patterns aligned with fundamentals\n• How similar situations played out historically"
@@ -65,7 +65,7 @@ const BlogPost = () => {
             title: "Building Confidence, One Candle at a Time",
             content: [
               {
-                text: "Trading success isn't about finding a \"holy grail\" system. It's about consistency. By combining real-time insights with clear explanations, tracr helps traders:"
+                text: "Trading success isn't about finding a \"holy grail\" system. It's about consistency. By combining real-time insights with clear explanations, tracr ai helps traders:"
               },
               {
                 text: "• Learn faster by connecting cause and effect\n• Avoid impulsive trades driven by emotions\n• Build strategies based on data, not speculation"
@@ -74,7 +74,7 @@ const BlogPost = () => {
           }
         ],
         conclusion: "The statistic that most traders lose doesn't have to apply to you. With the right tools, you can trade with confidence, clarity, and consistency. AI won't replace you — but it will empower you.",
-        cta: "Join the waitlist for tracr today and start seeing behind the trade."
+        cta: "Join the waitlist for tracr ai today and start seeing behind the trade."
       }
     },
     {
@@ -83,13 +83,13 @@ const BlogPost = () => {
       description: "Every trader knows the feeling: staring at charts for hours, drawing lines, juggling indicators — yet still second-guessing every move. The truth is, complexity isn't what makes you profitable. Clarity does.",
       image: aiChatbotImg,
       author: {
-        name: "tracr Team",
+        name: "tracr ai Team",
         photo: userProfileImg
       },
       publishedDate: "2025-01-10",
       readTime: "5 min read",
       fullContent: {
-        intro: "Trading often feels like trying to solve a puzzle with missing pieces. Charts tell part of the story, indicators add another layer, and news headlines create noise that can distract more than they help. What traders truly need isn't more tools — it's clarity.\n\nThis is the philosophy behind tracr: giving traders the context they need to understand markets without drowning in complexity.",
+        intro: "Trading often feels like trying to solve a puzzle with missing pieces. Charts tell part of the story, indicators add another layer, and news headlines create noise that can distract more than they help. What traders truly need isn't more tools — it's clarity.\n\nThis is the philosophy behind tracr ai: giving traders the context they need to understand markets without drowning in complexity.",
         sections: [
           {
             title: "Why Complexity Hurts Traders",
@@ -118,7 +118,7 @@ const BlogPost = () => {
                 text: "• Why did the price move?\n• What factors influenced the candle?\n• How does this fit into the broader trend?"
               },
               {
-                text: "With tracr's AI Candle Insights, traders can see exactly that. Instead of staring at a green or red candle and guessing, you get a clear explanation that connects technical, fundamental, and sentiment data."
+                text: "With tracr ai's AI Candle Insights, traders can see exactly that. Instead of staring at a green or red candle and guessing, you get a clear explanation that connects technical, fundamental, and sentiment data."
               }
             ]
           },
@@ -137,15 +137,15 @@ const BlogPost = () => {
             ]
           },
           {
-            title: "Why tracr Is Built Around Clarity",
+            title: "Why tracr ai Is Built Around Clarity",
             content: [
               {
-                text: "Our vision isn't to overwhelm traders with endless features. It's to build the cleanest, most effective platform for learning and improving as you trade. By focusing on context, tracr ensures you make decisions with confidence rather than doubt."
+                text: "Our vision isn't to overwhelm traders with endless features. It's to build the cleanest, most effective platform for learning and improving as you trade. By focusing on context, tracr ai ensures you make decisions with confidence rather than doubt."
               }
             ]
           }
         ],
-        conclusion: "Complexity doesn't make you profitable — clarity does. By explaining the story behind every move, tracr gives traders the knowledge and confidence they need to succeed.",
+        conclusion: "Complexity doesn't make you profitable — clarity does. By explaining the story behind every move, tracr ai gives traders the knowledge and confidence they need to succeed.",
         cta: "Join our waitlist today and experience the power of AI-driven clarity."
       }
     },
@@ -155,13 +155,13 @@ const BlogPost = () => {
       description: "For years, traders have relied on raw charts and lagging indicators. But markets move faster now, and traders need more than lines and numbers. The future of trading lies in AI — not to replace traders, but to make them smarter.",
       image: ourMissionImg,
       author: {
-        name: "tracr Team",
+        name: "tracr ai Team",
         photo: userProfileImg
       },
       publishedDate: "2025-01-05",
       readTime: "7 min read",
       fullContent: {
-        intro: "For decades, traders have relied on charts, indicators, and gut instinct to navigate markets. While these tools have their place, the landscape has changed. Markets now move at lightning speed, influenced by everything from central bank announcements to social media sentiment. To keep up, traders need more than lines on a chart — they need AI.\n\nAt tracr, we see AI not as a replacement for traders, but as the next evolution in trading tools.",
+        intro: "For decades, traders have relied on charts, indicators, and gut instinct to navigate markets. While these tools have their place, the landscape has changed. Markets now move at lightning speed, influenced by everything from central bank announcements to social media sentiment. To keep up, traders need more than lines on a chart — they need AI.\n\nAt tracr ai, we see AI not as a replacement for traders, but as the next evolution in trading tools.",
         sections: [
           {
             title: "The Limitations of Traditional Trading",
@@ -190,7 +190,7 @@ const BlogPost = () => {
                 text: "• Analysing technical, fundamental, and sentiment data together\n• Explaining market moves in real-time\n• Highlighting patterns humans might overlook"
               },
               {
-                text: "tracr's AI Candle Insights are built exactly for this — transforming raw market data into clear, human-readable explanations."
+                text: "tracr ai's AI Candle Insights are built exactly for this — transforming raw market data into clear, human-readable explanations."
               }
             ]
           },
@@ -198,7 +198,7 @@ const BlogPost = () => {
             title: "Democratizing Advanced Tools",
             content: [
               {
-                text: "Until now, tools this powerful were reserved for hedge funds and institutions. tracr brings them to retail traders. Whether you trade US stocks, major FX pairs, cryptocurrencies, or US indices, you'll have access to insights that help you compete on a higher level."
+                text: "Until now, tools this powerful were reserved for hedge funds and institutions. tracr ai brings them to retail traders. Whether you trade US stocks, major FX pairs, cryptocurrencies, or US indices, you'll have access to insights that help you compete on a higher level."
               }
             ]
           },
@@ -206,7 +206,7 @@ const BlogPost = () => {
             title: "The Road Ahead",
             content: [
               {
-                text: "tracr's launch focuses on AI insights and analytics, but our vision goes further. Soon, traders will be able to:"
+                text: "tracr ai's launch focuses on AI insights and analytics, but our vision goes further. Soon, traders will be able to:"
               },
               {
                 text: "• Backtest strategies without coding\n• Journal trades seamlessly\n• Transition from analysis to live trading in one platform"
@@ -218,7 +218,7 @@ const BlogPost = () => {
           }
         ],
         conclusion: "The future of trading won't be about who has the fastest charting software. It will be about who can understand and act on information the quickest. With AI at your side, that future is within reach.",
-        cta: "Be part of the future of trading — join tracr's waitlist today."
+        cta: "Be part of the future of trading — join tracr ai's waitlist today."
       }
     }
   ];

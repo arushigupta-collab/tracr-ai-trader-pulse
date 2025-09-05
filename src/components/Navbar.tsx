@@ -48,7 +48,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center group">
             <div className="relative">
               <div className="text-2xl font-bold text-gradient tracking-tight group-hover:scale-105 transition-transform duration-300">
-                tracr
+                tracr ai
               </div>
               <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
             </div>

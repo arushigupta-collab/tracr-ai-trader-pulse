@@ -41,7 +41,7 @@ const Hero = () => {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto">
-            Tracr is an all-in-one trading and market analysis platform with every tool a trader would ever need.
+            Tracr AI is an all-in-one trading and market analysis platform with every tool a trader would ever need.
           </p>
           
 

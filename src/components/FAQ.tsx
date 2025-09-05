@@ -7,14 +7,14 @@ const FAQ = () => {
 
   const faqData = [
     {
-      question: "How much does tracr cost?",
+      question: "How much does tracr ai cost?",
       answer: (
         <div className="space-y-4">
-          <p>We offer multiple ways to access tracr — including a free option.</p>
+          <p>We offer multiple ways to access tracr ai — including a free option.</p>
           
           <div>
             <h4 className="font-semibold text-primary mb-2">Option 1 – Broker Deposit Access (Best Value)</h4>
-            <p className="mb-2">Get full platform access simply by opening a trading account with our partnered broker and making a deposit — no extra payment to tracr.</p>
+            <p className="mb-2">Get full platform access simply by opening a trading account with our partnered broker and making a deposit — no extra payment to tracr ai.</p>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground">
               <li>$500 Deposit → 1 year, Unlimited Insights</li>
               <li>$1,000 Deposit → 1 year, Unlimited Insights and new features coming soon</li>
@@ -35,18 +35,18 @@ const FAQ = () => {
       )
     },
     {
-      question: "Who can use tracr?",
-      answer: "Whether you're a beginner trying to understand the markets or an experienced trader refining complex strategies, tracr is designed to suit all skill levels."
+      question: "Who can use tracr ai?",
+      answer: "Whether you're a beginner trying to understand the markets or an experienced trader refining complex strategies, tracr ai is designed to suit all skill levels."
     },
     {
-      question: "How is tracr different from other trading platforms?",
-      answer: "Unlike traditional platforms, tracr doesn't just provide charts — it explains why the market moves. With AI Candle Insights, tracr helps traders learn, optimise, and execute with confidence."
+      question: "How is tracr ai different from other trading platforms?",
+      answer: "Unlike traditional platforms, tracr ai doesn't just provide charts — it explains why the market moves. With AI Candle Insights, tracr ai helps traders learn, optimise, and execute with confidence."
     },
     {
-      question: "What markets can I trade or test on tracr?",
+      question: "What markets can I trade or test on tracr ai?",
       answer: (
         <div className="space-y-3">
-          <p>Currently, tracr supports:</p>
+          <p>Currently, tracr ai supports:</p>
           <ul className="list-disc list-inside space-y-1 text-muted-foreground">
             <li><strong>US Stocks</strong> – full coverage of major listed companies</li>
             <li><strong>Major FX Pairs</strong> – the most liquid currency pairs in the world</li>
@@ -76,7 +76,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-muted-foreground">
-            Get answers to common questions about tracr
+            Get answers to common questions about tracr ai
           </p>
         </div>
 
