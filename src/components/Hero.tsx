@@ -48,7 +48,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Link to="/register">
-              <Button variant="hero" size="xl" className="animate-glow-pulse">
+              <Button variant="hero-bw" size="xl" className="animate-glow-pulse">
                 Register your Interest
               </Button>
             </Link>
