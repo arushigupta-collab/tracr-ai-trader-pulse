@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Brain, MessageSquare, User, Bot } from 'lucide-react';
-import aiCandlesImage from '@/assets/ai-candles.jpg';
+import aiCandleInsightsImage from '@/assets/ai-candle-insights.jpg';
 import aiChatbotImage from '@/assets/ai-chatbot.jpg';
 import userProfileImage from '@/assets/user-profile.jpg';
 
@@ -83,7 +83,7 @@ const Solutions = () => {
               {/* Chart Preview */}
               <div className="relative mb-6 rounded-lg overflow-hidden animate-fade-in hover-scale group cursor-pointer">
                 <img 
-                  src={aiCandlesImage} 
+                  src={aiCandleInsightsImage} 
                   alt="AI Candle Analysis"
                   className="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110"
                 />
