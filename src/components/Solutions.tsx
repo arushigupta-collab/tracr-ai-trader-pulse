@@ -91,13 +91,6 @@ const Solutions = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent group-hover:from-background/60 transition-all duration-500" />
                 <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                {/* Floating AI indicators */}
-                <div className="absolute top-4 right-4 animate-pulse">
-                  <div className="bg-primary/20 backdrop-blur-sm rounded-full p-2 border border-primary/30">
-                    <Brain className="h-4 w-4 text-primary" />
-                  </div>
-                </div>
-                
                 {/* Animated insight tooltip */}
                 <div className="absolute bottom-4 left-4 right-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
                   <div className="bg-background/90 backdrop-blur-sm rounded-lg p-3 border border-border animate-fade-in">
