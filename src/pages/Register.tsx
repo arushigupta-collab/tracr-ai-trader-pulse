@@ -123,12 +123,9 @@ const Register = () => {
 
             {/* Right Column - Form */}
             <div className="animate-slide-in-right">
-              <Card className="bg-card-gradient border-border shadow-card">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-center">Register Your Interest</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border">
+                <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Register Your Interest</h3>
+                <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
                       <Label htmlFor="name" className="text-sm font-medium">
                         Full Name
@@ -168,8 +165,7 @@ const Register = () => {
                       We respect your privacy and won't spam you.
                     </p>
                   </form>
-                </CardContent>
-              </Card>
+                </div>
             </div>
           </div>
         </div>
