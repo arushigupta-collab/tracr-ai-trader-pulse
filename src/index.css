@@ -107,6 +107,10 @@ All colors MUST be HSL.
   html {
     scroll-behavior: smooth;
   }
+
+  #lovable-badge {
+    display: none !important;
+  }
 }
 
 @layer components {
