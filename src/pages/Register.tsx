@@ -123,49 +123,60 @@ const Register = () => {
 
             {/* Right Column - Form */}
             <div className="animate-slide-in-right">
-              <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border">
-                <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Register Your Interest</h3>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                      <Label htmlFor="name" className="text-sm font-medium">
-                        Full Name
-                      </Label>
-                      <Input
-                        id="name"
-                        type="text"
-                        placeholder="Enter your full name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="mt-1"
-                        required
-                      />
-                    </div>
+              <div className="bg-card/50 backdrop-blur-sm rounded-lg p-8 border border-border h-full">
+                <h3 className="text-xl font-semibold text-foreground mb-6 text-center">Register Your Interest</h3>
+                
+                <div className="mb-8">
+                  <p className="text-muted-foreground text-center leading-relaxed">
+                    Join thousands of traders who are waiting for tracr's launch. Be the first to access our revolutionary AI-powered trading platform.
+                  </p>
+                </div>
 
-                    <div>
-                      <Label htmlFor="email" className="text-sm font-medium">
-                        Email Address
-                      </Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="Enter your email address"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="mt-1"
-                        required
-                      />
-                    </div>
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  <div>
+                    <Label htmlFor="name" className="text-sm font-medium">
+                      Full Name
+                    </Label>
+                    <Input
+                      id="name"
+                      type="text"
+                      placeholder="Enter your full name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="mt-2 h-12"
+                      required
+                    />
+                  </div>
 
-                    <Button type="submit" variant="hero" size="lg" className="w-full" disabled={isSubmitting}>
+                  <div>
+                    <Label htmlFor="email" className="text-sm font-medium">
+                      Email Address
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="Enter your email address"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="mt-2 h-12"
+                      required
+                    />
+                  </div>
+
+                  <div className="pt-4">
+                    <Button type="submit" variant="hero" size="lg" className="w-full h-12" disabled={isSubmitting}>
                       {isSubmitting ? "Registering..." : "Register Interest"}
                     </Button>
+                  </div>
 
-                    <p className="text-xs text-muted-foreground text-center">
+                  <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
+                    <p className="text-xs text-muted-foreground text-center leading-relaxed">
                       By registering, you agree to receive updates about tracr's launch. 
-                      We respect your privacy and won't spam you.
+                      We respect your privacy and won't spam you. You can unsubscribe at any time.
                     </p>
-                  </form>
-                </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
