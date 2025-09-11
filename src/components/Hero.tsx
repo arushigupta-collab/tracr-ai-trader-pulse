@@ -34,13 +34,13 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight px-2">
             One Platform, Endless{' '}
             <span className="text-gradient">Trading Possibilities</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto px-4">
             Tracr AI is an all-in-one trading and market analysis platform with every tool a trader would ever need.
           </p>
           

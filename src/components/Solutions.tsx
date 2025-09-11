@@ -57,14 +57,14 @@ const Solutions = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4">
             Discover the Future of Trading with{' '}
             <span className="text-gradient">tracr ai</span>
           </h2>
         </div>
 
         {/* Solutions Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* AI Candle Insights */}
           <Card className="bg-card-gradient border-border card-hover group h-full">
             <CardContent className="p-8 h-full flex flex-col">

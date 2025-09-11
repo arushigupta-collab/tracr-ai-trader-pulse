@@ -71,11 +71,11 @@ const FAQ = () => {
     <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary/20">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-16 animate-fade-in px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-lg sm:text-xl text-muted-foreground">
             Get answers to common questions about tracr ai
           </p>
         </div>
