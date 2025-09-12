@@ -13,15 +13,6 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-hero">
-        <div 
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        />
         <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
       </div>
 
@@ -35,13 +26,13 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight px-2">
-            One Platform, Endless{' '}
-            <span className="text-gradient">Trading Possibilities</span>
+            THE FUTURE OF TRADING{' '}
+            <span className="text-gradient">STARTS HERE</span>
           </h1>
 
           {/* Subheading */}
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto px-4">
-            Tracr AI is an all-in-one trading and market analysis platform with every tool a trader would ever need.
+            See behind the trade. Trade ahead of the market.
           </p>
           
 
