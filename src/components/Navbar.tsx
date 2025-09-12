@@ -11,23 +11,27 @@ const Navbar = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'FAQs', href: '#faq' },
+    { name: 'FAQs', href: '/#faq' },
     { name: 'Blog', href: '/blog' },
   ];
 
   const isActive = (href: string) => {
-    if (href === '#faq') {
+    if (href === '/#faq') {
       return location.pathname === '/' && location.hash === '#faq';
     }
     return location.pathname === href;
   };
 
   const handleNavClick = (href: string) => {
-    if (href === '#faq') {
-      const faqElement = document.getElementById('faq');
-      if (faqElement) {
-        faqElement.scrollIntoView({ behavior: 'smooth' });
+    if (href === '/#faq') {
+      if (location.pathname === '/') {
+        // Already on homepage, just scroll to FAQ
+        const faqElement = document.getElementById('faq');
+        if (faqElement) {
+          faqElement.scrollIntoView({ behavior: 'smooth' });
+        }
       }
+      // If not on homepage, Link will handle navigation to /#faq
     }
   };
 
@@ -66,7 +70,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              item.href.startsWith('#') ? (
+              item.href === '/#faq' && location.pathname === '/' ? (
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
@@ -135,7 +139,7 @@ const Navbar = () => {
           <div className="bg-background/70 backdrop-blur-xl border border-border/30 rounded-lg mx-4 mt-2 shadow-xl overflow-hidden">
             <div className="py-4">
               {navigation.map((item, index) => (
-                item.href.startsWith('#') ? (
+                item.href === '/#faq' && location.pathname === '/' ? (
                   <button
                     key={item.name}
                     onClick={() => {
