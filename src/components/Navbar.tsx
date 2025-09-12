@@ -11,15 +11,24 @@ const Navbar = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'FAQs', href: '/#faq' },
+    { name: 'FAQs', href: '#faq' },
     { name: 'Blog', href: '/blog' },
   ];
 
   const isActive = (href: string) => {
-    if (href === '/#faq') {
+    if (href === '#faq') {
       return location.pathname === '/' && location.hash === '#faq';
     }
     return location.pathname === href;
+  };
+
+  const handleNavClick = (href: string) => {
+    if (href === '#faq') {
+      const faqElement = document.getElementById('faq');
+      if (faqElement) {
+        faqElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   // Handle scroll effect for background transparency
@@ -48,7 +57,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center group">
             <div className="relative">
               <div className="text-2xl font-bold text-gradient tracking-tight group-hover:scale-105 transition-transform duration-300">
-                tracr ai
+                tracr AI
               </div>
               <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
             </div>
@@ -57,18 +66,33 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`relative text-base font-medium transition-all duration-300 hover:text-primary group px-3 py-2 ${
-                  isActive(item.href) ? 'text-primary' : 'text-foreground/80 hover:text-foreground'
-                }`}
-              >
-                {item.name}
-                <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-primary transform transition-transform duration-300 origin-left rounded-full ${
-                  isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                }`}></span>
-              </Link>
+              item.href.startsWith('#') ? (
+                <button
+                  key={item.name}
+                  onClick={() => handleNavClick(item.href)}
+                  className={`relative text-base font-medium transition-all duration-300 hover:text-primary group px-3 py-2 ${
+                    isActive(item.href) ? 'text-primary' : 'text-foreground/80 hover:text-foreground'
+                  }`}
+                >
+                  {item.name}
+                  <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-primary transform transition-transform duration-300 origin-left rounded-full ${
+                    isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  }`}></span>
+                </button>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`relative text-base font-medium transition-all duration-300 hover:text-primary group px-3 py-2 ${
+                    isActive(item.href) ? 'text-primary' : 'text-foreground/80 hover:text-foreground'
+                  }`}
+                >
+                  {item.name}
+                  <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-primary transform transition-transform duration-300 origin-left rounded-full ${
+                    isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  }`}></span>
+                </Link>
+              )
             ))}
           </div>
 
@@ -111,19 +135,37 @@ const Navbar = () => {
           <div className="bg-background/70 backdrop-blur-xl border border-border/30 rounded-lg mx-4 mt-2 shadow-xl overflow-hidden">
             <div className="py-4">
               {navigation.map((item, index) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`block px-6 py-3 text-lg font-medium transition-all duration-300 border-l-4 ${
-                    isActive(item.href) 
-                      ? 'text-primary border-primary bg-primary/5' 
-                      : 'text-foreground/80 border-transparent hover:text-primary hover:border-primary/50 hover:bg-primary/5'
-                  }`}
-                  style={{ animationDelay: `${index * 50}ms` }}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                item.href.startsWith('#') ? (
+                  <button
+                    key={item.name}
+                    onClick={() => {
+                      handleNavClick(item.href);
+                      setIsOpen(false);
+                    }}
+                    className={`w-full text-left block px-6 py-3 text-lg font-medium transition-all duration-300 border-l-4 ${
+                      isActive(item.href) 
+                        ? 'text-primary border-primary bg-primary/5' 
+                        : 'text-foreground/80 border-transparent hover:text-primary hover:border-primary/50 hover:bg-primary/5'
+                    }`}
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`block px-6 py-3 text-lg font-medium transition-all duration-300 border-l-4 ${
+                      isActive(item.href) 
+                        ? 'text-primary border-primary bg-primary/5' 
+                        : 'text-foreground/80 border-transparent hover:text-primary hover:border-primary/50 hover:bg-primary/5'
+                    }`}
+                    style={{ animationDelay: `${index * 50}ms` }}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
               <div className="px-6 pt-4 pb-2">
                 <Link to="/register" onClick={() => setIsOpen(false)}>

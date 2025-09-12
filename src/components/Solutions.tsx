@@ -7,7 +7,8 @@ import userProfileImage from '@/assets/user-profile.jpg';
 
 const Solutions = () => {
   const [activeInsight, setActiveInsight] = useState(0);
-  const [chatMessages, setChatMessages] = useState<Array<{id: number, sender: 'user' | 'ai', message: string, visible: boolean}>>([]);
+  const [chatMessages, setChatMessages] = useState<Array<{id: number, sender: 'user' | 'AI', message: string, visible: boolean}>>([]);
+  const [candleInsights, setCandleInsights] = useState<Array<{id: number, type: string, message: string, visible: boolean}>>([]);
 
   const insights = [
     "JPY Bullish: BOJ's Kimino comments 'Appropriate to raise rates'",
@@ -17,9 +18,16 @@ const Solutions = () => {
 
   const chatConversation = [
     { id: 1, sender: 'user' as const, message: "What is a Doji candle?" },
-    { id: 2, sender: 'ai' as const, message: "A Doji candlestick is a common pattern in technical analysis that signals indecision in the market." },
+    { id: 2, sender: 'AI' as const, message: "A Doji candlestick is a common pattern in technical analysis that signals indecision in the market." },
     { id: 3, sender: 'user' as const, message: "Where did this happen on the chart?" },
-    { id: 4, sender: 'ai' as const, message: "A Doji candle appeared on 24th August 2025." }
+    { id: 4, sender: 'AI' as const, message: "A Doji candle appeared on 24th August 2025." }
+  ];
+
+  const candleInsightSequence = [
+    { id: 1, type: 'pattern', message: "Doji pattern detected - Market indecision" },
+    { id: 2, type: 'volume', message: "Volume spike confirms breakout potential" },
+    { id: 3, type: 'trend', message: "Bullish momentum building - RSI oversold" },
+    { id: 4, type: 'support', message: "Strong support at 1.2450 level" }
   ];
 
   useEffect(() => {
@@ -52,6 +60,28 @@ const Solutions = () => {
     return () => clearInterval(resetInterval);
   }, []);
 
+  useEffect(() => {
+    const startCandleAnimation = () => {
+      setCandleInsights([]);
+      
+      candleInsightSequence.forEach((insight, index) => {
+        setTimeout(() => {
+          setCandleInsights(prev => [...prev, { ...insight, visible: true }]);
+        }, index * 2500);
+      });
+    };
+
+    // Start initial animation
+    startCandleAnimation();
+
+    // Reset and restart animation every 15 seconds
+    const resetInterval = setInterval(() => {
+      startCandleAnimation();
+    }, 15000);
+
+    return () => clearInterval(resetInterval);
+  }, []);
+
   return (
     <section id="solutions" className="py-24 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
@@ -59,7 +89,7 @@ const Solutions = () => {
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4">
             Discover the Future of Trading with{' '}
-            <span className="text-gradient">tracr ai</span>
+            <span className="text-gradient">tracr AI</span>
           </h2>
         </div>
 
@@ -80,22 +110,40 @@ const Solutions = () => {
                 </div>
               </div>
 
-              {/* Chart Preview */}
+              {/* Chart Preview with Animated Insights */}
               <div className="relative mb-6 rounded-lg overflow-hidden animate-fade-in animate-scale-in hover-scale group cursor-pointer">
                 <img 
                   src={aiCandleInsightsImage} 
                   alt="AI Candle Analysis"
-                  className="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110 animate-pulse"
-                  style={{ animationDuration: '3s' }}
+                  className="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent group-hover:from-background/60 transition-all duration-500" />
                 <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                {/* Animated insight tooltip */}
+                {/* Animated insights overlay */}
+                <div className="absolute top-4 left-4 right-4 space-y-2">
+                  {candleInsights.map((insight, index) => (
+                    <div 
+                      key={insight.id}
+                      className="bg-background/90 backdrop-blur-sm rounded-lg p-3 border border-border animate-fade-in transform translate-x-full opacity-0"
+                      style={{ 
+                        animationDelay: `${index * 0.5}s`,
+                        animation: `fade-in 0.5s ease-out ${index * 2.5}s forwards, slide-in-right 0.5s ease-out ${index * 2.5}s forwards`
+                      }}
+                    >
+                      <p className="text-sm text-foreground">
+                        <span className="text-primary font-medium">AI {insight.type}:</span> {insight.message}
+                        <span className="animate-pulse text-accent ml-2">●</span>
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Static hover tooltip */}
                 <div className="absolute bottom-4 left-4 right-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
                   <div className="bg-background/90 backdrop-blur-sm rounded-lg p-3 border border-border animate-fade-in">
                     <p className="text-sm text-foreground">
-                      <span className="text-primary font-medium">AI Insight:</span> Bullish momentum detected - 
+                      <span className="text-primary font-medium">AI Insight:</span> Hover over any candle for real-time analysis
                       <span className="animate-pulse text-accent"> Live Analysis</span>
                     </p>
                   </div>

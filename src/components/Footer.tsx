@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="text-2xl font-bold text-gradient">tracr ai</div>
+              <div className="text-2xl font-bold text-gradient">tracr AI</div>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-md">
               Trade smarter with tracr AI. Cut out the noise and make trading decisions backed by data and insights, not emotions.
