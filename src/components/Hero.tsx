@@ -12,8 +12,8 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-hero">
-        <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-hero">
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
       </div>
 
       {/* Content */}
@@ -25,13 +25,13 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight px-2">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight px-2 text-white">
             THE FUTURE OF TRADING{' '}
-            <span className="text-gradient">STARTS HERE</span>
+            <span className="text-white/90">STARTS HERE</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto px-4">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-12 max-w-4xl mx-auto px-4">
             See behind the trade. Trade ahead of the market.
           </p>
           
@@ -39,13 +39,14 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Link to="/register">
-              <Button variant="hero-bw" size="xl" className="animate-glow-pulse">
+              <Button variant="default" size="xl" className="bg-white text-blue-600 hover:bg-white/90 animate-glow-pulse">
                 Register your Interest
               </Button>
             </Link>
             <Button 
-              variant="hero-bw" 
+              variant="outline" 
               size="xl" 
+              className="border-white text-white hover:bg-white hover:text-blue-600"
               onClick={scrollToSolutions}
             >
               Explore Services
@@ -56,7 +57,7 @@ const Hero = () => {
           <div className="animate-bounce">
             <ChevronDown 
               size={32} 
-              className="mx-auto text-primary cursor-pointer hover:text-primary-glow transition-colors"
+              className="mx-auto text-white cursor-pointer hover:text-white/80 transition-colors"
               onClick={scrollToSolutions}
             />
           </div>

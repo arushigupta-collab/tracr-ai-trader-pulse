@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import tracrLogo from '@/assets/tracr-logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,9 +61,11 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <div className="relative">
-              <div className="text-2xl font-bold text-gradient tracking-tight group-hover:scale-105 transition-transform duration-300">
-                tracr AI
-              </div>
+              <img 
+                src={tracrLogo} 
+                alt="tracr AI" 
+                className="h-8 w-auto group-hover:scale-105 transition-all duration-300 group-hover:brightness-110"
+              />
               <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
             </div>
           </Link>
