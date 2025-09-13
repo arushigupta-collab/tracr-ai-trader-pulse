@@ -64,7 +64,7 @@ const Navbar = () => {
               <img 
                 src={tracrLogo} 
                 alt="tracr AI" 
-                className="h-8 w-auto group-hover:scale-105 transition-all duration-300 group-hover:brightness-110"
+                className="h-8 w-auto group-hover:scale-110 transition-all duration-500 group-hover:brightness-110 animate-pulse group-hover:animate-none group-hover:drop-shadow-lg"
               />
               <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
             </div>
