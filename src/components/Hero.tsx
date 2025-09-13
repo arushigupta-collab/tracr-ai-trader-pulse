@@ -26,11 +26,8 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight px-2 text-white animate-fade-in">
-            <span className="inline-block animate-slide-in-right animation-delay-200">THE</span>{' '}
-            <span className="inline-block animate-slide-in-right animation-delay-400">FUTURE</span>{' '}
-            <span className="inline-block animate-slide-in-right animation-delay-600">OF</span>{' '}
-            <span className="inline-block animate-slide-in-right animation-delay-800">TRADING</span>{' '}
-            <span className="inline-block text-white/90 animate-scale-in animation-delay-1000">STARTS HERE</span>
+            THE FUTURE OF TRADING{' '}
+            <span className="text-white/90">STARTS HERE</span>
           </h1>
 
           {/* Subheading */}
@@ -47,9 +44,9 @@ const Hero = () => {
               </Button>
             </Link>
             <Button 
-              variant="outline" 
+              variant="default" 
               size="xl" 
-              className="border-white text-white hover:bg-white hover:text-blue-600"
+              className="bg-white text-blue-600 hover:bg-white/90"
               onClick={scrollToSolutions}
             >
               Explore Services
