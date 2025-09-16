@@ -7,14 +7,14 @@ const CurvedArrow = ({ className = '' }: CurvedArrowProps) => {
     <div className={`flex justify-center py-12 ${className}`}>
       <svg
         width="80"
-        height="120"
-        viewBox="0 0 80 120"
+        height="180"
+        viewBox="0 0 80 180"
         fill="none"
         className="animate-float hover:scale-110 transition-transform duration-300"
       >
         {/* Curved flowing path */}
         <path
-          d="M40 10 C20 25, 60 35, 30 55 C15 70, 45 75, 40 95"
+          d="M40 10 C20 30, 60 50, 30 80 C15 100, 45 120, 35 140 C30 155, 50 160, 40 170"
           stroke="url(#gradient)"
           strokeWidth="3"
           fill="none"
@@ -24,7 +24,7 @@ const CurvedArrow = ({ className = '' }: CurvedArrowProps) => {
         
         {/* Arrow head */}
         <path
-          d="M35 90 L40 95 L45 90 M37 92 L40 95 L43 92"
+          d="M35 165 L40 170 L45 165 M37 167 L40 170 L43 167"
           stroke="url(#gradient)"
           strokeWidth="3"
           strokeLinecap="round"
