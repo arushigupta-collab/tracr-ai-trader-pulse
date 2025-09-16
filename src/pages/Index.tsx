@@ -5,6 +5,7 @@ import Solutions from '@/components/Solutions';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import SectionArrow from '@/components/SectionArrow';
+import CurvedArrow from '@/components/CurvedArrow';
 
 const Index = () => {
   // Handle FAQ scroll when coming from other pages
@@ -24,7 +25,7 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <Hero />
-        <SectionArrow variant="glow" />
+        <CurvedArrow />
         <Solutions />
         <SectionArrow variant="bounce" />
         <FAQ />
