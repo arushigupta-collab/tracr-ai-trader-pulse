@@ -88,8 +88,8 @@ const Solutions = () => {
         {/* Section Header */}
         <div className="text-center mb-20 animate-fade-in space-y-6">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-            Discover the Future of Trading with{' '}
-            <span className="bg-gradient-to-r from-pantone-190 via-pantone-298 to-pantone-715 bg-clip-text text-transparent">tracr AI</span>
+            ENHANCE DECISION MAKING WITH{' '}
+            <span className="text-pantone-298">tracr AI</span>
           </h2>
           <p className="text-xl text-muted-foreground/80 max-w-3xl mx-auto leading-relaxed">
             Cutting-edge AI technology that transforms how you understand and trade the markets
