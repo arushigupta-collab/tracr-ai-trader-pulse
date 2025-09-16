@@ -117,6 +117,10 @@ const Solutions = () => {
                 </div>
               </div>
 
+              <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light mb-6">
+                No more guessing. No more staring at charts in confusion. Just clear, AI-powered breakdowns that help you trade, invest, and learn faster than ever.
+              </p>
+
               {/* Chart Preview with Animated Insights */}
               <div className="relative mb-8 rounded-2xl overflow-hidden animate-fade-in group cursor-pointer">
                 <img 
@@ -167,9 +171,6 @@ const Solutions = () => {
                     <span className="text-pantone-298 font-semibold">AI Insight:</span> Hover over any candle for real-time, context-driven analysis.
                   </p>
                 </div>
-                <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light border-t border-white/10 pt-4">
-                  No more guessing. No more staring at charts in confusion. Just clear, AI-powered breakdowns that help you trade, invest, and learn faster than ever.
-                </p>
               </div>
             </CardContent>
           </Card>
