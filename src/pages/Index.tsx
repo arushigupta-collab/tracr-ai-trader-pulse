@@ -25,7 +25,6 @@ const Index = () => {
         <Hero />
         <SectionArrow variant="glow" />
         <FAQ />
-        <SectionArrow variant="bounce" />
         <Footer />
       </div>
     </div>
