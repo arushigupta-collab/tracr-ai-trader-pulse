@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import newLogo from '@/assets/new-logo.png';
+import vantageLogo from '@/assets/vantage-logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,14 +59,31 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
+          {/* Logo and Partnership */}
           <Link to="/" className="flex items-center group">
-            <div className="relative">
-              <img 
-                src={newLogo} 
-                alt="Logo" 
-                className="h-16 w-auto group-hover:scale-105 transition-all duration-300 group-hover:brightness-110 animate-fade-in cursor-pointer"
-              />
+            <div className="flex items-center space-x-4">
+              {/* Main Logo */}
+              <div className="relative">
+                <img 
+                  src={newLogo} 
+                  alt="Tracr Logo" 
+                  className="h-16 w-auto group-hover:scale-105 transition-all duration-300 group-hover:brightness-110 animate-fade-in cursor-pointer"
+                />
+              </div>
+              
+              {/* Partnership Section */}
+              <div className="hidden sm:flex items-center space-x-3">
+                <div className="text-xs text-muted-foreground/70 font-medium">
+                  Proudly partnered with
+                </div>
+                <div className="relative">
+                  <img 
+                    src={vantageLogo} 
+                    alt="Vantage Markets Logo" 
+                    className="h-8 w-auto group-hover:scale-105 transition-all duration-300 opacity-90 group-hover:opacity-100"
+                  />
+                </div>
+              </div>
             </div>
           </Link>
 
