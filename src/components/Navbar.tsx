@@ -64,7 +64,7 @@ const Navbar = () => {
               <img 
                 src={newLogo} 
                 alt="Logo" 
-                className="h-12 w-auto group-hover:scale-105 transition-all duration-300 group-hover:brightness-110 animate-fade-in cursor-pointer"
+                className="h-16 w-auto group-hover:scale-105 transition-all duration-300 group-hover:brightness-110 animate-fade-in cursor-pointer"
               />
             </div>
           </Link>
