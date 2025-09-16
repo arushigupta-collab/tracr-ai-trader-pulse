@@ -306,8 +306,8 @@ const Hero = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="animate-bounce text-center">
-          <ChevronDown 
+        <div className="animate-bounce text-center mt-8">
+          <ChevronDown
             size={28} 
             className="mx-auto text-white/60 cursor-pointer hover:text-white/90 transition-all duration-300 hover:scale-110"
             onClick={scrollToFAQ}

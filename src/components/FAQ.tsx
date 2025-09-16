@@ -68,7 +68,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-32 px-6 sm:px-8 lg:px-12">
+    <section id="faq" className="py-16 px-6 sm:px-8 lg:px-12">
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20 animate-fade-in space-y-6">
