@@ -83,8 +83,7 @@ const Solutions = () => {
   }, []);
 
   return (
-    <section id="solutions" className="relative py-32 px-6 sm:px-8 lg:px-12 bg-gradient-hero">
-      <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
+    <section id="solutions" className="relative py-32 px-6 sm:px-8 lg:px-12">
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20 animate-fade-in space-y-6">
