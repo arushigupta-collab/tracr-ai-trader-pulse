@@ -9,84 +9,65 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dark theme base colors */
-    --background: 222 47% 7%;
-    --foreground: 213 27% 94%;
+    /* Blue gradient theme matching landing page */
+    --background: 220 90% 15%;
+    --foreground: 0 0% 100%;
 
-    /* Card colors */
-    --card: 224 47% 9%;
-    --card-foreground: 213 27% 94%;
+    /* Card colors with blue theme */
+    --card: 220 85% 18%;
+    --card-foreground: 0 0% 100%;
 
     /* Popover colors */
-    --popover: 224 47% 9%;
-    --popover-foreground: 213 27% 94%;
+    --popover: 220 85% 18%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Pantone Color System */
-    /* PANTONE 171 C - Bright Orange/Red */
-    --pantone-171: 11 92% 55%;
-    --pantone-171-foreground: 213 27% 94%;
+    /* Blue color system */
+    --blue-light: 200 80% 60%;
+    --blue-medium: 210 85% 50%;
+    --blue-dark: 220 90% 40%;
+    --blue-darker: 230 95% 30%;
     
-    /* PANTONE 190 C - Bright Pink/Magenta */
-    --pantone-190: 330 92% 65%;
-    --pantone-190-foreground: 213 27% 94%;
-    
-    /* PANTONE 298 C - Cyan Blue */
-    --pantone-298: 193 100% 55%;
-    --pantone-298-foreground: 213 27% 94%;
-    
-    /* PANTONE 426 C - Warm Gray */
-    --pantone-426: 30 8% 65%;
-    --pantone-426-foreground: 222 47% 7%;
-    
-    /* PANTONE 432 C - Cool Gray */
-    --pantone-432: 210 8% 55%;
-    --pantone-432-foreground: 213 27% 94%;
-    
-    /* PANTONE 715 C - Peach/Coral */
-    --pantone-715: 15 85% 75%;
-    --pantone-715-foreground: 222 47% 7%;
+    /* Primary brand colors using blue theme */
+    --primary: 210 85% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 200 80% 60%;
 
-    /* Primary brand colors using Pantone 298 C */
-    --primary: 193 100% 55%;
-    --primary-foreground: 213 27% 94%;
-    --primary-glow: 193 100% 70%;
-
-    /* Secondary colors using Pantone 432 C */
-    --secondary: 210 8% 55%;
-    --secondary-foreground: 213 27% 94%;
+    /* Secondary colors using darker blue */
+    --secondary: 220 90% 40%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Muted colors */
-    --muted: 215 27% 16%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 220 85% 25%;
+    --muted-foreground: 0 0% 80%;
 
-    /* Accent colors using Pantone 190 C */
-    --accent: 330 92% 65%;
-    --accent-foreground: 213 27% 94%;
+    /* Accent colors using lighter blue */
+    --accent: 200 80% 60%;
+    --accent-foreground: 220 90% 15%;
 
     /* Success and error colors */
     --success: 142 76% 36%;
-    --success-foreground: 213 27% 94%;
+    --success-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 213 27% 94%;
+    --destructive-foreground: 0 0% 100%;
 
     /* Border and input colors */
-    --border: 215 27% 16%;
-    --input: 215 27% 16%;
-    --ring: 221 83% 53%;
+    --border: 220 85% 25%;
+    --input: 220 85% 25%;
+    --ring: 210 85% 50%;
 
-    /* Gradients using Pantone colors */
-    --gradient-primary: linear-gradient(135deg, hsl(193 100% 55%), hsl(330 92% 65%));
+    /* Blue gradients matching landing page */
+    --gradient-primary: linear-gradient(135deg, hsl(200 80% 60%), hsl(210 85% 50%));
     --gradient-hero: linear-gradient(135deg, hsl(200 80% 60%) 0%, hsl(210 85% 50%) 30%, hsl(220 90% 40%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(224 47% 9%) 0%, hsl(215 27% 12%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(11 92% 55%), hsl(15 85% 75%));
-    --gradient-text: linear-gradient(135deg, hsl(193 100% 55%), hsl(330 92% 65%), hsl(15 85% 75%));
+    --gradient-card: linear-gradient(145deg, hsl(220 85% 18%) 0%, hsl(220 85% 22%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(200 80% 60%), hsl(210 85% 50%));
+    --gradient-text: linear-gradient(135deg, hsl(200 80% 60%), hsl(210 85% 50%), hsl(220 90% 40%));
     
-    /* Shadows and glows using Pantone colors */
-    --shadow-primary: 0 10px 40px -10px hsl(193 100% 55% / 0.3);
-    --shadow-card: 0 8px 32px -8px hsl(222 47% 4% / 0.3);
-    --shadow-soft: 0 4px 16px -4px hsl(222 47% 4% / 0.1);
-    --glow-primary: 0 0 60px hsl(193 100% 55% / 0.4);
-    --glow-accent: 0 0 40px hsl(15 85% 75% / 0.3);
+    /* Shadows and glows using blue colors */
+    --shadow-primary: 0 10px 40px -10px hsl(210 85% 50% / 0.3);
+    --shadow-card: 0 8px 32px -8px hsl(220 90% 15% / 0.3);
+    --shadow-soft: 0 4px 16px -4px hsl(220 90% 15% / 0.1);
+    --glow-primary: 0 0 60px hsl(210 85% 50% / 0.4);
+    --glow-accent: 0 0 40px hsl(200 80% 60% / 0.3);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -94,33 +75,26 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 85% 18%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 210 85% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 85% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 85% 25%;
+    --sidebar-ring: 210 85% 50%;
   }
 
-  /* Light theme - minimal for financial platforms */
+  /* Light theme with blue accents */
   .light {
-    --background: 213 27% 94%;
-    --foreground: 222 47% 7%;
-    --card: 213 27% 96%;
-    --card-foreground: 222 47% 7%;
-    --border: 213 27% 85%;
-    --input: 213 27% 85%;
-    --gradient-hero: linear-gradient(135deg, hsl(213 27% 94%) 0%, hsl(213 27% 88%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(213 27% 96%) 0%, hsl(213 27% 92%) 100%);
+    --background: 0 0% 100%;
+    --foreground: 220 90% 15%;
+    --card: 0 0% 98%;
+    --card-foreground: 220 90% 15%;
+    --border: 220 85% 90%;
+    --input: 220 85% 90%;
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 85% 95%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 98%) 0%, hsl(220 85% 95%) 100%);
   }
 }
 
