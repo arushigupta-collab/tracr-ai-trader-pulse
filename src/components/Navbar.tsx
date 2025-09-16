@@ -64,40 +64,33 @@ const Navbar = () => {
               <img 
                 src={newLogo} 
                 alt="Logo" 
-                className="h-12 w-auto group-hover:scale-125 transition-all duration-700 group-hover:brightness-125 animate-fade-in group-hover:drop-shadow-2xl group-hover:rotate-3 cursor-pointer"
+                className="h-8 w-auto group-hover:scale-105 transition-all duration-300 group-hover:brightness-110 animate-fade-in cursor-pointer"
               />
-              <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navigation.map((item) => (
               item.href === '/#faq' && location.pathname === '/' ? (
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className={`relative text-base font-medium transition-all duration-300 hover:text-primary group px-3 py-2 ${
-                    isActive(item.href) ? 'text-primary' : 'text-foreground/80 hover:text-foreground'
+                  className={`relative text-sm font-normal transition-all duration-300 hover:text-primary group px-2 py-1 ${
+                    isActive(item.href) ? 'text-primary' : 'text-foreground/90 hover:text-foreground'
                   }`}
                 >
                   {item.name}
-                  <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-primary transform transition-transform duration-300 origin-left rounded-full ${
-                    isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                  }`}></span>
                 </button>
               ) : (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`relative text-base font-medium transition-all duration-300 hover:text-primary group px-3 py-2 ${
-                    isActive(item.href) ? 'text-primary' : 'text-foreground/80 hover:text-foreground'
+                  className={`relative text-sm font-normal transition-all duration-300 hover:text-primary group px-2 py-1 ${
+                    isActive(item.href) ? 'text-primary' : 'text-foreground/90 hover:text-foreground'
                   }`}
                 >
                   {item.name}
-                  <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-primary transform transition-transform duration-300 origin-left rounded-full ${
-                    isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                  }`}></span>
                 </Link>
               )
             ))}
@@ -109,9 +102,9 @@ const Navbar = () => {
               <Button 
                 variant="default" 
                 size="sm"
-                className="bg-black hover:bg-gray-800 text-white font-medium px-6 py-2 rounded-lg hover:scale-105 hover:shadow-lg transition-all duration-300"
+                className="bg-primary hover:bg-primary/90 text-white font-medium px-4 py-2 rounded-lg transition-all duration-300 text-sm"
               >
-                Register Interest
+                Start Now
               </Button>
             </Link>
           </div>
@@ -149,7 +142,7 @@ const Navbar = () => {
                       handleNavClick(item.href);
                       setIsOpen(false);
                     }}
-                    className={`w-full text-left block px-6 py-3 text-lg font-medium transition-all duration-300 border-l-4 ${
+                    className={`w-full text-left block px-6 py-3 text-base font-normal transition-all duration-300 border-l-4 ${
                       isActive(item.href) 
                         ? 'text-primary border-primary bg-primary/5' 
                         : 'text-foreground/80 border-transparent hover:text-primary hover:border-primary/50 hover:bg-primary/5'
@@ -162,7 +155,7 @@ const Navbar = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`block px-6 py-3 text-lg font-medium transition-all duration-300 border-l-4 ${
+                    className={`block px-6 py-3 text-base font-normal transition-all duration-300 border-l-4 ${
                       isActive(item.href) 
                         ? 'text-primary border-primary bg-primary/5' 
                         : 'text-foreground/80 border-transparent hover:text-primary hover:border-primary/50 hover:bg-primary/5'
@@ -179,9 +172,9 @@ const Navbar = () => {
                   <Button 
                     variant="default" 
                     size="sm" 
-                    className="w-full bg-black hover:bg-gray-800 text-white font-medium"
+                    className="w-full bg-primary hover:bg-primary/90 text-white font-medium text-sm"
                   >
-                    Register Interest
+                    Start Now
                   </Button>
                 </Link>
               </div>
