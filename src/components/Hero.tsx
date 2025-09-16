@@ -7,11 +7,11 @@ import { useState, useEffect } from 'react';
 const Hero = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const texts = [
-    "See Behind the Trade",
-    "See Behind the Market", 
-    "See Behind the Investment",
-    "See Behind the Strategy",
-    "See Behind the Opportunity"
+    "Trade",
+    "Market", 
+    "Investment",
+    "Strategy",
+    "Opportunity"
   ];
 
   useEffect(() => {
@@ -44,6 +44,7 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight px-2 text-white animate-fade-in hover:scale-105 hover:text-blue-200 transition-all duration-500 cursor-pointer hover:drop-shadow-2xl">
+            See Behind the{' '}
             <span 
               key={currentTextIndex}
               className="inline-block animate-fade-in"
