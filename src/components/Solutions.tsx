@@ -99,14 +99,14 @@ const Solutions = () => {
         {/* Solutions Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* AI Candle Insights */}
-          <Card className="backdrop-blur-md border-white/20 hover:border-pantone-171/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group h-full rounded-3xl overflow-hidden">
+          <Card className="bg-white/5 backdrop-blur-md border-white/20 hover:border-pantone-298/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group h-full rounded-3xl overflow-hidden">
             <CardContent className="p-10 h-full flex flex-col">
               <div className="flex items-center mb-8">
-                <div className="p-4 bg-gradient-to-br from-pantone-171/20 to-pantone-171/10 rounded-2xl mr-6">
-                  <Brain className="h-10 w-10 text-pantone-171" />
+                <div className="p-4 bg-gradient-to-br from-pantone-298/20 to-pantone-715/10 rounded-2xl mr-6">
+                  <Brain className="h-10 w-10 text-pantone-298" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold mb-3 text-pantone-171">AI Candle Insights</h3>
+                  <h3 className="text-3xl font-bold mb-3 text-white">AI Candle Insights</h3>
                   <p className="text-muted-foreground/80 text-lg leading-relaxed">
                     AI-driven explanations behind price movements for instant market shift understanding
                   </p>
@@ -121,7 +121,7 @@ const Solutions = () => {
                   className="w-full h-72 object-cover transition-all duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent group-hover:from-background/20 transition-all duration-700" />
-                <div className="absolute inset-0 bg-pantone-171/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute inset-0 bg-pantone-298/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 
                 {/* Animated insights overlay */}
                 <div className="absolute top-6 left-6 right-6 space-y-3">
@@ -135,7 +135,7 @@ const Solutions = () => {
                       }}
                     >
                       <p className="text-sm font-medium text-foreground">
-                        <span className="text-pantone-171 font-semibold">AI {insight.type}:</span> {insight.message}
+                        <span className="text-pantone-298 font-semibold">AI {insight.type}:</span> {insight.message}
                         <span className="animate-pulse text-pantone-298 ml-2 text-lg">●</span>
                       </p>
                     </div>
@@ -146,7 +146,7 @@ const Solutions = () => {
                 <div className="absolute bottom-4 left-4 right-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20 animate-fade-in">
                     <p className="text-sm text-foreground">
-                      <span className="text-pantone-171 font-medium">AI Insight:</span> Hover over any candle for real-time analysis
+                      <span className="text-pantone-298 font-medium">AI Insight:</span> Hover over any candle for real-time analysis
                       <span className="animate-pulse text-pantone-298"> Live Analysis</span>
                     </p>
                   </div>
@@ -163,11 +163,11 @@ const Solutions = () => {
           </Card>
 
           {/* AI Chatbot */}
-          <Card className="bg-white/5 backdrop-blur-md border-white/20 hover:border-pantone-190/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group h-full rounded-3xl overflow-hidden">
+          <Card className="bg-white/5 backdrop-blur-md border-white/20 hover:border-pantone-715/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group h-full rounded-3xl overflow-hidden">
             <CardContent className="p-8 h-full flex flex-col">
               <div className="flex items-center mb-6">
-                <div className="p-3 bg-pantone-190/20 rounded-lg mr-4">
-                  <MessageSquare className="h-8 w-8 text-pantone-190" />
+                <div className="p-3 bg-gradient-to-br from-pantone-715/20 to-pantone-298/10 rounded-lg mr-4">
+                  <MessageSquare className="h-8 w-8 text-pantone-715" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold mb-2 text-pantone-190">AI Chatbot</h3>
