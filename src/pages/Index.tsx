@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Solutions from '@/components/Solutions';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 
@@ -23,7 +22,6 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <Hero />
-        <Solutions />
         <FAQ />
         <Footer />
       </div>
