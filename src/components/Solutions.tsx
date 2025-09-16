@@ -83,15 +83,16 @@ const Solutions = () => {
   }, []);
 
   return (
-    <section id="solutions" className="py-32 px-6 sm:px-8 lg:px-12 bg-background/95 backdrop-blur-sm">
-      <div className="max-w-6xl mx-auto">
+    <section id="solutions" className="relative py-32 px-6 sm:px-8 lg:px-12 bg-gradient-hero">
+      <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
+      <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20 animate-fade-in space-y-6">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-white">
             ENHANCE DECISION MAKING WITH{' '}
             <span className="text-pantone-298">tracr AI</span>
           </h2>
-          <p className="text-xl text-muted-foreground/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
             Cutting-edge AI technology that transforms how you understand and trade the markets
           </p>
         </div>
