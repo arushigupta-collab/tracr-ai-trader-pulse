@@ -64,7 +64,7 @@ const Navbar = () => {
               <img 
                 src={newLogo} 
                 alt="Logo" 
-                className="h-8 w-auto group-hover:scale-125 transition-all duration-700 group-hover:brightness-125 animate-fade-in group-hover:drop-shadow-2xl group-hover:rotate-3 cursor-pointer"
+                className="h-12 w-auto group-hover:scale-125 transition-all duration-700 group-hover:brightness-125 animate-fade-in group-hover:drop-shadow-2xl group-hover:rotate-3 cursor-pointer"
               />
               <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
             </div>

@@ -2,8 +2,26 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import heroImage from '@/assets/hero-bg.jpg';
+import { useState, useEffect } from 'react';
 
 const Hero = () => {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const texts = [
+    "See Behind the Trade",
+    "See Behind the Market", 
+    "See Behind the Investment",
+    "See Behind the Strategy",
+    "See Behind the Opportunity"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [texts.length]);
+
   const scrollToSolutions = () => {
     const element = document.getElementById('solutions');
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -26,8 +44,12 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight px-2 text-white animate-fade-in hover:scale-105 hover:text-blue-200 transition-all duration-500 cursor-pointer hover:drop-shadow-2xl">
-            THE FUTURE OF TRADING{' '}
-            <span className="text-white/90 hover:text-blue-100 transition-colors duration-500">STARTS HERE</span>
+            <span 
+              key={currentTextIndex}
+              className="inline-block animate-fade-in"
+            >
+              {texts[currentTextIndex]}
+            </span>
           </h1>
 
           {/* Subheading */}
