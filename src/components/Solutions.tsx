@@ -162,7 +162,7 @@ const Solutions = () => {
               </div>
 
               {/* Feature Description */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 space-y-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 space-y-4">
                 <div className="space-y-3">
                   <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light">
                     <span className="text-pantone-298 font-semibold">AI Pattern:</span> Spot hidden formations that were not visible before.
