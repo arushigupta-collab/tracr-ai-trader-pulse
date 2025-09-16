@@ -20,9 +20,9 @@ const SectionArrow = ({ variant = 'default', className = '' }: SectionArrowProps
   };
 
   return (
-    <div className={`flex justify-center py-8 ${className}`}>
+    <div className={`flex justify-center py-16 ${className}`}>
       <ChevronDown
-        size={32}
+        size={40}
         className={`cursor-pointer transition-all duration-300 ${getArrowStyles()}`}
       />
     </div>
