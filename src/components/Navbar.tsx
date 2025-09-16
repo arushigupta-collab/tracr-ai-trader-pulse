@@ -78,13 +78,13 @@ const Navbar = () => {
                 
                 {/* Partnership Text and Logo */}
                 <div className="flex items-center space-x-3">
-                  <span className="text-sm text-white/90 font-medium">
+                  <span className="text-sm text-foreground/90 font-medium">
                     Proudly partnered with
                   </span>
                   <img 
                     src={vantageLogo} 
                     alt="Vantage Markets" 
-                    className="h-8 w-auto transition-all duration-300 opacity-90 hover:opacity-100 hover:scale-105"
+                    className="h-8 w-auto transition-all duration-300 hover:scale-105 brightness-0 invert"
                   />
                 </div>
               </div>
