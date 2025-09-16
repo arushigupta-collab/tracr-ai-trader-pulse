@@ -34,18 +34,18 @@ const Hero = () => {
         <div className="animate-fade-in">
 
           {/* Main Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight px-2 text-white animate-fade-in hover:scale-105 hover:text-blue-200 transition-all duration-500 cursor-pointer hover:drop-shadow-2xl">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight px-2 bg-gradient-to-r from-pantone-171 via-pantone-190 to-pantone-298 bg-clip-text text-transparent animate-fade-in hover:scale-105 transition-all duration-500 cursor-pointer hover:drop-shadow-2xl">
             See Behind the{' '}
             <span 
               key={currentTextIndex}
-              className="inline-block animate-fade-in"
+              className="inline-block animate-fade-in text-pantone-715"
             >
               {texts[currentTextIndex]}
             </span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-12 max-w-4xl mx-auto px-4">
+          <p className="text-lg sm:text-xl md:text-2xl text-pantone-432 mb-12 max-w-4xl mx-auto px-4">
             See behind the trade. Trade ahead of the market.
           </p>
           
@@ -53,14 +53,14 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Link to="/register">
-              <Button variant="default" size="xl" className="bg-white text-blue-600 hover:bg-white/90 hover:scale-105 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <Button variant="default" size="xl" className="bg-pantone-171 text-white hover:bg-pantone-190 hover:scale-105 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-pantone-171">
                 Register your Interest
               </Button>
             </Link>
             <Button 
               variant="default" 
               size="xl" 
-              className="bg-white text-blue-600 hover:bg-white/90 hover:scale-105 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-pantone-298 text-white hover:bg-pantone-715 hover:scale-105 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-pantone-298"
               onClick={scrollToSolutions}
             >
               Explore Services
@@ -71,7 +71,7 @@ const Hero = () => {
           <div className="animate-bounce">
             <ChevronDown 
               size={32} 
-              className="mx-auto text-white cursor-pointer hover:text-white/80 transition-colors"
+              className="mx-auto text-pantone-426 cursor-pointer hover:text-pantone-715 transition-colors"
               onClick={scrollToSolutions}
             />
           </div>

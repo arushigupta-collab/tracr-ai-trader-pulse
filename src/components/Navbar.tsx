@@ -98,8 +98,8 @@ const Navbar = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className={`relative text-sm font-normal transition-all duration-300 hover:text-primary group px-2 py-1 ${
-                    isActive(item.href) ? 'text-primary' : 'text-foreground/90 hover:text-foreground'
+                  className={`relative text-sm font-normal transition-all duration-300 hover:text-pantone-171 group px-2 py-1 ${
+                    isActive(item.href) ? 'text-pantone-171' : 'text-foreground/90 hover:text-pantone-171'
                   }`}
                 >
                   {item.name}
@@ -108,8 +108,8 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`relative text-sm font-normal transition-all duration-300 hover:text-primary group px-2 py-1 ${
-                    isActive(item.href) ? 'text-primary' : 'text-foreground/90 hover:text-foreground'
+                  className={`relative text-sm font-normal transition-all duration-300 hover:text-pantone-171 group px-2 py-1 ${
+                    isActive(item.href) ? 'text-pantone-171' : 'text-foreground/90 hover:text-pantone-171'
                   }`}
                 >
                   {item.name}
@@ -124,7 +124,7 @@ const Navbar = () => {
               <Button 
                 variant="default" 
                 size="sm"
-                className="bg-primary hover:bg-primary/90 text-white font-medium px-4 py-2 rounded-lg transition-all duration-300 text-sm"
+                className="bg-pantone-298 hover:bg-pantone-190 text-white font-medium px-4 py-2 rounded-lg transition-all duration-300 text-sm border-pantone-298"
               >
                 Start Now
               </Button>
@@ -137,7 +137,7 @@ const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="relative z-50 text-foreground hover:text-primary hover:bg-transparent"
+              className="relative z-50 text-foreground hover:text-pantone-171 hover:bg-transparent"
             >
               <div className="relative w-6 h-6">
                 <span className={`absolute inset-0 transition-all duration-300 ${isOpen ? 'rotate-45 opacity-100' : 'rotate-0 opacity-100'}`}>
@@ -166,8 +166,8 @@ const Navbar = () => {
                     }}
                     className={`w-full text-left block px-6 py-3 text-base font-normal transition-all duration-300 border-l-4 ${
                       isActive(item.href) 
-                        ? 'text-primary border-primary bg-primary/5' 
-                        : 'text-foreground/80 border-transparent hover:text-primary hover:border-primary/50 hover:bg-primary/5'
+                        ? 'text-pantone-171 border-pantone-171 bg-pantone-171/5' 
+                        : 'text-foreground/80 border-transparent hover:text-pantone-171 hover:border-pantone-171/50 hover:bg-pantone-171/5'
                     }`}
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
@@ -179,8 +179,8 @@ const Navbar = () => {
                     to={item.href}
                     className={`block px-6 py-3 text-base font-normal transition-all duration-300 border-l-4 ${
                       isActive(item.href) 
-                        ? 'text-primary border-primary bg-primary/5' 
-                        : 'text-foreground/80 border-transparent hover:text-primary hover:border-primary/50 hover:bg-primary/5'
+                        ? 'text-pantone-171 border-pantone-171 bg-pantone-171/5' 
+                        : 'text-foreground/80 border-transparent hover:text-pantone-171 hover:border-pantone-171/50 hover:bg-pantone-171/5'
                     }`}
                     style={{ animationDelay: `${index * 50}ms` }}
                     onClick={() => setIsOpen(false)}
@@ -194,7 +194,7 @@ const Navbar = () => {
                   <Button 
                     variant="default" 
                     size="sm" 
-                    className="w-full bg-primary hover:bg-primary/90 text-white font-medium text-sm"
+                    className="w-full bg-pantone-298 hover:bg-pantone-190 text-white font-medium text-sm border-pantone-298"
                   >
                     Start Now
                   </Button>

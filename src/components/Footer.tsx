@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="text-2xl font-bold text-gradient">tracr AI</div>
+              <div className="text-2xl font-bold bg-gradient-to-r from-pantone-171 via-pantone-190 to-pantone-298 bg-clip-text text-transparent">tracr AI</div>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-md">
               Trade smarter with tracr AI. Cut out the noise and make trading decisions backed by data and insights, not emotions.
@@ -19,35 +19,35 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a 
                 href="#" 
-                className="p-2 bg-secondary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="p-2 bg-secondary rounded-lg hover:bg-pantone-171 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a 
                 href="#" 
-                className="p-2 bg-secondary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="p-2 bg-secondary rounded-lg hover:bg-pantone-190 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a 
                 href="#" 
-                className="p-2 bg-secondary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="p-2 bg-secondary rounded-lg hover:bg-pantone-298 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a 
                 href="#" 
-                className="p-2 bg-secondary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="p-2 bg-secondary rounded-lg hover:bg-pantone-715 hover:text-white transition-colors"
                 aria-label="YouTube"
               >
                 <Youtube className="h-5 w-5" />
               </a>
               <a 
                 href="#" 
-                className="p-2 bg-secondary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="p-2 bg-secondary rounded-lg hover:bg-pantone-426 hover:text-white transition-colors"
                 aria-label="X (formerly Twitter)"
               >
                 <X className="h-5 w-5" />
@@ -57,25 +57,25 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-pantone-171">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/" className="text-muted-foreground hover:text-pantone-171 transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/about" className="text-muted-foreground hover:text-pantone-190 transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/blog" className="text-muted-foreground hover:text-pantone-298 transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/register" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/register" className="text-muted-foreground hover:text-pantone-715 transition-colors">
                   Register Interest
                 </Link>
               </li>
@@ -84,25 +84,25 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <h3 className="text-lg font-semibold mb-4 text-pantone-190">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/privacy-policy" className="text-muted-foreground hover:text-pantone-171 transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/terms-of-service" className="text-muted-foreground hover:text-pantone-190 transition-colors">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link to="/cookie-policy" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/cookie-policy" className="text-muted-foreground hover:text-pantone-298 transition-colors">
                   Cookie Policy
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-pantone-715 transition-colors">
                   Contact Us
                 </a>
               </li>
