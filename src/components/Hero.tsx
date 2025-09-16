@@ -37,10 +37,6 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
-          {/* Trust Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-card/50 backdrop-blur-sm rounded-full border border-border mb-8">
-            <span className="text-sm text-muted-foreground">Trustpilot</span>
-          </div>
 
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight px-2 text-white animate-fade-in hover:scale-105 hover:text-blue-200 transition-all duration-500 cursor-pointer hover:drop-shadow-2xl">
@@ -62,14 +58,14 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Link to="/register">
-              <Button variant="default" size="xl" className="bg-white text-blue-600 hover:bg-white/90 animate-glow-pulse">
+              <Button variant="default" size="xl" className="bg-white text-blue-600 hover:bg-white/90 hover:scale-105 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                 Register your Interest
               </Button>
             </Link>
             <Button 
               variant="default" 
               size="xl" 
-              className="bg-white text-blue-600 hover:bg-white/90"
+              className="bg-white text-blue-600 hover:bg-white/90 hover:scale-105 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               onClick={scrollToSolutions}
             >
               Explore Services
