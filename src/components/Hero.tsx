@@ -28,7 +28,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative py-32 flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
         <div className="animate-fade-in space-y-8">
