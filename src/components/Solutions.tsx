@@ -49,8 +49,10 @@ const Solutions = () => {
       });
     };
 
-    // Start initial animation
-    startChatAnimation();
+    // Start initial animation at the same time as candle animation
+    setTimeout(() => {
+      startChatAnimation();
+    }, 0);
 
     // Reset and restart animation every 15 seconds (synchronized with candle insights)
     const resetInterval = setInterval(() => {
@@ -71,8 +73,10 @@ const Solutions = () => {
       });
     };
 
-    // Start initial animation
-    startCandleAnimation();
+    // Start initial animation with slight delay to sync with chat
+    setTimeout(() => {
+      startCandleAnimation();
+    }, 0);
 
     // Reset and restart animation every 15 seconds
     const resetInterval = setInterval(() => {
@@ -192,7 +196,7 @@ const Solutions = () => {
                     <div 
                       key={msg.id}
                       className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}
-                      style={{ animationDelay: `${index * 0.5}s` }}
+                      style={{ animationDelay: `${index * 2.5}s` }}
                     >
                        <div className={`flex items-start space-x-2 max-w-xs ${msg.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
                          {msg.sender === 'user' ? (
