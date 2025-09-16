@@ -87,7 +87,7 @@ const Solutions = () => {
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-24 animate-fade-in space-y-8">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white max-w-4xl mx-auto">
             ENHANCE DECISION MAKING WITH{' '}
             <span className="text-pantone-298">tracr AI</span>
           </h2>
