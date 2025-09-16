@@ -72,9 +72,9 @@ const Navbar = () => {
               </div>
               
               {/* Desktop Partnership Section */}
-              <div className="hidden md:flex items-center ml-8">
+              <div className="hidden md:flex items-center ml-4">
                 {/* Vertical Separator */}
-                <div className="w-px h-10 bg-foreground/20 mr-8"></div>
+                <div className="w-px h-10 bg-foreground/20 mr-4"></div>
                 
                 {/* Partnership Text and Logo */}
                 <div className="flex items-center space-x-4">
