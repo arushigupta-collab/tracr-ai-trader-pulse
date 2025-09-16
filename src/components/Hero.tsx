@@ -34,7 +34,7 @@ const Hero = () => {
         <div className="animate-fade-in space-y-8">
 
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight text-white">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight text-white whitespace-nowrap">
             See Behind the{' '}
             <span 
               key={currentTextIndex}
