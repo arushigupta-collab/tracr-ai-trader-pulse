@@ -25,7 +25,6 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <Hero />
-        <CurvedArrow />
         <Solutions />
         <SectionArrow variant="bounce" />
         <FAQ />
