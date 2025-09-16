@@ -108,12 +108,12 @@ const Hero = () => {
   };
 
   return (
-    <section id="solutions" className="relative min-h-screen py-16 px-6 sm:px-8 lg:px-12 pt-32 pb-24">
+    <section id="solutions" className="relative min-h-[120vh] py-16 px-6 sm:px-8 lg:px-12 pt-32 pb-32">
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Hero Content */}
         <div className="text-center mb-32 animate-fade-in space-y-8">
           {/* Main Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white max-w-5xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white max-w-6xl mx-auto whitespace-nowrap">
             See Behind the{' '}
             <span 
               key={currentTextIndex}
