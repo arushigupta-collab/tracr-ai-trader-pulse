@@ -191,7 +191,7 @@ const Solutions = () => {
               </div>
 
               {/* Animated Chat Interface */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 h-80 overflow-y-auto mb-6 mt-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 h-80 overflow-y-auto mb-6">
                 <div className="space-y-4">
                   {chatMessages.map((msg, index) => (
                     <div 
