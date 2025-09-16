@@ -108,7 +108,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="solutions" className="relative min-h-screen py-16 px-6 sm:px-8 lg:px-12">
+    <section id="solutions" className="relative min-h-screen py-16 px-6 sm:px-8 lg:px-12 pt-32">
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Hero Content */}
         <div className="text-center mb-32 animate-fade-in space-y-8">
