@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import Solutions from '@/components/Solutions';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import SectionArrow from '@/components/SectionArrow';
@@ -24,6 +25,8 @@ const Index = () => {
         <Navbar />
         <Hero />
         <SectionArrow variant="glow" />
+        <Solutions />
+        <SectionArrow variant="bounce" />
         <FAQ />
         <Footer />
       </div>
