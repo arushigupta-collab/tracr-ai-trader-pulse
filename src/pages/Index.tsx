@@ -20,7 +20,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-hero">
-      <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
       <div className="relative z-10">
         <Navbar />
         <Hero />

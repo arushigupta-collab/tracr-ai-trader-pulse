@@ -99,7 +99,7 @@ const Solutions = () => {
         {/* Solutions Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* AI Candle Insights */}
-          <Card className="bg-card/80 backdrop-blur-md border-border/50 hover:border-pantone-171/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group h-full rounded-3xl overflow-hidden">
+          <Card className="backdrop-blur-md border-white/20 hover:border-pantone-171/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group h-full rounded-3xl overflow-hidden">
             <CardContent className="p-10 h-full flex flex-col">
               <div className="flex items-center mb-8">
                 <div className="p-4 bg-gradient-to-br from-pantone-171/20 to-pantone-171/10 rounded-2xl mr-6">
@@ -120,7 +120,7 @@ const Solutions = () => {
                   alt="AI Candle Analysis"
                   className="w-full h-72 object-cover transition-all duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent group-hover:from-background/70 transition-all duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent group-hover:from-background/20 transition-all duration-700" />
                 <div className="absolute inset-0 bg-pantone-171/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 
                 {/* Animated insights overlay */}
@@ -144,7 +144,7 @@ const Solutions = () => {
                 
                 {/* Static hover tooltip */}
                 <div className="absolute bottom-4 left-4 right-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-                  <div className="bg-background/90 backdrop-blur-sm rounded-lg p-3 border border-border animate-fade-in">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20 animate-fade-in">
                     <p className="text-sm text-foreground">
                       <span className="text-pantone-171 font-medium">AI Insight:</span> Hover over any candle for real-time analysis
                       <span className="animate-pulse text-pantone-298"> Live Analysis</span>
@@ -154,8 +154,8 @@ const Solutions = () => {
               </div>
 
               {/* Feature Description */}
-              <div className="bg-gradient-to-br from-secondary/30 to-secondary/10 rounded-2xl p-6 backdrop-blur-sm border border-secondary/20">
-                <p className="text-foreground/90 leading-relaxed text-lg">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <p className="text-white/90 leading-relaxed text-lg">
                   Instantly understand market shifts. Hover over a candle or highlight multiple to reveal AI-driven explanations behind price movements for smarter trading decisions.
                 </p>
               </div>
@@ -163,7 +163,7 @@ const Solutions = () => {
           </Card>
 
           {/* AI Chatbot */}
-          <Card className="bg-card-gradient border-border card-hover group h-full">
+          <Card className="bg-white/5 backdrop-blur-md border-white/20 hover:border-pantone-190/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group h-full rounded-3xl overflow-hidden">
             <CardContent className="p-8 h-full flex flex-col">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-pantone-190/20 rounded-lg mr-4">
@@ -178,7 +178,7 @@ const Solutions = () => {
               </div>
 
               {/* Animated Chat Interface */}
-              <div className="bg-muted/20 rounded-lg p-4 h-64 overflow-y-auto mb-6">
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 h-64 overflow-y-auto mb-6">
                 <div className="space-y-4">
                   {chatMessages.map((msg, index) => (
                     <div 
@@ -194,14 +194,14 @@ const Solutions = () => {
                              className="flex-shrink-0 w-8 h-8 rounded-full object-cover"
                            />
                          ) : (
-                           <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent flex items-center justify-center">
-                             <Bot className="h-4 w-4 text-accent-foreground" />
+                           <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                             <Bot className="h-4 w-4 text-white" />
                            </div>
                          )}
                          <div className={`rounded-lg px-3 py-2 ${
                            msg.sender === 'user' 
                              ? 'bg-pantone-298 text-white' 
-                             : 'bg-pantone-715/20 text-pantone-432'
+                             : 'bg-white/20 text-white'
                          }`}>
                           <p className="text-sm">{msg.message}</p>
                         </div>
@@ -213,14 +213,14 @@ const Solutions = () => {
                   {chatMessages.length === 0 && (
                     <div className="flex justify-start">
                        <div className="flex items-center space-x-2">
-                         <div className="w-8 h-8 rounded-full bg-pantone-190 flex items-center justify-center">
+                         <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                            <Bot className="h-4 w-4 text-white" />
                          </div>
-                        <div className="bg-secondary rounded-lg px-3 py-2">
+                        <div className="bg-white/10 rounded-lg px-3 py-2">
                           <div className="flex space-x-1">
-                            <div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse"></div>
-                            <div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                            <div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                            <div className="w-2 h-2 bg-white/60 rounded-full animate-pulse"></div>
+                            <div className="w-2 h-2 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                            <div className="w-2 h-2 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
                           </div>
                         </div>
                       </div>
@@ -230,8 +230,8 @@ const Solutions = () => {
               </div>
 
               {/* Feature Description */}
-              <div className="bg-secondary/30 rounded-lg p-6">
-                <p className="text-foreground leading-relaxed">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <p className="text-white/90 leading-relaxed">
                   Get instant, AI-powered support. Ask questions, gain insights, and receive personalized recommendations to improve your trading.
                 </p>
               </div>

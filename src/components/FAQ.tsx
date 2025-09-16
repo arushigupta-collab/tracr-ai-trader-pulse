@@ -89,7 +89,7 @@ const FAQ = () => {
             return (
               <Card 
                 key={index}
-                className={`bg-card/80 backdrop-blur-md border-border/50 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:border-${colorClass}/40 animate-fade-in rounded-2xl overflow-hidden ${
+                className={`bg-white/5 backdrop-blur-md border-white/20 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:border-${colorClass}/40 animate-fade-in rounded-2xl overflow-hidden ${
                   expandedItem === index ? `ring-2 ring-${colorClass}/30 shadow-2xl border-${colorClass}/50 scale-[1.02]` : 'hover:scale-[1.01]'
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -114,7 +114,7 @@ const FAQ = () => {
                       : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="text-pantone-432/90 leading-relaxed text-lg">
+                  <div className="text-white/90 leading-relaxed text-lg">
                     {typeof item.answer === 'string' ? (
                       <p>{item.answer}</p>
                     ) : (
