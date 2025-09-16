@@ -71,30 +71,20 @@ const Navbar = () => {
                 />
               </div>
               
-              {/* Partnership Section */}
-              <div className="hidden lg:flex items-center ml-6 pl-6 border-l border-border/30">
-                <div className="flex items-center space-x-4">
-                  <div className="text-xs text-muted-foreground/80 font-medium tracking-wide">
+              {/* Desktop Partnership Section */}
+              <div className="hidden md:flex items-center ml-6">
+                {/* Vertical Separator */}
+                <div className="w-px h-8 bg-white/30 mr-6"></div>
+                
+                {/* Partnership Text and Logo */}
+                <div className="flex items-center space-x-3">
+                  <span className="text-sm text-white/90 font-medium">
                     Proudly partnered with
-                  </div>
-                  <div className="relative group/vantage">
-                    <img 
-                      src={vantageLogo} 
-                      alt="Vantage Markets Logo" 
-                      className="h-9 w-auto transition-all duration-300 opacity-90 group-hover:opacity-100 group/vantage:scale-105 group/vantage:brightness-110"
-                    />
-                  </div>
-                </div>
-              </div>
-              
-              {/* Mobile Partnership - Simplified */}
-              <div className="flex lg:hidden items-center ml-3 space-x-2">
-                <div className="w-px h-8 bg-border/30"></div>
-                <div className="relative">
+                  </span>
                   <img 
                     src={vantageLogo} 
                     alt="Vantage Markets" 
-                    className="h-6 w-auto opacity-80 group-hover:opacity-100 transition-all duration-300"
+                    className="h-8 w-auto transition-all duration-300 opacity-90 hover:opacity-100 hover:scale-105"
                   />
                 </div>
               </div>
