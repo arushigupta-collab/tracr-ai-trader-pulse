@@ -172,14 +172,14 @@ const Solutions = () => {
 
           {/* AI Chatbot */}
           <Card className="bg-white/5 backdrop-blur-md border-white/20 hover:border-pantone-715/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group h-full rounded-3xl overflow-hidden">
-            <CardContent className="p-8 h-full flex flex-col">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-gradient-to-br from-pantone-715/20 to-pantone-298/10 rounded-lg mr-4">
-                  <MessageSquare className="h-8 w-8 text-pantone-715" />
+            <CardContent className="p-10 h-full flex flex-col">
+              <div className="flex items-center mb-8">
+                <div className="p-4 bg-gradient-to-br from-pantone-715/20 to-pantone-298/10 rounded-2xl mr-6">
+                  <MessageSquare className="h-10 w-10 text-pantone-715" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2 text-white">AI Chatbot</h3>
-                  <p className="text-white/70 text-sm sm:text-base font-light leading-relaxed">
+                  <h3 className="text-3xl font-bold mb-3 text-white">AI Chatbot</h3>
+                  <p className="text-white/70 text-base sm:text-lg leading-relaxed font-light">
                     Your personal market guide — anytime, anywhere.
                   </p>
                 </div>
