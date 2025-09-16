@@ -243,10 +243,7 @@ const Solutions = () => {
 
               {/* Feature Description */}
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 space-y-4">
-                <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light">
-                  Ask questions, explore insights, and get instant explanations of what's happening in the markets. Whether you're a trader, investor, or simply learning how markets work, our AI Chatbot gives you clear, personalized answers to help you understand and make smarter decisions.
-                </p>
-                <div className="space-y-3 border-t border-white/10 pt-4">
+                <div className="space-y-3">
                   <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light">
                     <span className="text-pantone-715 font-semibold">Ask anything:</span> From candlestick patterns to economic news.
                   </p>
@@ -257,6 +254,9 @@ const Solutions = () => {
                     <span className="text-pantone-715 font-semibold">Learn faster:</span> Turn every question into a lesson.
                   </p>
                 </div>
+                <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light border-t border-white/10 pt-4">
+                  Ask questions, explore insights, and get instant explanations of what's happening in the markets. Whether you're a trader, investor, or simply learning how markets work, our AI Chatbot gives you clear, personalized answers to help you understand and make smarter decisions.
+                </p>
               </div>
 
             </CardContent>
