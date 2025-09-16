@@ -84,7 +84,7 @@ const Navbar = () => {
                   <img 
                     src={vantageLogo} 
                     alt="Vantage Markets" 
-                    className="h-6 w-auto transition-all duration-300 hover:scale-105 brightness-0 invert opacity-90"
+                    className="h-7 w-auto transition-all duration-300 hover:scale-105 brightness-0 invert opacity-90"
                   />
                 </div>
               </div>
