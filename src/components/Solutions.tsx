@@ -45,17 +45,17 @@ const Solutions = () => {
       chatConversation.forEach((msg, index) => {
         setTimeout(() => {
           setChatMessages(prev => [...prev, { ...msg, visible: true }]);
-        }, index * 2000);
+        }, index * 2500);
       });
     };
 
     // Start initial animation
     startChatAnimation();
 
-    // Reset and restart animation every 12 seconds (after all messages are shown)
+    // Reset and restart animation every 15 seconds (synchronized with candle insights)
     const resetInterval = setInterval(() => {
       startChatAnimation();
-    }, 12000);
+    }, 15000);
 
     return () => clearInterval(resetInterval);
   }, []);
