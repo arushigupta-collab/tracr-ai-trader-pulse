@@ -72,32 +72,36 @@ const FAQ = () => {
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in px-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pantone-171 via-pantone-190 to-pantone-298 bg-clip-text text-transparent">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground">
+          <p className="text-lg sm:text-xl text-pantone-426">
             Get answers to common questions about tracr AI
           </p>
         </div>
 
         {/* FAQ Accordion */}
         <div className="space-y-4">
-          {faqData.map((item, index) => (
-            <Card 
-              key={index}
-              className={`bg-card border-border cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-primary/30 animate-fade-in ${
-                expandedItem === index ? 'ring-2 ring-primary/20 shadow-lg' : ''
-              }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-              onClick={() => toggleExpand(index)}
-            >
+          {faqData.map((item, index) => {
+            const pantoneColors = ['pantone-171', 'pantone-190', 'pantone-298', 'pantone-426', 'pantone-432', 'pantone-715'];
+            const colorClass = pantoneColors[index % pantoneColors.length];
+            
+            return (
+              <Card 
+                key={index}
+                className={`bg-card border-border cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-${colorClass}/50 animate-fade-in ${
+                  expandedItem === index ? `ring-2 ring-${colorClass}/30 shadow-lg border-${colorClass}/40` : ''
+                }`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+                onClick={() => toggleExpand(index)}
+              >
               <CardContent className="p-6">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold text-foreground pr-4 flex-1">
+                  <h3 className={`text-lg font-semibold text-${colorClass} pr-4 flex-1`}>
                     {item.question}
                   </h3>
                   <ChevronDown 
-                    className={`h-5 w-5 text-primary transition-transform duration-300 flex-shrink-0 ${
+                    className={`h-5 w-5 text-${colorClass} transition-transform duration-300 flex-shrink-0 ${
                       expandedItem === index ? 'rotate-180' : ''
                     }`}
                   />
@@ -110,7 +114,7 @@ const FAQ = () => {
                       : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="text-muted-foreground leading-relaxed">
+                  <div className="text-pantone-432 leading-relaxed">
                     {typeof item.answer === 'string' ? (
                       <p>{item.answer}</p>
                     ) : (
@@ -120,7 +124,8 @@ const FAQ = () => {
                 </div>
               </CardContent>
             </Card>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
