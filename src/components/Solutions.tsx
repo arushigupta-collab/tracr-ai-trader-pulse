@@ -107,8 +107,8 @@ const Solutions = () => {
                 </div>
                 <div>
                   <h3 className="text-3xl font-bold mb-3 text-white">AI Candle Insights</h3>
-                  <p className="text-muted-foreground/80 text-lg leading-relaxed">
-                    AI-driven explanations behind price movements for instant market shift understanding
+                  <p className="text-white/70 text-base sm:text-lg leading-relaxed font-light">
+                    tracr AI doesn't just show you charts, it decodes them. With AI Candle Insights, every price movement comes with instant, plain-English explanations so you know exactly why the market is shifting.
                   </p>
                 </div>
               </div>
@@ -154,9 +154,17 @@ const Solutions = () => {
               </div>
 
               {/* Feature Description */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <p className="text-white/90 leading-relaxed text-lg">
-                  Instantly understand market shifts. Hover over a candle or highlight multiple to reveal AI-driven explanations behind price movements for smarter trading decisions.
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 space-y-4">
+                <div className="space-y-3">
+                  <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light">
+                    <span className="text-pantone-298 font-semibold">AI Pattern:</span> Spot hidden formations that were not visible before.
+                  </p>
+                  <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light">
+                    <span className="text-pantone-298 font-semibold">AI Insight:</span> Hover over any candle for real-time, context-driven analysis.
+                  </p>
+                </div>
+                <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light border-t border-white/10 pt-4">
+                  No more guessing. No more staring at charts in confusion. Just clear, AI-powered breakdowns that help you trade, invest, and learn faster than ever.
                 </p>
               </div>
             </CardContent>
@@ -170,9 +178,9 @@ const Solutions = () => {
                   <MessageSquare className="h-8 w-8 text-pantone-715" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2 text-pantone-190">AI Chatbot</h3>
-                  <p className="text-pantone-426">
-                    AI-powered support, insights, and personalized recommendations for improved trading decisions
+                  <h3 className="text-2xl font-bold mb-2 text-white">AI Chatbot</h3>
+                  <p className="text-white/70 text-sm sm:text-base font-light leading-relaxed">
+                    Your personal market guide — anytime, anywhere.
                   </p>
                 </div>
               </div>
@@ -230,10 +238,21 @@ const Solutions = () => {
               </div>
 
               {/* Feature Description */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <p className="text-white/90 leading-relaxed">
-                  Get instant, AI-powered support. Ask questions, gain insights, and receive personalized recommendations to improve your trading.
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 space-y-4">
+                <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light">
+                  Ask questions, explore insights, and get instant explanations of what's happening in the markets. Whether you're a trader, investor, or simply learning how markets work, our AI Chatbot gives you clear, personalized answers to help you understand and make smarter decisions.
                 </p>
+                <div className="space-y-3 border-t border-white/10 pt-4">
+                  <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light">
+                    <span className="text-pantone-715 font-semibold">Ask anything:</span> From candlestick patterns to economic news.
+                  </p>
+                  <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light">
+                    <span className="text-pantone-715 font-semibold">Get context:</span> Understand the "why" behind price movements.
+                  </p>
+                  <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light">
+                    <span className="text-pantone-715 font-semibold">Learn faster:</span> Turn every question into a lesson.
+                  </p>
+                </div>
               </div>
 
             </CardContent>
