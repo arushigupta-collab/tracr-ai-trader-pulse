@@ -152,7 +152,7 @@ const Hero = () => {
 
         {/* Solutions Section */}
         <div className="text-center mb-20 animate-fade-in space-y-6">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white">
             ENHANCE DECISION MAKING WITH{' '}
             <span className="text-pantone-298">tracr AI</span>
           </h2>
