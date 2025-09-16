@@ -83,7 +83,7 @@ const Solutions = () => {
   }, []);
 
   return (
-    <section id="solutions" className="relative py-32 px-6 sm:px-8 lg:px-12">
+    <section id="solutions" className="relative pb-32 px-6 sm:px-8 lg:px-12">
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20 animate-fade-in space-y-6">
