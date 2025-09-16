@@ -34,18 +34,18 @@ const Hero = () => {
         <div className="animate-fade-in space-y-8">
 
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight bg-gradient-to-r from-white via-white/95 to-white/90 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight text-white">
             See Behind the{' '}
             <span 
               key={currentTextIndex}
-              className="inline-block animate-fade-in bg-gradient-to-r from-pantone-171 via-pantone-190 to-pantone-715 bg-clip-text text-transparent"
+              className="inline-block animate-fade-in text-white"
             >
               {texts[currentTextIndex]}
             </span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-white/80 font-light max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl md:text-3xl text-white font-light max-w-4xl mx-auto leading-relaxed">
             See behind the trade. Trade ahead of the market.
           </p>
           
