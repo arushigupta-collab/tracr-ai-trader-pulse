@@ -83,10 +83,10 @@ const Solutions = () => {
   }, []);
 
   return (
-    <section id="solutions" className="relative py-32 px-6 sm:px-8 lg:px-12">
+    <section id="solutions" className="relative py-24 px-8 sm:px-12 lg:px-16">
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-20 animate-fade-in space-y-6">
+        <div className="text-center mb-24 animate-fade-in space-y-8">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-white">
             ENHANCE DECISION MAKING WITH{' '}
             <span className="text-pantone-298">tracr AI</span>

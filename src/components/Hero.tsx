@@ -27,10 +27,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen py-16 px-6 sm:px-8 lg:px-12 pt-48 pb-32 flex items-center">
+    <section id="hero" className="relative min-h-screen py-20 px-8 sm:px-12 lg:px-16 pt-32 pb-40 flex items-center">
       <div className="relative z-10 max-w-6xl mx-auto w-full">
         {/* Hero Content */}
-        <div className="text-center animate-fade-in space-y-8">
+        <div className="text-center animate-fade-in space-y-12">
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white max-w-6xl mx-auto whitespace-nowrap">
             See Behind the{' '}

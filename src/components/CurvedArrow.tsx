@@ -4,7 +4,7 @@ interface CurvedArrowProps {
 
 const CurvedArrow = ({ className = '' }: CurvedArrowProps) => {
   return (
-    <div className={`flex justify-center py-12 ${className}`}>
+    <div className={`flex justify-center py-20 ${className}`}>
       <svg
         width="80"
         height="180"

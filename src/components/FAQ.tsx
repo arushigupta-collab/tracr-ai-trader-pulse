@@ -68,10 +68,10 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-8 px-6 sm:px-8 lg:px-12">
+    <section id="faq" className="py-20 px-8 sm:px-12 lg:px-16">
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12 animate-fade-in space-y-6">
+        <div className="text-center mb-16 animate-fade-in space-y-8">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-pantone-171 via-pantone-190 to-pantone-298 bg-clip-text text-transparent leading-tight">
             Frequently Asked Questions
           </h2>
