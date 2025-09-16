@@ -113,7 +113,7 @@ const Hero = () => {
         {/* Hero Content */}
         <div className="text-center mb-32 animate-fade-in space-y-8">
           {/* Main Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white whitespace-nowrap">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white max-w-5xl mx-auto">
             See Behind the{' '}
             <span 
               key={currentTextIndex}
@@ -124,7 +124,7 @@ const Hero = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-white font-light max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-light max-w-3xl mx-auto leading-relaxed tracking-wide">
             See behind the trade. Trade ahead of the market.
           </p>
           
@@ -152,11 +152,11 @@ const Hero = () => {
 
         {/* Solutions Section */}
         <div className="text-center mb-20 animate-fade-in space-y-6">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white max-w-4xl mx-auto">
             ENHANCE DECISION MAKING WITH{' '}
             <span className="text-pantone-298">tracr AI</span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed font-light">
             Cutting-edge AI technology that transforms how you understand and trade the markets
           </p>
         </div>
@@ -170,9 +170,9 @@ const Hero = () => {
                 <div className="p-4 bg-gradient-to-br from-pantone-171/20 to-pantone-171/10 rounded-2xl mr-6">
                   <Brain className="h-10 w-10 text-pantone-171" />
                 </div>
-                <div>
-                  <h3 className="text-3xl font-bold mb-3 text-pantone-171">AI Candle Insights</h3>
-                  <p className="text-white/60 text-lg leading-relaxed">
+                <div className="text-left">
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-3 text-pantone-171 leading-tight">AI Candle Insights</h3>
+                  <p className="text-white/70 text-base sm:text-lg leading-relaxed font-light">
                     AI-driven explanations behind price movements for instant market shift understanding
                   </p>
                 </div>
@@ -220,7 +220,7 @@ const Hero = () => {
 
               {/* Feature Description */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <p className="text-white/90 leading-relaxed text-lg">
+                <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light text-left">
                   Instantly understand market shifts. Hover over a candle or highlight multiple to reveal AI-driven explanations behind price movements for smarter trading decisions.
                 </p>
               </div>
@@ -234,9 +234,9 @@ const Hero = () => {
                 <div className="p-3 bg-pantone-190/20 rounded-lg mr-4">
                   <MessageSquare className="h-8 w-8 text-pantone-190" />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2 text-pantone-190">AI Chatbot</h3>
-                  <p className="text-white/60">
+                <div className="text-left">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-pantone-190 leading-tight">AI Chatbot</h3>
+                  <p className="text-white/70 text-sm sm:text-base font-light leading-relaxed">
                     AI-powered support, insights, and personalized recommendations for improved trading decisions
                   </p>
                 </div>
@@ -296,7 +296,7 @@ const Hero = () => {
 
               {/* Feature Description */}
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <p className="text-white/90 leading-relaxed">
+                <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light text-left">
                   Get instant, AI-powered support. Ask questions, gain insights, and receive personalized recommendations to improve your trading.
                 </p>
               </div>
