@@ -52,12 +52,12 @@ const Navbar = () => {
   }, [location.pathname]);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-background/60 backdrop-blur-xl border-b border-border/30 shadow-lg' 
-        : 'bg-background/40 backdrop-blur-md'
+        ? 'bg-background/80 backdrop-blur-2xl border-b border-border/30 shadow-2xl' 
+        : 'bg-background/20 backdrop-blur-xl'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-20">
           {/* Logo and Partnership */}
           <Link to="/" className="flex items-center group">
@@ -67,7 +67,7 @@ const Navbar = () => {
                 <img 
                   src={newLogo} 
                   alt="Tracr Logo" 
-                  className="h-16 w-auto group-hover:scale-105 transition-all duration-300 group-hover:brightness-110 animate-fade-in cursor-pointer"
+                  className="h-16 w-auto group-hover:scale-105 transition-all duration-500 group-hover:brightness-110 animate-fade-in cursor-pointer drop-shadow-lg"
                 />
               </div>
               
@@ -124,7 +124,7 @@ const Navbar = () => {
               <Button 
                 variant="default" 
                 size="sm"
-                className="bg-pantone-298 hover:bg-pantone-190 text-white font-medium px-4 py-2 rounded-lg transition-all duration-300 text-sm border-pantone-298"
+                className="bg-gradient-to-r from-pantone-298/20 to-pantone-190/20 backdrop-blur-md hover:from-pantone-298/30 hover:to-pantone-190/30 text-white font-medium px-6 py-3 rounded-xl transition-all duration-500 text-sm border border-pantone-298/30 hover:border-pantone-190/50 hover:scale-105 hover:shadow-lg"
               >
                 Start Now
               </Button>

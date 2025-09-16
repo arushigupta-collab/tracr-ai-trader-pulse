@@ -68,20 +68,20 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary/20">
-      <div className="max-w-4xl mx-auto">
+    <section id="faq" className="py-32 px-6 sm:px-8 lg:px-12 bg-gradient-to-br from-secondary/10 to-background/95 backdrop-blur-sm">
+      <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in px-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pantone-171 via-pantone-190 to-pantone-298 bg-clip-text text-transparent">
+        <div className="text-center mb-20 animate-fade-in space-y-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-pantone-171 via-pantone-190 to-pantone-298 bg-clip-text text-transparent leading-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg sm:text-xl text-pantone-426">
+          <p className="text-xl text-pantone-426/80 max-w-3xl mx-auto leading-relaxed">
             Get answers to common questions about tracr AI
           </p>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4">
+        <div className="space-y-6">
           {faqData.map((item, index) => {
             const pantoneColors = ['pantone-171', 'pantone-190', 'pantone-298', 'pantone-426', 'pantone-432', 'pantone-715'];
             const colorClass = pantoneColors[index % pantoneColors.length];
@@ -89,32 +89,32 @@ const FAQ = () => {
             return (
               <Card 
                 key={index}
-                className={`bg-card border-border cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-${colorClass}/50 animate-fade-in ${
-                  expandedItem === index ? `ring-2 ring-${colorClass}/30 shadow-lg border-${colorClass}/40` : ''
+                className={`bg-card/80 backdrop-blur-md border-border/50 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:border-${colorClass}/40 animate-fade-in rounded-2xl overflow-hidden ${
+                  expandedItem === index ? `ring-2 ring-${colorClass}/30 shadow-2xl border-${colorClass}/50 scale-[1.02]` : 'hover:scale-[1.01]'
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
                 onClick={() => toggleExpand(index)}
               >
-              <CardContent className="p-6">
+              <CardContent className="p-8">
                 <div className="flex justify-between items-center">
-                  <h3 className={`text-lg font-semibold text-${colorClass} pr-4 flex-1`}>
+                  <h3 className={`text-xl font-semibold text-${colorClass} pr-6 flex-1 leading-relaxed`}>
                     {item.question}
                   </h3>
                   <ChevronDown 
-                    className={`h-5 w-5 text-${colorClass} transition-transform duration-300 flex-shrink-0 ${
-                      expandedItem === index ? 'rotate-180' : ''
+                    className={`h-6 w-6 text-${colorClass} transition-all duration-500 flex-shrink-0 ${
+                      expandedItem === index ? 'rotate-180 scale-110' : 'hover:scale-110'
                     }`}
                   />
                 </div>
                 
                 <div 
-                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  className={`overflow-hidden transition-all duration-700 ease-in-out ${
                     expandedItem === index 
-                      ? 'max-h-[500px] opacity-100 mt-4' 
+                      ? 'max-h-[600px] opacity-100 mt-6' 
                       : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="text-pantone-432 leading-relaxed">
+                  <div className="text-pantone-432/90 leading-relaxed text-lg">
                     {typeof item.answer === 'string' ? (
                       <p>{item.answer}</p>
                     ) : (

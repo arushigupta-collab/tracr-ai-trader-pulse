@@ -30,37 +30,42 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="animate-fade-in">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+        <div className="animate-fade-in space-y-8">
 
           {/* Main Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight px-2 bg-gradient-to-r from-pantone-171 via-pantone-190 to-pantone-298 bg-clip-text text-transparent animate-fade-in hover:scale-105 transition-all duration-500 cursor-pointer hover:drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight bg-gradient-to-r from-white via-white/95 to-white/90 bg-clip-text text-transparent">
             See Behind the{' '}
             <span 
               key={currentTextIndex}
-              className="inline-block animate-fade-in text-pantone-715"
+              className="inline-block animate-fade-in bg-gradient-to-r from-pantone-171 via-pantone-190 to-pantone-715 bg-clip-text text-transparent"
             >
               {texts[currentTextIndex]}
             </span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg sm:text-xl md:text-2xl text-pantone-432 mb-12 max-w-4xl mx-auto px-4">
+          <p className="text-xl sm:text-2xl md:text-3xl text-white/80 font-light max-w-4xl mx-auto leading-relaxed">
             See behind the trade. Trade ahead of the market.
           </p>
           
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link to="/register">
-              <Button variant="default" size="xl" className="bg-pantone-171 text-white hover:bg-pantone-190 hover:scale-105 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-pantone-171">
+              <Button 
+                variant="default" 
+                size="xl" 
+                className="bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-white/20 hover:border-white/40 hover:scale-105 hover:shadow-xl transition-all duration-300 px-8 py-4 rounded-2xl font-medium text-lg"
+              >
                 Register your Interest
               </Button>
             </Link>
             <Button 
               variant="default" 
               size="xl" 
-              className="bg-pantone-298 text-white hover:bg-pantone-715 hover:scale-105 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-pantone-298"
+              className="bg-gradient-to-r from-pantone-298/20 to-pantone-715/20 backdrop-blur-md text-white border border-pantone-298/30 hover:from-pantone-298/30 hover:to-pantone-715/30 hover:scale-105 hover:shadow-xl transition-all duration-300 px-8 py-4 rounded-2xl font-medium text-lg"
               onClick={scrollToSolutions}
             >
               Explore Services
@@ -68,10 +73,10 @@ const Hero = () => {
           </div>
 
           {/* Scroll Indicator */}
-          <div className="animate-bounce">
+          <div className="animate-bounce mt-16">
             <ChevronDown 
-              size={32} 
-              className="mx-auto text-pantone-426 cursor-pointer hover:text-pantone-715 transition-colors"
+              size={28} 
+              className="mx-auto text-white/60 cursor-pointer hover:text-white/90 transition-all duration-300 hover:scale-110"
               onClick={scrollToSolutions}
             />
           </div>

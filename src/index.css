@@ -76,15 +76,17 @@ All colors MUST be HSL.
 
     /* Gradients using Pantone colors */
     --gradient-primary: linear-gradient(135deg, hsl(193 100% 55%), hsl(330 92% 65%));
-    --gradient-hero: linear-gradient(90deg, hsl(200 80% 60%) 0%, hsl(210 85% 50%) 50%, hsl(220 90% 40%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(200 80% 60%) 0%, hsl(210 85% 50%) 30%, hsl(220 90% 40%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(224 47% 9%) 0%, hsl(215 27% 12%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(11 92% 55%), hsl(15 85% 75%));
+    --gradient-text: linear-gradient(135deg, hsl(193 100% 55%), hsl(330 92% 65%), hsl(15 85% 75%));
     
     /* Shadows and glows using Pantone colors */
     --shadow-primary: 0 10px 40px -10px hsl(193 100% 55% / 0.3);
-    --shadow-card: 0 4px 20px -2px hsl(222 47% 4% / 0.3);
-    --glow-primary: 0 0 40px hsl(193 100% 55% / 0.4);
-    --glow-accent: 0 0 30px hsl(330 92% 65% / 0.3);
+    --shadow-card: 0 8px 32px -8px hsl(222 47% 4% / 0.3);
+    --shadow-soft: 0 4px 16px -4px hsl(222 47% 4% / 0.1);
+    --glow-primary: 0 0 60px hsl(193 100% 55% / 0.4);
+    --glow-accent: 0 0 40px hsl(15 85% 75% / 0.3);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
