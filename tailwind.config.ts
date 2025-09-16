@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'montserrat': ['Montserrat', 'sans-serif'],
+				'nexa': ['Nexa', 'sans-serif'], // For when custom Nexa fonts are added
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -56,17 +60,28 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				// Pantone Color System
+				pantone: {
+					171: 'hsl(var(--pantone-171))', // Bright Orange/Red
+					190: 'hsl(var(--pantone-190))', // Bright Pink/Magenta  
+					298: 'hsl(var(--pantone-298))', // Cyan Blue
+					426: 'hsl(var(--pantone-426))', // Warm Gray
+					432: 'hsl(var(--pantone-432))', // Cool Gray
+					715: 'hsl(var(--pantone-715))', // Peach/Coral
 				}
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-card': 'var(--gradient-card)'
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-accent': 'var(--gradient-accent)'
 			},
 			boxShadow: {
 				'primary': 'var(--shadow-primary)',
 				'card': 'var(--shadow-card)',
-				'glow': 'var(--glow-primary)'
+				'glow': 'var(--glow-primary)',
+				'glow-accent': 'var(--glow-accent)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',

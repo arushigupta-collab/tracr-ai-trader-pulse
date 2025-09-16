@@ -21,21 +21,46 @@ All colors MUST be HSL.
     --popover: 224 47% 9%;
     --popover-foreground: 213 27% 94%;
 
-    /* Primary brand colors - Tracr AI Blue */
-    --primary: 221 83% 53%;
-    --primary-foreground: 213 27% 94%;
-    --primary-glow: 221 83% 70%;
+    /* Pantone Color System */
+    /* PANTONE 171 C - Bright Orange/Red */
+    --pantone-171: 11 92% 55%;
+    --pantone-171-foreground: 213 27% 94%;
+    
+    /* PANTONE 190 C - Bright Pink/Magenta */
+    --pantone-190: 330 92% 65%;
+    --pantone-190-foreground: 213 27% 94%;
+    
+    /* PANTONE 298 C - Cyan Blue */
+    --pantone-298: 193 100% 55%;
+    --pantone-298-foreground: 213 27% 94%;
+    
+    /* PANTONE 426 C - Warm Gray */
+    --pantone-426: 30 8% 65%;
+    --pantone-426-foreground: 222 47% 7%;
+    
+    /* PANTONE 432 C - Cool Gray */
+    --pantone-432: 210 8% 55%;
+    --pantone-432-foreground: 213 27% 94%;
+    
+    /* PANTONE 715 C - Peach/Coral */
+    --pantone-715: 15 85% 75%;
+    --pantone-715-foreground: 222 47% 7%;
 
-    /* Secondary colors */
-    --secondary: 215 27% 16%;
+    /* Primary brand colors using Pantone 298 C */
+    --primary: 193 100% 55%;
+    --primary-foreground: 213 27% 94%;
+    --primary-glow: 193 100% 70%;
+
+    /* Secondary colors using Pantone 432 C */
+    --secondary: 210 8% 55%;
     --secondary-foreground: 213 27% 94%;
 
     /* Muted colors */
     --muted: 215 27% 16%;
     --muted-foreground: 215 20% 65%;
 
-    /* Accent colors */
-    --accent: 262 83% 58%;
+    /* Accent colors using Pantone 190 C */
+    --accent: 330 92% 65%;
     --accent-foreground: 213 27% 94%;
 
     /* Success and error colors */
@@ -49,15 +74,17 @@ All colors MUST be HSL.
     --input: 215 27% 16%;
     --ring: 221 83% 53%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(262 83% 58%));
-    --gradient-hero: linear-gradient(90deg, hsl(220 100% 65%) 0%, hsl(220 100% 55%) 50%, hsl(220 100% 45%) 100%);
+    /* Gradients using Pantone colors */
+    --gradient-primary: linear-gradient(135deg, hsl(193 100% 55%), hsl(330 92% 65%));
+    --gradient-hero: linear-gradient(90deg, hsl(193 100% 65%) 0%, hsl(193 100% 55%) 50%, hsl(193 100% 45%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(224 47% 9%) 0%, hsl(215 27% 12%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(11 92% 55%), hsl(15 85% 75%));
     
-    /* Shadows and glows */
-    --shadow-primary: 0 10px 40px -10px hsl(221 83% 53% / 0.3);
+    /* Shadows and glows using Pantone colors */
+    --shadow-primary: 0 10px 40px -10px hsl(193 100% 55% / 0.3);
     --shadow-card: 0 4px 20px -2px hsl(222 47% 4% / 0.3);
-    --glow-primary: 0 0 40px hsl(221 83% 53% / 0.4);
+    --glow-primary: 0 0 40px hsl(193 100% 55% / 0.4);
+    --glow-accent: 0 0 30px hsl(330 92% 65% / 0.3);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -101,7 +128,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-montserrat antialiased;
   }
 
   html {
