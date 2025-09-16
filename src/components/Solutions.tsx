@@ -122,7 +122,7 @@ const Solutions = () => {
                 <img 
                   src={aiCandleInsightsImage} 
                   alt="AI Candle Analysis"
-                  className="w-full h-72 object-cover transition-all duration-700 group-hover:scale-105"
+                  className="w-full h-80 object-cover transition-all duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent group-hover:from-background/20 transition-all duration-700" />
                 <div className="absolute inset-0 bg-pantone-298/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
