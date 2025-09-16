@@ -184,7 +184,7 @@ const Solutions = () => {
                 <div>
                   <h3 className="text-3xl font-bold mb-3 text-white">AI Chatbot</h3>
                   <p className="text-white/70 text-base sm:text-lg leading-relaxed font-light">
-                    More than numbers, it's context. Get real-time insights in plain English so every chart makes sense.
+                    Your personal market guide — anytime, anywhere. Ask questions, explore insights, and get instant explanations of what's happening in the markets. Whether you're a trader, investor, or simply learning how markets work, our AI Chatbot gives you clear, personalized answers to help you understand and make smarter decisions.
                   </p>
                 </div>
               </div>
