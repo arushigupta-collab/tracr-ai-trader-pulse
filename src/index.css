@@ -199,4 +199,13 @@ All colors MUST be HSL.
   .animation-delay-1000 {
     animation-delay: 1000ms;
   }
+  
+  /* Custom animations for AI Candle Insights */
+  @keyframes slide-cursor {
+    0% { left: 8%; }
+    25% { left: 35%; }
+    50% { left: 60%; }
+    75% { left: 85%; }
+    100% { left: 8%; }
+  }
 }

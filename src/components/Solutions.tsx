@@ -121,41 +121,78 @@ const Solutions = () => {
                 No more guessing. No more staring at charts in confusion. Just clear, AI-powered breakdowns that help you trade, invest, and learn faster than ever.
               </p>
 
-              {/* Chart Preview with Animated Insights */}
-              <div className="relative mb-8 rounded-2xl overflow-hidden animate-fade-in group cursor-pointer">
-                <img 
-                  src={aiCandleInsightsImage} 
-                  alt="AI Candle Analysis"
-                  className="w-full h-80 object-cover transition-all duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent group-hover:from-background/20 transition-all duration-700" />
-                <div className="absolute inset-0 bg-pantone-298/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              {/* Interactive Chart Animation */}
+              <div className="relative mb-8 rounded-2xl overflow-hidden animate-fade-in group cursor-pointer bg-background/95 h-80">
+                {/* Animated Candlestick Chart Background */}
+                <div className="absolute inset-0 p-6">
+                  {/* Chart Grid */}
+                  <div className="w-full h-full relative">
+                    {/* Grid Lines */}
+                    <div className="absolute inset-0 grid grid-cols-12 grid-rows-8 opacity-20">
+                      {Array.from({ length: 96 }).map((_, i) => (
+                        <div key={i} className="border-r border-b border-white/10"></div>
+                      ))}
+                    </div>
+                    
+                    {/* Animated Candlesticks */}
+                    <div className="absolute bottom-16 left-8 right-8 flex items-end justify-between h-40">
+                      {Array.from({ length: 12 }).map((_, i) => {
+                        const heights = [60, 80, 45, 90, 70, 85, 55, 95, 75, 65, 88, 92];
+                        const colors = i === 7 ? 'bg-pantone-298' : (i % 3 === 0 ? 'bg-green-500' : 'bg-red-500');
+                        return (
+                          <div
+                            key={i}
+                            className={`w-3 ${colors} opacity-80 transition-all duration-1000 ease-in-out`}
+                            style={{ 
+                              height: `${heights[i]}%`,
+                              animationDelay: `${i * 200}ms`,
+                              animation: `fade-in 0.8s ease-out ${i * 0.2}s forwards`
+                            }}
+                          ></div>
+                        );
+                      })}
+                    </div>
+                    
+                    {/* AI Analysis Cursor */}
+                    <div 
+                      className="absolute w-0.5 h-full bg-pantone-298/60 transition-all duration-3000 ease-in-out"
+                      style={{
+                        left: '8%',
+                        animation: 'slide-cursor 6s ease-in-out infinite'
+                      }}
+                    >
+                      <div className="absolute top-1/2 -translate-y-1/2 w-3 h-3 bg-pantone-298 rounded-full animate-pulse"></div>
+                    </div>
+                  </div>
+                </div>
                 
-                {/* Animated insights overlay */}
+                {/* Real-time AI Insights */}
                 <div className="absolute top-6 left-6 right-6 space-y-3">
                   {candleInsights.map((insight, index) => (
                     <div 
                       key={insight.id}
-                      className="bg-background/95 backdrop-blur-md rounded-xl p-4 border border-border/30 animate-fade-in transform translate-x-full opacity-0 shadow-lg"
+                      className="bg-background/95 backdrop-blur-md rounded-xl p-4 border border-pantone-298/30 animate-fade-in transform translate-x-full opacity-0 shadow-lg"
                       style={{ 
                         animationDelay: `${index * 0.5}s`,
                         animation: `fade-in 0.6s ease-out ${index * 2.5}s forwards, slide-in-right 0.6s ease-out ${index * 2.5}s forwards`
                       }}
                     >
-                      <p className="text-sm font-medium text-foreground">
-                        <span className="text-pantone-298 font-semibold">AI {insight.type}:</span> {insight.message}
-                        <span className="animate-pulse text-pantone-298 ml-2 text-lg">●</span>
-                      </p>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-pantone-298 rounded-full animate-pulse"></div>
+                        <p className="text-sm font-medium text-foreground">
+                          <span className="text-pantone-298 font-semibold">AI {insight.type}:</span> {insight.message}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>
                 
-                {/* Static hover tooltip */}
+                {/* Interactive Hover Tooltip */}
                 <div className="absolute bottom-4 left-4 right-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20 animate-fade-in">
+                  <div className="bg-pantone-298/20 backdrop-blur-sm rounded-lg p-3 border border-pantone-298/30">
                     <p className="text-sm text-foreground">
-                      <span className="text-pantone-298 font-medium">AI Insight:</span> Hover over any candle for real-time analysis
-                      <span className="animate-pulse text-pantone-298"> Live Analysis</span>
+                      <span className="text-pantone-298 font-medium">Live Analysis:</span> AI scanning market patterns in real-time
+                      <span className="animate-pulse text-pantone-298 ml-2">●</span>
                     </p>
                   </div>
                 </div>
