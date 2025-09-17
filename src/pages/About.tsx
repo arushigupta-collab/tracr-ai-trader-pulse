@@ -36,7 +36,7 @@ const About = () => {
                 About <span className="text-white">tracr ai</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto">
-                Building smarter tools so every trader can see behind the trade.
+                AI-powered clarity for traders and investors.
               </p>
             </div>
           </div>
