@@ -135,10 +135,13 @@ const Solutions = () => {
                         ];
                         
                         return (
-                          <div key={i} className="relative group z-30">
+                          <div key={i} className="relative group/candle">
+                            {/* Hover Area - Invisible expanded area for better hover detection */}
+                            <div className="absolute inset-0 -inset-x-2 -inset-y-4 z-10" />
+                            
                             {/* Candlestick Body */}
                             <div
-                              className={`relative w-4 ${colors} opacity-90 transition-all duration-300 ease-in-out hover:opacity-100 hover:scale-x-125 hover:z-50 cursor-pointer rounded-sm`}
+                              className={`relative w-4 ${colors} opacity-90 transition-all duration-300 ease-in-out group-hover/candle:opacity-100 group-hover/candle:scale-x-125 cursor-pointer rounded-sm z-20`}
                               style={{ 
                                 height: `${heights[i]}%`,
                                 animationDelay: `${i * 150}ms`,
@@ -160,7 +163,7 @@ const Solutions = () => {
                             </div>
 
                             {/* Enhanced Hover Tooltip with AI Insights */}
-                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-50 group-hover:scale-105">
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 opacity-0 group-hover/candle:opacity-100 transition-all duration-300 pointer-events-none z-[100] scale-95 group-hover/candle:scale-100">
                               <div className="bg-slate-900/95 backdrop-blur-xl rounded-xl p-4 border border-pantone-298/50 shadow-2xl min-w-64 max-w-80">
                                 {/* Header */}
                                 <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/10">
