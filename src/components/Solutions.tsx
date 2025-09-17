@@ -72,86 +72,93 @@ const Solutions = () => {
                 No more guessing. No more staring at charts in confusion. Just clear, AI-powered breakdowns that help you trade, invest, and learn faster than ever.
               </p>
 
-              {/* Enhanced Interactive Candlestick Animation */}
-              <div className="relative mb-8 rounded-2xl overflow-hidden animate-fade-in cursor-pointer bg-slate-900/80 backdrop-blur-sm h-80 border border-white/20">
-                {/* Animated Candlestick Chart */}
+              {/* Enhanced Realistic Candlestick Chart Animation */}
+              <div className="relative mb-8 rounded-2xl overflow-hidden animate-fade-in cursor-pointer bg-slate-950 backdrop-blur-sm h-80 border border-cyan-500/20">
+                {/* Professional Trading Chart */}
                 <div className="absolute inset-0 p-6">
                   <div className="w-full h-full relative">
-                    {/* Subtle Grid Lines */}
+                    {/* Enhanced Grid Lines - Similar to Trading Platforms */}
                     <div className="absolute inset-0 z-0">
-                      {/* Horizontal lines with subtle animation */}
-                      {Array.from({ length: 5 }).map((_, i) => (
+                      {/* Horizontal grid lines */}
+                      {Array.from({ length: 6 }).map((_, i) => (
                         <div 
                           key={`h-${i}`} 
-                          className="absolute w-full border-t border-white/5 animate-pulse" 
+                          className="absolute w-full border-t border-cyan-500/10" 
                           style={{ 
-                            top: `${(i + 1) * 20}%`,
-                            animationDelay: `${i * 0.2}s`,
-                            animationDuration: '3s'
+                            top: `${i * 16.67}%`,
+                            animationDelay: `${i * 0.1}s`
                           }}
                         />
                       ))}
-                      {/* Vertical lines with subtle animation */}
-                      {Array.from({ length: 8 }).map((_, i) => (
+                      {/* Vertical grid lines */}
+                      {Array.from({ length: 12 }).map((_, i) => (
                         <div 
                           key={`v-${i}`} 
-                          className="absolute h-full border-l border-white/5 animate-pulse" 
+                          className="absolute h-full border-l border-cyan-500/10" 
                           style={{ 
-                            left: `${(i + 1) * 11.11}%`,
-                            animationDelay: `${i * 0.15}s`,
-                            animationDuration: '4s'
+                            left: `${(i + 1) * 7.69}%`,
+                            animationDelay: `${i * 0.05}s`
                           }}
                         />
                       ))}
                     </div>
                     
-                    {/* Animated Price Labels */}
-                    <div className="absolute left-2 top-0 bottom-0 flex flex-col justify-between text-xs text-white/60 py-4 z-10">
-                      {['1.2600', '1.2550', '1.2500', '1.2450', '1.2400'].map((price, i) => (
+                    {/* Professional Price Scale */}
+                    <div className="absolute left-2 top-0 bottom-0 flex flex-col justify-between text-xs text-cyan-400/70 py-4 z-10 font-mono">
+                      {['1.2650', '1.2600', '1.2550', '1.2500', '1.2450', '1.2400'].map((price, i) => (
                         <span 
                           key={price}
-                          className="animate-fade-in"
-                          style={{ animationDelay: `${i * 0.3}s` }}
+                          className="animate-fade-in bg-slate-950/80 px-1 rounded"
+                          style={{ animationDelay: `${i * 0.2}s` }}
                         >
                           {price}
                         </span>
                       ))}
                     </div>
                     
-                    {/* Enhanced Interactive Candlesticks with Advanced Animation */}
-                    <div className="absolute bottom-16 left-12 right-8 flex items-end justify-between h-40 z-20">
-                      {Array.from({ length: 23 }).map((_, i) => {
-                        const heights = [60, 80, 45, 90, 70, 85, 55, 95, 75, 65, 88, 92, 68, 82, 58, 94, 77, 63, 89, 91, 72, 86, 79];
-                        const isGreen = i % 3 === 0 || i === 8 || i === 10 || i === 11 || i === 13 || i === 15 || i === 17 || i === 19 || i === 21 || i === 22;
-                        const isDoji = i === 7 || i === 14 || i === 20;
-                        const colors = isDoji ? 'bg-pantone-298 shadow-lg shadow-pantone-298/30' :
-                                      isGreen ? 'bg-green-500 shadow-md shadow-green-500/30' : 
-                                      'bg-red-500 shadow-md shadow-red-500/30';
+                    {/* Professional Candlestick Chart with Enhanced Realism */}
+                    <div className="absolute bottom-16 left-12 right-8 flex items-end justify-between h-48 z-20">
+                      {Array.from({ length: 25 }).map((_, i) => {
+                        // More realistic height variations
+                        const heights = [45, 65, 35, 75, 55, 70, 40, 80, 60, 50, 72, 78, 52, 68, 42, 82, 62, 48, 74, 76, 58, 71, 63, 54, 69];
+                        const wickHeights = [55, 75, 45, 85, 65, 80, 50, 90, 70, 60, 82, 88, 62, 78, 52, 92, 72, 58, 84, 86, 68, 81, 73, 64, 79];
+                        
+                        // More realistic distribution of bullish/bearish candles
+                        const isGreen = [true, true, false, true, true, true, false, true, true, false, true, true, false, true, false, true, true, false, true, true, false, true, true, false, true][i];
+                        const isDoji = i === 7 || i === 14 || i === 21;
+                        
+                        const candleColor = isDoji ? 'bg-cyan-400 shadow-lg shadow-cyan-400/40' :
+                                          isGreen ? 'bg-cyan-400 shadow-md shadow-cyan-400/30' : 
+                                          'bg-red-500 shadow-md shadow-red-500/30';
+                        
+                        const wickColor = isDoji ? 'bg-cyan-400' : isGreen ? 'bg-cyan-300' : 'bg-red-400';
                         
                         const candleData = [
-                          { open: 1.2340, high: 1.2390, low: 1.2320, close: 1.2375, volume: 2450, trend: 'Bullish', signal: 'Buy Signal', insight: 'Strong buying pressure detected at support level' },
-                          { open: 1.2375, high: 1.2420, low: 1.2360, close: 1.2415, volume: 3200, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Volume surge confirms bullish momentum' },
-                          { open: 1.2415, high: 1.2430, low: 1.2380, close: 1.2395, volume: 1800, trend: 'Neutral', signal: 'Hold', insight: 'Consolidation phase - awaiting direction' },
-                          { open: 1.2395, high: 1.2450, low: 1.2390, close: 1.2445, volume: 4100, trend: 'Bullish', signal: 'Buy Signal', insight: 'Breakout above resistance confirmed' },
-                          { open: 1.2445, high: 1.2470, low: 1.2420, close: 1.2460, volume: 2800, trend: 'Bullish', signal: 'Buy Signal', insight: 'Sustained upward momentum with good volume' },
-                          { open: 1.2460, high: 1.2490, low: 1.2450, close: 1.2485, volume: 3600, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Higher highs pattern establishing new trend' },
-                          { open: 1.2485, high: 1.2500, low: 1.2465, close: 1.2475, volume: 2200, trend: 'Neutral', signal: 'Hold', insight: 'Minor pullback - healthy retracement' },
-                          { open: 1.2475, high: 1.2520, low: 1.2470, close: 1.2515, volume: 5200, trend: 'Breakout', signal: 'AI DOJI ALERT', insight: 'Doji formation signals market indecision - potential reversal point' },
-                          { open: 1.2515, high: 1.2540, low: 1.2500, close: 1.2535, volume: 3800, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Post-doji bullish continuation confirmed' },
-                          { open: 1.2535, high: 1.2550, low: 1.2520, close: 1.2545, volume: 2900, trend: 'Bullish', signal: 'Buy Signal', insight: 'Steady climb with institutional support' },
-                          { open: 1.2545, high: 1.2580, low: 1.2540, close: 1.2575, volume: 4500, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Acceleration phase - momentum building' },
-                          { open: 1.2575, high: 1.2595, low: 1.2565, close: 1.2590, volume: 3300, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'New highs reached - trend continuation likely' },
-                          { open: 1.2590, high: 1.2605, low: 1.2580, close: 1.2595, volume: 2750, trend: 'Bearish', signal: 'Sell Signal', insight: 'Resistance met at key level - profit taking detected' },
-                          { open: 1.2595, high: 1.2615, low: 1.2585, close: 1.2610, volume: 4200, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'False breakout followed by genuine momentum surge' },
-                          { open: 1.2610, high: 1.2625, low: 1.2605, close: 1.2615, volume: 3100, trend: 'Breakout', signal: 'AI DOJI ALERT', insight: 'Second doji pattern - major institutional decision point' },
-                          { open: 1.2615, high: 1.2640, low: 1.2610, close: 1.2635, volume: 5800, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Institutional buying wave - major volume spike detected' },
-                          { open: 1.2635, high: 1.2650, low: 1.2625, close: 1.2640, volume: 2400, trend: 'Bearish', signal: 'Sell Signal', insight: 'Overextended rally showing first signs of exhaustion' },
-                          { open: 1.2640, high: 1.2655, low: 1.2630, close: 1.2650, volume: 3900, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Bull flag formation completing - continuation pattern confirmed' },
-                          { open: 1.2650, high: 1.2670, low: 1.2645, close: 1.2665, volume: 4600, trend: 'Bearish', signal: 'Sell Signal', insight: 'Double top formation emerging - bearish divergence detected' },
-                          { open: 1.2665, high: 1.2680, low: 1.2660, close: 1.2675, volume: 5100, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Breakout above double top - new uptrend established' },
-                          { open: 1.2675, high: 1.2690, low: 1.2670, close: 1.2685, volume: 3700, trend: 'Breakout', signal: 'AI DOJI ALERT', insight: 'Third doji pattern - critical decision zone for major trend direction' },
-                          { open: 1.2685, high: 1.2700, low: 1.2675, close: 1.2695, volume: 4800, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Explosive breakout from consolidation - institutional accumulation confirmed' },
-                          { open: 1.2695, high: 1.2715, low: 1.2690, close: 1.2710, volume: 6200, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Parabolic move initiated - highest volume of the session detected' }
+                          { open: 1.2340, high: 1.2395, low: 1.2320, close: 1.2380, volume: 2450, signal: 'Buy Signal', insight: 'Strong bullish momentum building at support' },
+                          { open: 1.2380, high: 1.2425, low: 1.2365, close: 1.2420, volume: 3200, signal: 'Strong Buy', insight: 'Volume surge confirms upward breakout' },
+                          { open: 1.2420, high: 1.2435, low: 1.2385, close: 1.2390, volume: 1800, signal: 'Sell Signal', insight: 'Bearish rejection at resistance level' },
+                          { open: 1.2390, high: 1.2455, low: 1.2385, close: 1.2450, volume: 4100, signal: 'Buy Signal', insight: 'Bulls regain control with strong close' },
+                          { open: 1.2450, high: 1.2475, low: 1.2425, close: 1.2470, volume: 2800, signal: 'Buy Signal', insight: 'Consistent buying pressure continues' },
+                          { open: 1.2470, high: 1.2495, low: 1.2455, close: 1.2490, volume: 3600, signal: 'Strong Buy', insight: 'New highs signal trend acceleration' },
+                          { open: 1.2490, high: 1.2505, low: 1.2470, close: 1.2475, volume: 2200, signal: 'Sell Signal', insight: 'Profit-taking creates bearish candle' },
+                          { open: 1.2475, high: 1.2525, low: 1.2470, close: 1.2478, volume: 5200, signal: 'DOJI ALERT', insight: 'Market indecision - critical reversal zone' },
+                          { open: 1.2478, high: 1.2545, low: 1.2475, close: 1.2540, volume: 3800, signal: 'Strong Buy', insight: 'Doji resolved bullishly with volume' },
+                          { open: 1.2540, high: 1.2555, low: 1.2525, close: 1.2530, volume: 2900, signal: 'Sell Signal', insight: 'Minor pullback after strong advance' },
+                          { open: 1.2530, high: 1.2585, low: 1.2525, close: 1.2580, volume: 4500, signal: 'Strong Buy', insight: 'Breakout above previous resistance' },
+                          { open: 1.2580, high: 1.2600, low: 1.2570, close: 1.2595, volume: 3300, signal: 'Strong Buy', insight: 'Momentum accelerating to new peaks' },
+                          { open: 1.2595, high: 1.2610, low: 1.2575, close: 1.2585, volume: 2750, signal: 'Sell Signal', insight: 'Bears step in at psychological level' },
+                          { open: 1.2585, high: 1.2620, low: 1.2580, close: 1.2615, volume: 4200, signal: 'Strong Buy', insight: 'Bulls overcome resistance decisively' },
+                          { open: 1.2615, high: 1.2630, low: 1.2610, close: 1.2618, volume: 3100, signal: 'DOJI ALERT', insight: 'Second doji - major decision point ahead' },
+                          { open: 1.2618, high: 1.2645, low: 1.2615, close: 1.2640, volume: 5800, signal: 'Strong Buy', insight: 'Institutional buying wave detected' },
+                          { open: 1.2640, high: 1.2655, low: 1.2630, close: 1.2650, volume: 2400, signal: 'Strong Buy', insight: 'New session highs reached confidently' },
+                          { open: 1.2650, high: 1.2665, low: 1.2635, close: 1.2645, volume: 3900, signal: 'Sell Signal', insight: 'Slight retracement from day highs' },
+                          { open: 1.2645, high: 1.2675, low: 1.2640, close: 1.2670, volume: 4600, signal: 'Strong Buy', insight: 'Bulls maintain control at higher levels' },
+                          { open: 1.2670, high: 1.2685, low: 1.2665, close: 1.2680, volume: 5100, signal: 'Strong Buy', insight: 'Continued strength with solid volume' },
+                          { open: 1.2680, high: 1.2695, low: 1.2675, close: 1.2685, volume: 3700, signal: 'Sell Signal', insight: 'Minor consolidation at resistance' },
+                          { open: 1.2685, high: 1.2705, low: 1.2680, close: 1.2688, volume: 4800, signal: 'DOJI ALERT', insight: 'Third doji - trend exhaustion signal' },
+                          { open: 1.2688, high: 1.2710, low: 1.2685, close: 1.2705, volume: 6200, signal: 'Strong Buy', insight: 'Final push to session highs' },
+                          { open: 1.2705, high: 1.2720, low: 1.2695, close: 1.2700, volume: 2800, signal: 'Sell Signal', insight: 'Profit-taking near resistance zone' },
+                          { open: 1.2700, high: 1.2725, low: 1.2695, close: 1.2720, volume: 4100, signal: 'Strong Buy', insight: 'Final bullish surge to close session' }
                         ];
                         
                         return (
@@ -168,104 +175,108 @@ const Solutions = () => {
                               document.querySelector(`#tooltip-${i}`)?.classList.add('hidden');
                             }}
                           >
-                            {/* Enhanced Candlestick Body with Advanced Animation */}
+                            {/* Realistic Candlestick Wick */}
                             <div
-                              className={`relative w-4 ${colors} opacity-80 transition-all duration-700 ease-in-out hover:opacity-100 hover:scale-x-150 hover:shadow-xl cursor-pointer rounded-sm transform-gpu group-hover:z-50`}
+                              className={`absolute left-1/2 transform -translate-x-1/2 w-0.5 ${wickColor} opacity-70 transition-all duration-500 group-hover:opacity-100`}
+                              style={{ 
+                                height: `${wickHeights[i]}%`,
+                                bottom: '0%',
+                                animation: `fade-in 1s ease-out ${i * 0.08}s forwards`
+                              }}
+                            />
+                            
+                            {/* Realistic Candlestick Body */}
+                            <div
+                              className={`relative w-3 ${candleColor} opacity-85 transition-all duration-500 ease-out hover:opacity-100 hover:scale-x-150 hover:shadow-2xl cursor-pointer rounded-sm transform-gpu group-hover:z-50 border border-white/10`}
                               style={{ 
                                 height: `${heights[i]}%`,
-                                animation: `
-                                  fade-in 1.2s cubic-bezier(0.4, 0, 0.2, 1) ${i * 0.15}s forwards,
-                                  ${isDoji ? 'pulse 2s ease-in-out infinite' : ''}
-                                `,
-                                transformOrigin: 'bottom'
+                                animation: `fade-in 1.2s cubic-bezier(0.4, 0, 0.2, 1) ${i * 0.1}s forwards`,
+                                transformOrigin: 'bottom',
+                                minHeight: '8px'
                               }}
                             >
-                              {/* Enhanced Wick lines with glow effect */}
-                              <div className={`absolute left-1/2 transform -translate-x-1/2 w-0.5 ${isDoji ? 'bg-pantone-298 shadow-md shadow-pantone-298/50' : isGreen ? 'bg-green-400 shadow-sm shadow-green-400/30' : 'bg-red-400 shadow-sm shadow-red-400/30'} opacity-80 transition-all duration-500 group-hover:opacity-100`}
-                                   style={{ 
-                                     height: '130%', 
-                                     top: '-15%',
-                                     filter: isDoji ? 'drop-shadow(0 0 4px hsl(var(--pantone-298) / 0.5))' : ''
-                                   }}
-                              />
-                              
-                              {/* Enhanced AI Indicator for special candles */}
+                              {/* Enhanced AI Indicator for Doji candles */}
                               {isDoji && (
-                                <div className="absolute -top-3 -right-2 w-3 h-3 bg-pantone-298 rounded-full animate-pulse shadow-lg shadow-pantone-298/50">
-                                  <div className="absolute inset-0 bg-pantone-298 rounded-full animate-ping opacity-75"></div>
-                                </div>
+                                <>
+                                  <div className="absolute -top-4 -right-3 w-4 h-4 bg-cyan-400 rounded-full animate-pulse shadow-lg shadow-cyan-400/60 flex items-center justify-center">
+                                    <div className="w-2 h-2 bg-slate-950 rounded-full"></div>
+                                  </div>
+                                  <div className="absolute -top-4 -right-3 w-4 h-4 bg-cyan-400/30 rounded-full animate-ping"></div>
+                                </>
                               )}
 
                               {/* Hover glow effect */}
-                              <div className={`absolute inset-0 rounded-sm opacity-0 group-hover:opacity-30 transition-opacity duration-300 ${isDoji ? 'bg-pantone-298' : isGreen ? 'bg-green-400' : 'bg-red-400'} blur-sm -z-10`}></div>
+                              <div className={`absolute inset-0 rounded-sm opacity-0 group-hover:opacity-40 transition-opacity duration-300 ${isDoji ? 'bg-cyan-400' : isGreen ? 'bg-cyan-300' : 'bg-red-400'} blur-sm -z-10`}></div>
                             </div>
 
-                            {/* Enhanced Tooltip with Animation */}
+                            {/* Professional Trading Tooltip */}
                             <div 
                               id={`tooltip-${i}`}
                               className="candle-tooltip hidden absolute bottom-full left-1/2 transform -translate-x-1/2 mb-6 transition-all duration-500 pointer-events-none z-[100]"
-                              style={{
-                                animation: 'scale-in 0.3s ease-out'
-                              }}
                             >
-                              <div className="bg-slate-900/98 backdrop-blur-xl rounded-xl p-5 border border-pantone-298/60 shadow-2xl min-w-72 max-w-80">
-                                {/* Header with enhanced styling */}
-                                <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/20">
-                                  <span className="text-sm font-bold text-pantone-298 flex items-center gap-2">
-                                    <div className={`w-2 h-2 rounded-full ${isDoji ? 'bg-pantone-298 animate-pulse' : isGreen ? 'bg-green-400' : 'bg-red-400'}`}></div>
-                                    Candle #{i + 1}
-                                  </span>
-                                  <span className={`text-xs px-3 py-1.5 rounded-full font-semibold ${isDoji ? 'bg-pantone-298/30 text-pantone-298 border border-pantone-298/50' : isGreen ? 'bg-green-500/30 text-green-400 border border-green-500/50' : 'bg-red-500/30 text-red-400 border border-red-500/50'}`}>
-                                    {isDoji ? 'DOJI' : isGreen ? 'BULL' : 'BEAR'}
+                              <div className="bg-slate-950/98 backdrop-blur-xl rounded-xl p-5 border border-cyan-500/60 shadow-2xl min-w-80 max-w-96">
+                                {/* Professional Header */}
+                                <div className="flex items-center justify-between mb-4 pb-3 border-b border-cyan-500/20">
+                                  <div className="flex items-center gap-3">
+                                    <div className={`w-3 h-3 rounded-sm ${candleColor.replace('shadow-lg shadow-cyan-400/40', '').replace('shadow-md shadow-cyan-400/30', '').replace('shadow-md shadow-red-500/30', '')}`}></div>
+                                    <span className="text-sm font-bold text-cyan-400">Candle #{i + 1}</span>
+                                  </div>
+                                  <span className={`text-xs px-3 py-1.5 rounded-full font-bold border ${isDoji ? 'bg-cyan-400/20 text-cyan-400 border-cyan-400/60' : isGreen ? 'bg-cyan-400/20 text-cyan-400 border-cyan-400/60' : 'bg-red-500/20 text-red-400 border-red-500/60'}`}>
+                                    {isDoji ? 'DOJI' : isGreen ? 'BULLISH' : 'BEARISH'}
                                   </span>
                                 </div>
                                 
-                                {/* OHLC Data with enhanced layout */}
-                                <div className="grid grid-cols-2 gap-3 mb-4 text-xs">
-                                  <div className="flex justify-between p-2 bg-white/5 rounded">
-                                    <span className="text-white/60">Open:</span>
-                                    <span className="text-white font-medium">{candleData[i].open}</span>
+                                {/* OHLC Data - Professional Format */}
+                                <div className="grid grid-cols-2 gap-3 mb-4 text-xs font-mono">
+                                  <div className="flex justify-between p-3 bg-slate-900/60 rounded-lg border border-cyan-500/10">
+                                    <span className="text-cyan-300/60">O:</span>
+                                    <span className="text-white font-bold">{candleData[i].open.toFixed(4)}</span>
                                   </div>
-                                  <div className="flex justify-between p-2 bg-white/5 rounded">
-                                    <span className="text-white/60">High:</span>
-                                    <span className="text-green-400 font-medium">{candleData[i].high}</span>
+                                  <div className="flex justify-between p-3 bg-slate-900/60 rounded-lg border border-cyan-500/10">
+                                    <span className="text-cyan-300/60">H:</span>
+                                    <span className="text-cyan-400 font-bold">{candleData[i].high.toFixed(4)}</span>
                                   </div>
-                                  <div className="flex justify-between p-2 bg-white/5 rounded">
-                                    <span className="text-white/60">Low:</span>
-                                    <span className="text-red-400 font-medium">{candleData[i].low}</span>
+                                  <div className="flex justify-between p-3 bg-slate-900/60 rounded-lg border border-cyan-500/10">
+                                    <span className="text-cyan-300/60">L:</span>
+                                    <span className="text-red-400 font-bold">{candleData[i].low.toFixed(4)}</span>
                                   </div>
-                                  <div className="flex justify-between p-2 bg-white/5 rounded">
-                                    <span className="text-white/60">Close:</span>
-                                    <span className="text-white font-medium">{candleData[i].close}</span>
+                                  <div className="flex justify-between p-3 bg-slate-900/60 rounded-lg border border-cyan-500/10">
+                                    <span className="text-cyan-300/60">C:</span>
+                                    <span className="text-white font-bold">{candleData[i].close.toFixed(4)}</span>
                                   </div>
                                 </div>
                                 
-                                {/* Enhanced AI Insight */}
-                                <div className="bg-gradient-to-r from-pantone-298/20 to-pantone-298/10 rounded-lg p-4 mb-4 border border-pantone-298/30">
+                                {/* AI Analysis */}
+                                <div className="bg-gradient-to-r from-cyan-400/15 to-cyan-400/5 rounded-lg p-4 mb-4 border border-cyan-400/30">
                                   <div className="flex items-start space-x-3">
-                                    <Brain className="h-5 w-5 text-pantone-298 mt-0.5 flex-shrink-0 animate-pulse" />
+                                    <Brain className="h-5 w-5 text-cyan-400 mt-0.5 flex-shrink-0 animate-pulse" />
                                     <div>
-                                      <p className="text-sm font-semibold text-pantone-298 mb-2">AI Insight</p>
-                                      <p className="text-xs text-white/90 leading-relaxed">{candleData[i].insight}</p>
+                                      <p className="text-sm font-bold text-cyan-400 mb-2">AI Market Analysis</p>
+                                      <p className="text-sm text-white/90 leading-relaxed">{candleData[i].insight}</p>
                                     </div>
                                   </div>
                                 </div>
                                 
-                                {/* Enhanced Trading Signal */}
-                                <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                                {/* Trading Signal & Volume */}
+                                <div className="flex items-center justify-between p-3 bg-slate-900/60 rounded-lg border border-cyan-500/10">
                                   <div className="flex items-center space-x-3">
-                                    <span className="text-xs text-white/60">Volume:</span>
-                                    <span className="text-xs text-pantone-298 font-bold">{candleData[i].volume.toLocaleString()}</span>
+                                    <span className="text-xs text-cyan-300/60 font-mono">VOL:</span>
+                                    <span className="text-xs text-cyan-400 font-bold">{candleData[i].volume.toLocaleString()}</span>
                                   </div>
-                                  <span className={`text-xs font-bold px-4 py-2 rounded-full border ${isDoji ? 'bg-pantone-298/30 text-pantone-298 border-pantone-298/50' : candleData[i].signal.includes('Strong') ? 'bg-green-500/30 text-green-400 border-green-500/50' : candleData[i].signal.includes('Buy') ? 'bg-green-400/30 text-green-300 border-green-400/50' : 'bg-yellow-500/30 text-yellow-400 border-yellow-500/50'}`}>
+                                  <span className={`text-xs font-bold px-4 py-2 rounded-full border ${
+                                    isDoji ? 'bg-cyan-400/20 text-cyan-400 border-cyan-400/60' : 
+                                    candleData[i].signal.includes('Strong') ? 'bg-cyan-400/20 text-cyan-400 border-cyan-400/60' : 
+                                    candleData[i].signal.includes('Buy') ? 'bg-cyan-400/15 text-cyan-300 border-cyan-400/40' : 
+                                    'bg-red-500/20 text-red-400 border-red-500/60'
+                                  }`}>
                                     {candleData[i].signal}
                                   </span>
                                 </div>
                               </div>
                               
-                              {/* Enhanced Tooltip Arrow */}
+                              {/* Tooltip Arrow */}
                               <div className="absolute top-full left-1/2 transform -translate-x-1/2">
-                                <div className="w-0 h-0 border-l-6 border-r-6 border-t-8 border-transparent border-t-slate-900/98"></div>
+                                <div className="w-0 h-0 border-l-6 border-r-6 border-t-8 border-transparent border-t-slate-950/98"></div>
                               </div>
                             </div>
                           </div>
@@ -273,27 +284,30 @@ const Solutions = () => {
                       })}
                     </div>
                     
-                    {/* Enhanced Time Labels with Animation */}
-                    <div className="absolute bottom-2 left-12 right-8 flex justify-between text-xs text-white/50">
-                      {['09:00', '12:00', '15:00', '18:00'].map((time, i) => (
+                    {/* Professional Time Scale */}
+                    <div className="absolute bottom-2 left-12 right-8 flex justify-between text-xs text-cyan-400/60 font-mono">
+                      {['09:00', '10:30', '12:00', '13:30', '15:00', '16:30'].map((time, i) => (
                         <span 
                           key={time}
-                          className="animate-fade-in"
-                          style={{ animationDelay: `${(i + 1) * 0.4}s` }}
+                          className="animate-fade-in bg-slate-950/80 px-1 rounded"
+                          style={{ animationDelay: `${(i + 1) * 0.3}s` }}
                         >
                           {time}
                         </span>
                       ))}
                     </div>
 
-                    {/* AI Processing Indicator */}
-                    <div className="absolute top-4 right-4 flex items-center space-x-2 bg-pantone-298/20 backdrop-blur-sm rounded-lg px-3 py-2 border border-pantone-298/30">
-                      <Brain className="h-4 w-4 text-pantone-298 animate-pulse" />
-                      <span className="text-xs text-pantone-298 font-medium">AI Processing...</span>
+                    {/* Enhanced AI Processing Indicator */}
+                    <div className="absolute top-4 right-4 flex items-center space-x-3 bg-cyan-400/10 backdrop-blur-sm rounded-lg px-4 py-3 border border-cyan-400/30">
+                      <Brain className="h-5 w-5 text-cyan-400 animate-pulse" />
+                      <div className="flex flex-col">
+                        <span className="text-xs text-cyan-400 font-bold">AI Analysis</span>
+                        <span className="text-xs text-cyan-300/70">Active</span>
+                      </div>
                       <div className="flex space-x-1">
-                        <div className="w-1 h-1 bg-pantone-298 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
-                        <div className="w-1 h-1 bg-pantone-298 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                        <div className="w-1 h-1 bg-pantone-298 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0.15s' }}></div>
+                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0.3s' }}></div>
                       </div>
                     </div>
                   </div>
