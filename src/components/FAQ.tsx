@@ -84,25 +84,28 @@ const FAQ = () => {
         {/* FAQ Accordion */}
         <div className="space-y-6">
           {faqData.map((item, index) => {
-            const pantoneColors = ['pantone-171', 'pantone-190', 'pantone-298', 'pantone-426', 'pantone-432', 'pantone-715'];
-            const colorClass = pantoneColors[index % pantoneColors.length];
+            const isBlue = index % 2 === 0;
+            const questionColor = isBlue ? 'text-pantone-298' : 'text-white';
+            const iconColor = isBlue ? 'text-pantone-298' : 'text-white';
+            const hoverBorder = isBlue ? 'hover:border-pantone-298/40' : 'hover:border-white/40';
+            const activeBorder = isBlue ? 'ring-2 ring-pantone-298/30 shadow-2xl border-pantone-298/50' : 'ring-2 ring-white/30 shadow-2xl border-white/50';
             
             return (
               <Card 
                 key={index}
-                className={`bg-white/5 backdrop-blur-md border-white/20 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:border-${colorClass}/40 animate-fade-in rounded-2xl overflow-hidden ${
-                  expandedItem === index ? `ring-2 ring-${colorClass}/30 shadow-2xl border-${colorClass}/50 scale-[1.02]` : 'hover:scale-[1.01]'
+                className={`bg-white/5 backdrop-blur-md border-white/20 cursor-pointer transition-all duration-500 hover:shadow-2xl ${hoverBorder} animate-fade-in rounded-2xl overflow-hidden ${
+                  expandedItem === index ? `${activeBorder} scale-[1.02]` : 'hover:scale-[1.01]'
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
                 onClick={() => toggleExpand(index)}
               >
               <CardContent className="p-8">
                 <div className="flex justify-between items-center">
-                  <h3 className={`text-xl font-semibold text-${colorClass} pr-6 flex-1 leading-relaxed`}>
+                  <h3 className={`text-xl font-semibold ${questionColor} pr-6 flex-1 leading-relaxed`}>
                     {item.question}
                   </h3>
                   <ChevronDown 
-                    className={`h-6 w-6 text-${colorClass} transition-all duration-500 flex-shrink-0 ${
+                    className={`h-6 w-6 ${iconColor} transition-all duration-500 flex-shrink-0 ${
                       expandedItem === index ? 'rotate-180 scale-110' : 'hover:scale-110'
                     }`}
                   />
