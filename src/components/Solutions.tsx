@@ -261,6 +261,18 @@ const Solutions = () => {
                 </div>
               </div>
 
+              {/* Feature Description */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 space-y-4">
+                <div className="space-y-3">
+                  <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light">
+                    <span className="text-pantone-298 font-semibold">AI Pattern:</span> Spot hidden formations that were not visible before.
+                  </p>
+                  <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light">
+                    <span className="text-pantone-298 font-semibold">AI Insight:</span> Hover over any candle for real-time, context-driven analysis.
+                  </p>
+                </div>
+              </div>
+
             </CardContent>
           </Card>
 
