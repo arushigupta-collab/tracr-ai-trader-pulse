@@ -47,7 +47,7 @@ const About = () => {
           <div className="max-w-6xl mx-auto relative z-10">
             <div className="text-center mb-16 animate-fade-in">
               <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight text-white">
-                Revolutionizing Trading Through <span className="text-gradient">AI Intelligence</span>
+                Revolutionizing Trading Through <span className="text-gradient whitespace-nowrap">AI Intelligence</span>
               </h2>
               <div className="max-w-4xl mx-auto">
                 <p className="text-xl text-white/90 leading-relaxed">
