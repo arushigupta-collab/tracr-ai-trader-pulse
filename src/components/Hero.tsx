@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 
 const Hero = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
   
   const texts = [
     "Trade",
@@ -15,8 +16,12 @@ const Hero = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTextIndex((prev) => (prev + 1) % texts.length);
-    }, 2000);
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+        setIsAnimating(false);
+      }, 300); // Half the transition time for fade out, then fade in
+    }, 3000); // Slower transition for better readability
 
     return () => clearInterval(interval);
   }, [texts.length]);
@@ -35,8 +40,9 @@ const Hero = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white max-w-6xl mx-auto whitespace-nowrap">
             See Behind the{' '}
             <span 
-              key={currentTextIndex}
-              className="inline-block animate-fade-in text-white"
+              className={`inline-block text-white transition-all duration-500 ease-in-out ${
+                isAnimating ? 'opacity-0 transform translate-y-2' : 'opacity-100 transform translate-y-0'
+              }`}
             >
               {texts[currentTextIndex]}
             </span>
