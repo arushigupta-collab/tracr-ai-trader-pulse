@@ -113,7 +113,7 @@ const About = () => {
                       <h3 className="text-3xl font-bold text-white">Our Story</h3>
                     </div>
                     <p className="text-white/80 text-lg leading-relaxed">
-                      Our story began with a frustration every trader knows: strategies that work on paper often fail in practice. After years of trading and research, we realised the missing link was a platform that combined live analysis, and AI-driven insights all in one place. That vision became tracr ai, a platform built by traders, for traders, to help you see behind the trade.
+                      Our story began with a simple frustration: markets can feel impossible to truly understand. Strategies that look perfect on paper often fail in practice, leaving traders and investors guessing at the "why" behind every move. After years of research and experience, we realised the missing link was clear, AI-driven explanations paired with live market analysis. That vision became tracr AI — a platform built to decode markets, shorten the learning curve, and empower anyone, from beginner to expert, to see behind the trade.
                     </p>
                   </CardContent>
                 </Card>
