@@ -72,10 +72,10 @@ const About = () => {
                     
                     <div className="space-y-6 flex-1 flex flex-col justify-around">
                       {[
-                        { icon: Zap, title: "Innovation & Automation", desc: "building smarter, faster ways to trade" },
-                        { icon: TrendingUp, title: "Empowerment", desc: "giving traders clarity and control" },
-                        { icon: Target, title: "Precision", desc: "ensuring accuracy in every feature" },
-                        { icon: Brain, title: "Simplicity", desc: "easy to use without sacrificing depth" }
+                        { icon: Zap, title: "Innovation & Automation", desc: "Smarter, faster tools powered by AI to simplify markets for everyone." },
+                        { icon: TrendingUp, title: "Empowerment", desc: "Giving traders, investors, and learners the clarity and confidence to take control." },
+                        { icon: Target, title: "Precision", desc: "Every feature built for accuracy, insight, and trust." },
+                        { icon: Brain, title: "Simplicity", desc: "Clarity without complexity: powerful tools, easy to use." }
                       ].map((value, index) => (
                         <div key={index} className="flex items-start space-x-3 p-6 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300">
                           <div className="p-3 bg-white/10 rounded-lg">
