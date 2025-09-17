@@ -261,39 +261,6 @@ const Solutions = () => {
                 </div>
               </div>
 
-              {/* Additional AI Candle Insights Content */}
-              <div className="space-y-6">
-                <p className="text-white/90 leading-relaxed text-base sm:text-lg font-light">
-                  tracr AI doesn&apos;t just show you charts, it decodes them. With AI Candle Insights, every price movement comes with instant, plain-English explanations so you know exactly why the market is shifting.
-                </p>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                    <div className="flex items-start space-x-3">
-                      <Brain className="h-5 w-5 text-pantone-298 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <h4 className="text-white font-semibold mb-2">AI Pattern</h4>
-                        <p className="text-white/80 text-sm leading-relaxed">
-                          Spot hidden formations that were not visible before.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                    <div className="flex items-start space-x-3">
-                      <Brain className="h-5 w-5 text-pantone-298 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <h4 className="text-white font-semibold mb-2">AI Insight</h4>
-                        <p className="text-white/80 text-sm leading-relaxed">
-                          Hover over any candle for real-time, context-driven analysis.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
             </CardContent>
           </Card>
 
