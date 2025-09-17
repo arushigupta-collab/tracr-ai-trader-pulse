@@ -75,7 +75,7 @@ const Solutions = () => {
               </p>
 
               {/* Interactive Chart Animation */}
-              <div className="relative mb-8 rounded-2xl overflow-hidden animate-fade-in cursor-pointer bg-gradient-to-br from-background/95 to-background/90 h-80 border border-white/10">
+              <div className="relative mb-8 rounded-2xl overflow-hidden animate-fade-in cursor-pointer bg-gradient-to-br from-slate-900/50 to-slate-800/30 h-80 border border-white/10 backdrop-blur-sm">
                 {/* Animated Candlestick Chart Background */}
                 <div className="absolute inset-0 p-6">
                   {/* Chart Grid */}
@@ -86,7 +86,7 @@ const Solutions = () => {
                       {Array.from({ length: 6 }).map((_, i) => (
                         <div 
                           key={`h-${i}`} 
-                          className="absolute w-full border-t border-white/5" 
+                          className="absolute w-full border-t border-white/8" 
                           style={{ top: `${(i + 1) * 16.66}%` }}
                         />
                       ))}
@@ -94,7 +94,7 @@ const Solutions = () => {
                       {Array.from({ length: 11 }).map((_, i) => (
                         <div 
                           key={`v-${i}`} 
-                          className="absolute h-full border-l border-white/5" 
+                          className="absolute h-full border-l border-white/8" 
                           style={{ left: `${(i + 1) * 8.33}%` }}
                         />
                       ))}
