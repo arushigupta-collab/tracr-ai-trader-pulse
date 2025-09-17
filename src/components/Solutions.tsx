@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Brain, MessageSquare, User, Bot } from 'lucide-react';
-import aiCandleInsightsImage from '@/assets/ai-candle-insights.jpg';
-import aiChatbotImage from '@/assets/ai-chatbot.jpg';
 import userProfileImage from '@/assets/user-profile.jpg';
 
 const Solutions = () => {
