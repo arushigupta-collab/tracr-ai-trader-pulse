@@ -129,7 +129,7 @@ const About = () => {
               <CardContent className="p-12 text-center">
                 <div className="mb-6">
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    Ready to Transform Your Trading?
+                    Ready to See Behind the Markets?
                   </h3>
                   <p className="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
                     Join thousands of traders who are already on the waitlist. Be the first to experience the future of AI-powered trading analytics.
