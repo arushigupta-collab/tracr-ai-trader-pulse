@@ -14,7 +14,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-white/70 mb-6 max-w-md">
-              Trade smarter with tracr AI. Cut out the noise and make trading decisions backed by data and insights, not emotions.
+              See behind the trade. Cut out the noise and make decisions backed by data and insights, not emotions.
             </p>
             
             {/* Social Links */}
