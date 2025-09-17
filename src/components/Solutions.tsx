@@ -111,11 +111,11 @@ const Solutions = () => {
                     
                     {/* Interactive Enhanced Candlesticks */}
                     <div className="absolute bottom-16 left-12 right-8 flex items-end justify-between h-40 z-20">
-                      {Array.from({ length: 20 }).map((_, i) => {
-                        const heights = [60, 80, 45, 90, 70, 85, 55, 95, 75, 65, 88, 92, 68, 82, 58, 94, 77, 63, 89, 91];
-                        const isGreen = i % 3 === 0 || i === 8 || i === 10 || i === 11 || i === 13 || i === 15 || i === 17 || i === 19;
-                        const isDoji = i === 7 || i === 14;
-                        const colors = isDoji ? 'bg-pantone-298 shadow-lg shadow-pantone-298/20' : 
+                      {Array.from({ length: 23 }).map((_, i) => {
+                        const heights = [60, 80, 45, 90, 70, 85, 55, 95, 75, 65, 88, 92, 68, 82, 58, 94, 77, 63, 89, 91, 72, 86, 79];
+                        const isGreen = i % 3 === 0 || i === 8 || i === 10 || i === 11 || i === 13 || i === 15 || i === 17 || i === 19 || i === 21 || i === 22;
+                        const isDoji = i === 7 || i === 14 || i === 20;
+                        const colors = isDoji ? 'bg-pantone-298 shadow-lg shadow-pantone-298/20' :
                                       isGreen ? 'bg-green-500 shadow-md shadow-green-500/20' : 
                                       'bg-red-500 shadow-md shadow-red-500/20';
                         
@@ -139,7 +139,10 @@ const Solutions = () => {
                           { open: 1.2635, high: 1.2650, low: 1.2625, close: 1.2640, volume: 2400, trend: 'Bearish', signal: 'Sell Signal', insight: 'Overextended rally showing first signs of exhaustion' },
                           { open: 1.2640, high: 1.2655, low: 1.2630, close: 1.2650, volume: 3900, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Bull flag formation completing - continuation pattern confirmed' },
                           { open: 1.2650, high: 1.2670, low: 1.2645, close: 1.2665, volume: 4600, trend: 'Bearish', signal: 'Sell Signal', insight: 'Double top formation emerging - bearish divergence detected' },
-                          { open: 1.2665, high: 1.2680, low: 1.2660, close: 1.2675, volume: 5100, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Breakout above double top - new uptrend established' }
+                          { open: 1.2665, high: 1.2680, low: 1.2660, close: 1.2675, volume: 5100, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Breakout above double top - new uptrend established' },
+                          { open: 1.2675, high: 1.2690, low: 1.2670, close: 1.2685, volume: 3700, trend: 'Breakout', signal: 'AI DOJI ALERT', insight: 'Third doji pattern - critical decision zone for major trend direction' },
+                          { open: 1.2685, high: 1.2700, low: 1.2675, close: 1.2695, volume: 4800, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Explosive breakout from consolidation - institutional accumulation confirmed' },
+                          { open: 1.2695, high: 1.2715, low: 1.2690, close: 1.2710, volume: 6200, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Parabolic move initiated - highest volume of the session detected' }
                         ];
                         
                         return (
