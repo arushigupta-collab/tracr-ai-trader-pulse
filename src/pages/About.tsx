@@ -101,7 +101,7 @@ const About = () => {
                       <h3 className="text-3xl font-bold text-white">Our Mission</h3>
                     </div>
                     <p className="text-white/80 text-lg leading-relaxed">
-                      To level the playing field for retail traders by providing professional-grade tools that are intuitive, accessible, and powered by AI. We believe trading should be guided by insight, not emotion.
+                      To level the playing field by making market intelligence accessible to everyone. tracr AI provides professional-grade tools that are intuitive, powerful, and AI-driven helping traders, investors, and learners alike cut through noise, reduce mistakes, and understand the real drivers behind market moves. We believe markets should be guided by insight, not emotion.
                     </p>
                   </CardContent>
                 </Card>
