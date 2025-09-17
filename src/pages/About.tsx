@@ -33,7 +33,7 @@ const About = () => {
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="animate-fade-in">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
-                About <span className="text-gradient">tracr ai</span>
+                About <span style={{ color: 'hsl(11, 92%, 55%)' }}>tracr ai</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto">
                 Building smarter tools so every trader can see behind the trade.
