@@ -237,6 +237,7 @@ const Solutions = () => {
                               </div>
                             </div>
                           </div>
+                        );
                       })}
                     </div>
                     
