@@ -75,43 +75,42 @@ const Solutions = () => {
               </p>
 
               {/* Interactive Chart Animation */}
-              <div className="relative mb-8 rounded-2xl overflow-hidden animate-fade-in cursor-pointer bg-gradient-to-br from-slate-900/50 to-slate-800/30 h-80 border border-white/10 backdrop-blur-sm">
+              <div className="relative mb-8 rounded-2xl overflow-hidden animate-fade-in cursor-pointer bg-slate-900/80 backdrop-blur-sm h-80 border border-white/20">
                 {/* Animated Candlestick Chart Background */}
                 <div className="absolute inset-0 p-6">
                   {/* Chart Grid */}
                   <div className="w-full h-full relative">
-                    {/* Enhanced Grid Lines */}
-                    <div className="absolute inset-0">
+                    {/* Subtle Grid Lines */}
+                    <div className="absolute inset-0 z-0">
                       {/* Horizontal lines */}
-                      {Array.from({ length: 6 }).map((_, i) => (
+                      {Array.from({ length: 5 }).map((_, i) => (
                         <div 
                           key={`h-${i}`} 
-                          className="absolute w-full border-t border-white/8" 
-                          style={{ top: `${(i + 1) * 16.66}%` }}
+                          className="absolute w-full border-t border-white/5" 
+                          style={{ top: `${(i + 1) * 20}%` }}
                         />
                       ))}
                       {/* Vertical lines */}
-                      {Array.from({ length: 11 }).map((_, i) => (
+                      {Array.from({ length: 8 }).map((_, i) => (
                         <div 
                           key={`v-${i}`} 
-                          className="absolute h-full border-l border-white/8" 
-                          style={{ left: `${(i + 1) * 8.33}%` }}
+                          className="absolute h-full border-l border-white/5" 
+                          style={{ left: `${(i + 1) * 11.11}%` }}
                         />
                       ))}
                     </div>
                     
                     {/* Price Labels */}
-                    <div className="absolute left-2 top-0 bottom-0 flex flex-col justify-between text-xs text-white/40 py-4">
+                    <div className="absolute left-2 top-0 bottom-0 flex flex-col justify-between text-xs text-white/60 py-4 z-10">
                       <span>1.2600</span>
                       <span>1.2550</span>
                       <span>1.2500</span>
                       <span>1.2450</span>
                       <span>1.2400</span>
-                      <span>1.2350</span>
                     </div>
                     
                     {/* Interactive Enhanced Candlesticks */}
-                    <div className="absolute bottom-16 left-12 right-8 flex items-end justify-between h-40">
+                    <div className="absolute bottom-16 left-12 right-8 flex items-end justify-between h-40 z-20">
                       {Array.from({ length: 12 }).map((_, i) => {
                         const heights = [60, 80, 45, 90, 70, 85, 55, 95, 75, 65, 88, 92];
                         const isGreen = i % 3 === 0 || i === 8 || i === 10 || i === 11;
@@ -136,10 +135,10 @@ const Solutions = () => {
                         ];
                         
                         return (
-                          <div key={i} className="relative group">
+                          <div key={i} className="relative group z-30">
                             {/* Candlestick Body */}
                             <div
-                              className={`relative w-4 ${colors} opacity-85 transition-all duration-300 ease-in-out hover:opacity-100 hover:scale-x-125 hover:z-20 cursor-pointer rounded-sm`}
+                              className={`relative w-4 ${colors} opacity-90 transition-all duration-300 ease-in-out hover:opacity-100 hover:scale-x-125 hover:z-50 cursor-pointer rounded-sm`}
                               style={{ 
                                 height: `${heights[i]}%`,
                                 animationDelay: `${i * 150}ms`,
@@ -161,8 +160,8 @@ const Solutions = () => {
                             </div>
 
                             {/* Enhanced Hover Tooltip with AI Insights */}
-                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-30 group-hover:scale-105">
-                              <div className="bg-background/98 backdrop-blur-lg rounded-xl p-4 border border-pantone-298/40 shadow-2xl min-w-64 max-w-80">
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-50 group-hover:scale-105">
+                              <div className="bg-slate-900/95 backdrop-blur-xl rounded-xl p-4 border border-pantone-298/50 shadow-2xl min-w-64 max-w-80">
                                 {/* Header */}
                                 <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/10">
                                   <span className="text-sm font-semibold text-pantone-298">Candle #{i + 1}</span>
