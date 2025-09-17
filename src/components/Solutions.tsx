@@ -111,10 +111,10 @@ const Solutions = () => {
                     
                     {/* Interactive Enhanced Candlesticks */}
                     <div className="absolute bottom-16 left-12 right-8 flex items-end justify-between h-40 z-20">
-                      {Array.from({ length: 12 }).map((_, i) => {
-                        const heights = [60, 80, 45, 90, 70, 85, 55, 95, 75, 65, 88, 92];
-                        const isGreen = i % 3 === 0 || i === 8 || i === 10 || i === 11;
-                        const isDoji = i === 7;
+                      {Array.from({ length: 20 }).map((_, i) => {
+                        const heights = [60, 80, 45, 90, 70, 85, 55, 95, 75, 65, 88, 92, 68, 82, 58, 94, 77, 63, 89, 91];
+                        const isGreen = i % 3 === 0 || i === 8 || i === 10 || i === 11 || i === 13 || i === 15 || i === 17 || i === 19;
+                        const isDoji = i === 7 || i === 14;
                         const colors = isDoji ? 'bg-pantone-298 shadow-lg shadow-pantone-298/20' : 
                                       isGreen ? 'bg-green-500 shadow-md shadow-green-500/20' : 
                                       'bg-red-500 shadow-md shadow-red-500/20';
@@ -131,7 +131,15 @@ const Solutions = () => {
                           { open: 1.2515, high: 1.2540, low: 1.2500, close: 1.2535, volume: 3800, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Post-doji bullish continuation confirmed' },
                           { open: 1.2535, high: 1.2550, low: 1.2520, close: 1.2545, volume: 2900, trend: 'Bullish', signal: 'Buy Signal', insight: 'Steady climb with institutional support' },
                           { open: 1.2545, high: 1.2580, low: 1.2540, close: 1.2575, volume: 4500, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Acceleration phase - momentum building' },
-                          { open: 1.2575, high: 1.2595, low: 1.2565, close: 1.2590, volume: 3300, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'New highs reached - trend continuation likely' }
+                          { open: 1.2575, high: 1.2595, low: 1.2565, close: 1.2590, volume: 3300, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'New highs reached - trend continuation likely' },
+                          { open: 1.2590, high: 1.2605, low: 1.2580, close: 1.2595, volume: 2750, trend: 'Bearish', signal: 'Sell Signal', insight: 'Resistance met at key level - profit taking detected' },
+                          { open: 1.2595, high: 1.2615, low: 1.2585, close: 1.2610, volume: 4200, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'False breakout followed by genuine momentum surge' },
+                          { open: 1.2610, high: 1.2625, low: 1.2605, close: 1.2615, volume: 3100, trend: 'Breakout', signal: 'AI DOJI ALERT', insight: 'Second doji pattern - major institutional decision point' },
+                          { open: 1.2615, high: 1.2640, low: 1.2610, close: 1.2635, volume: 5800, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Institutional buying wave - major volume spike detected' },
+                          { open: 1.2635, high: 1.2650, low: 1.2625, close: 1.2640, volume: 2400, trend: 'Bearish', signal: 'Sell Signal', insight: 'Overextended rally showing first signs of exhaustion' },
+                          { open: 1.2640, high: 1.2655, low: 1.2630, close: 1.2650, volume: 3900, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Bull flag formation completing - continuation pattern confirmed' },
+                          { open: 1.2650, high: 1.2670, low: 1.2645, close: 1.2665, volume: 4600, trend: 'Bearish', signal: 'Sell Signal', insight: 'Double top formation emerging - bearish divergence detected' },
+                          { open: 1.2665, high: 1.2680, low: 1.2660, close: 1.2675, volume: 5100, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Breakout above double top - new uptrend established' }
                         ];
                         
                         return (
