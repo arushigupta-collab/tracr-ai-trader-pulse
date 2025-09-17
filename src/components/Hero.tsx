@@ -59,7 +59,7 @@ const Hero = () => {
               <Button 
                 variant="default" 
                 size="xl" 
-                className="bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-pantone-298 hover:border-pantone-298 hover:text-white hover:scale-105 hover:shadow-xl hover:shadow-pantone-298/30 transition-all duration-300 px-8 py-4 rounded-2xl font-medium text-lg"
+                className="bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-pantone-715 hover:border-pantone-715 hover:text-white hover:scale-105 hover:shadow-xl hover:shadow-pantone-715/30 transition-all duration-300 px-8 py-4 rounded-2xl font-medium text-lg"
               >
                 Register your Interest
               </Button>
