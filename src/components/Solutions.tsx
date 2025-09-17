@@ -195,13 +195,25 @@ const Solutions = () => {
                                 minHeight: '8px'
                               }}
                             >
-                              {/* Enhanced AI Indicator for Doji candles */}
+                              {/* Enhanced AI Candle Light Indicator for Doji candles */}
                               {isDoji && (
                                 <>
-                                  <div className="absolute -top-4 -right-3 w-4 h-4 bg-cyan-400 rounded-full animate-pulse shadow-lg shadow-cyan-400/60 flex items-center justify-center">
-                                    <div className="w-2 h-2 bg-slate-950 rounded-full"></div>
+                                  {/* Candle Light Shape */}
+                                  <div className="absolute -top-6 -right-4 flex flex-col items-center animate-pulse">
+                                    {/* Flame */}
+                                    <div className="relative w-3 h-4 bg-gradient-to-t from-cyan-400 via-cyan-300 to-yellow-300 rounded-full rounded-b-none shadow-lg shadow-cyan-400/60 animate-pulse">
+                                      {/* Inner flame glow */}
+                                      <div className="absolute inset-0.5 bg-gradient-to-t from-cyan-300 to-yellow-200 rounded-full rounded-b-none opacity-80"></div>
+                                      {/* Flame flicker effect */}
+                                      <div className="absolute -top-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-yellow-200 rounded-full animate-ping opacity-75"></div>
+                                    </div>
+                                    {/* Candle body */}
+                                    <div className="w-1.5 h-3 bg-gradient-to-b from-slate-300 to-slate-400 rounded-sm shadow-sm">
+                                      <div className="absolute top-0 w-full h-0.5 bg-slate-200 rounded-t-sm"></div>
+                                    </div>
                                   </div>
-                                  <div className="absolute -top-4 -right-3 w-4 h-4 bg-cyan-400/30 rounded-full animate-ping"></div>
+                                  {/* Animated glow ring */}
+                                  <div className="absolute -top-6 -right-4 w-6 h-6 bg-cyan-400/20 rounded-full animate-ping opacity-60"></div>
                                 </>
                               )}
 
