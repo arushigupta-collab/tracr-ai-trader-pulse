@@ -72,50 +72,61 @@ const Solutions = () => {
                 No more guessing. No more staring at charts in confusion. Just clear, AI-powered breakdowns that help you trade, invest, and learn faster than ever.
               </p>
 
-              {/* Interactive Chart Animation */}
+              {/* Enhanced Interactive Candlestick Animation */}
               <div className="relative mb-8 rounded-2xl overflow-hidden animate-fade-in cursor-pointer bg-slate-900/80 backdrop-blur-sm h-80 border border-white/20">
-                {/* Animated Candlestick Chart Background */}
+                {/* Animated Candlestick Chart */}
                 <div className="absolute inset-0 p-6">
-                  {/* Chart Grid */}
                   <div className="w-full h-full relative">
                     {/* Subtle Grid Lines */}
                     <div className="absolute inset-0 z-0">
-                      {/* Horizontal lines */}
+                      {/* Horizontal lines with subtle animation */}
                       {Array.from({ length: 5 }).map((_, i) => (
                         <div 
                           key={`h-${i}`} 
-                          className="absolute w-full border-t border-white/5" 
-                          style={{ top: `${(i + 1) * 20}%` }}
+                          className="absolute w-full border-t border-white/5 animate-pulse" 
+                          style={{ 
+                            top: `${(i + 1) * 20}%`,
+                            animationDelay: `${i * 0.2}s`,
+                            animationDuration: '3s'
+                          }}
                         />
                       ))}
-                      {/* Vertical lines */}
+                      {/* Vertical lines with subtle animation */}
                       {Array.from({ length: 8 }).map((_, i) => (
                         <div 
                           key={`v-${i}`} 
-                          className="absolute h-full border-l border-white/5" 
-                          style={{ left: `${(i + 1) * 11.11}%` }}
+                          className="absolute h-full border-l border-white/5 animate-pulse" 
+                          style={{ 
+                            left: `${(i + 1) * 11.11}%`,
+                            animationDelay: `${i * 0.15}s`,
+                            animationDuration: '4s'
+                          }}
                         />
                       ))}
                     </div>
                     
-                    {/* Price Labels */}
+                    {/* Animated Price Labels */}
                     <div className="absolute left-2 top-0 bottom-0 flex flex-col justify-between text-xs text-white/60 py-4 z-10">
-                      <span>1.2600</span>
-                      <span>1.2550</span>
-                      <span>1.2500</span>
-                      <span>1.2450</span>
-                      <span>1.2400</span>
+                      {['1.2600', '1.2550', '1.2500', '1.2450', '1.2400'].map((price, i) => (
+                        <span 
+                          key={price}
+                          className="animate-fade-in"
+                          style={{ animationDelay: `${i * 0.3}s` }}
+                        >
+                          {price}
+                        </span>
+                      ))}
                     </div>
                     
-                    {/* Interactive Enhanced Candlesticks */}
+                    {/* Enhanced Interactive Candlesticks with Advanced Animation */}
                     <div className="absolute bottom-16 left-12 right-8 flex items-end justify-between h-40 z-20">
                       {Array.from({ length: 23 }).map((_, i) => {
                         const heights = [60, 80, 45, 90, 70, 85, 55, 95, 75, 65, 88, 92, 68, 82, 58, 94, 77, 63, 89, 91, 72, 86, 79];
                         const isGreen = i % 3 === 0 || i === 8 || i === 10 || i === 11 || i === 13 || i === 15 || i === 17 || i === 19 || i === 21 || i === 22;
                         const isDoji = i === 7 || i === 14 || i === 20;
-                        const colors = isDoji ? 'bg-pantone-298 shadow-lg shadow-pantone-298/20' :
-                                      isGreen ? 'bg-green-500 shadow-md shadow-green-500/20' : 
-                                      'bg-red-500 shadow-md shadow-red-500/20';
+                        const colors = isDoji ? 'bg-pantone-298 shadow-lg shadow-pantone-298/30' :
+                                      isGreen ? 'bg-green-500 shadow-md shadow-green-500/30' : 
+                                      'bg-red-500 shadow-md shadow-red-500/30';
                         
                         const candleData = [
                           { open: 1.2340, high: 1.2390, low: 1.2320, close: 1.2375, volume: 2450, trend: 'Bullish', signal: 'Buy Signal', insight: 'Strong buying pressure detected at support level' },
@@ -146,95 +157,107 @@ const Solutions = () => {
                         return (
                           <div 
                             key={i} 
-                            className="relative candle-item"
+                            className="relative candle-item group"
                             onMouseEnter={() => {
-                              // Hide all other tooltips when hovering this candle
                               document.querySelectorAll('.candle-tooltip').forEach(tooltip => {
                                 tooltip.classList.add('hidden');
                               });
-                              // Show this candle's tooltip
                               document.querySelector(`#tooltip-${i}`)?.classList.remove('hidden');
                             }}
                             onMouseLeave={() => {
-                              // Hide this candle's tooltip when leaving
                               document.querySelector(`#tooltip-${i}`)?.classList.add('hidden');
                             }}
                           >
-                            {/* Candlestick Body */}
+                            {/* Enhanced Candlestick Body with Advanced Animation */}
                             <div
-                              className={`relative w-4 ${colors} opacity-90 transition-all duration-300 ease-in-out hover:opacity-100 hover:scale-x-125 cursor-pointer rounded-sm`}
+                              className={`relative w-4 ${colors} opacity-80 transition-all duration-700 ease-in-out hover:opacity-100 hover:scale-x-150 hover:shadow-xl cursor-pointer rounded-sm transform-gpu group-hover:z-50`}
                               style={{ 
                                 height: `${heights[i]}%`,
-                                animationDelay: `${i * 150}ms`,
-                                animation: `fade-in 0.8s ease-out ${i * 0.15}s forwards`
+                                animation: `
+                                  fade-in 1.2s cubic-bezier(0.4, 0, 0.2, 1) ${i * 0.15}s forwards,
+                                  ${isDoji ? 'pulse 2s ease-in-out infinite' : ''}
+                                `,
+                                transformOrigin: 'bottom'
                               }}
                             >
-                              {/* Wick lines */}
-                              <div className={`absolute left-1/2 transform -translate-x-1/2 w-0.5 ${isDoji ? 'bg-pantone-298' : isGreen ? 'bg-green-400' : 'bg-red-400'} opacity-60`}
+                              {/* Enhanced Wick lines with glow effect */}
+                              <div className={`absolute left-1/2 transform -translate-x-1/2 w-0.5 ${isDoji ? 'bg-pantone-298 shadow-md shadow-pantone-298/50' : isGreen ? 'bg-green-400 shadow-sm shadow-green-400/30' : 'bg-red-400 shadow-sm shadow-red-400/30'} opacity-80 transition-all duration-500 group-hover:opacity-100`}
                                    style={{ 
-                                     height: '120%', 
-                                     top: '-10%' 
+                                     height: '130%', 
+                                     top: '-15%',
+                                     filter: isDoji ? 'drop-shadow(0 0 4px hsl(var(--pantone-298) / 0.5))' : ''
                                    }}
                               />
                               
-                              {/* AI Indicator for special candles */}
+                              {/* Enhanced AI Indicator for special candles */}
                               {isDoji && (
-                                <div className="absolute -top-2 -right-1 w-2 h-2 bg-pantone-298 rounded-full animate-pulse"></div>
+                                <div className="absolute -top-3 -right-2 w-3 h-3 bg-pantone-298 rounded-full animate-pulse shadow-lg shadow-pantone-298/50">
+                                  <div className="absolute inset-0 bg-pantone-298 rounded-full animate-ping opacity-75"></div>
+                                </div>
                               )}
+
+                              {/* Hover glow effect */}
+                              <div className={`absolute inset-0 rounded-sm opacity-0 group-hover:opacity-30 transition-opacity duration-300 ${isDoji ? 'bg-pantone-298' : isGreen ? 'bg-green-400' : 'bg-red-400'} blur-sm -z-10`}></div>
                             </div>
 
-                            {/* Individual Tooltip - Hidden by default */}
+                            {/* Enhanced Tooltip with Animation */}
                             <div 
                               id={`tooltip-${i}`}
-                              className="candle-tooltip hidden absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 transition-all duration-300 pointer-events-none z-[100]"
+                              className="candle-tooltip hidden absolute bottom-full left-1/2 transform -translate-x-1/2 mb-6 transition-all duration-500 pointer-events-none z-[100]"
+                              style={{
+                                animation: 'scale-in 0.3s ease-out'
+                              }}
                             >
-                              <div className="bg-slate-900/95 backdrop-blur-xl rounded-xl p-4 border border-pantone-298/50 shadow-2xl min-w-64 max-w-80">
-                                {/* Header */}
-                                <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/10">
-                                  <span className="text-sm font-semibold text-pantone-298">Candle #{i + 1}</span>
-                                  <span className={`text-xs px-2 py-1 rounded-full ${isDoji ? 'bg-pantone-298/20 text-pantone-298' : isGreen ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`}>
+                              <div className="bg-slate-900/98 backdrop-blur-xl rounded-xl p-5 border border-pantone-298/60 shadow-2xl min-w-72 max-w-80">
+                                {/* Header with enhanced styling */}
+                                <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/20">
+                                  <span className="text-sm font-bold text-pantone-298 flex items-center gap-2">
+                                    <div className={`w-2 h-2 rounded-full ${isDoji ? 'bg-pantone-298 animate-pulse' : isGreen ? 'bg-green-400' : 'bg-red-400'}`}></div>
+                                    Candle #{i + 1}
+                                  </span>
+                                  <span className={`text-xs px-3 py-1.5 rounded-full font-semibold ${isDoji ? 'bg-pantone-298/30 text-pantone-298 border border-pantone-298/50' : isGreen ? 'bg-green-500/30 text-green-400 border border-green-500/50' : 'bg-red-500/30 text-red-400 border border-red-500/50'}`}>
                                     {isDoji ? 'DOJI' : isGreen ? 'BULL' : 'BEAR'}
                                   </span>
                                 </div>
                                 
-                                {/* OHLC Data */}
-                                <div className="grid grid-cols-2 gap-2 mb-3 text-xs">
-                                  <div className="flex justify-between">
-                                    <span className="text-muted-foreground">Open:</span>
-                                    <span className="text-foreground font-medium">{candleData[i].open}</span>
+                                {/* OHLC Data with enhanced layout */}
+                                <div className="grid grid-cols-2 gap-3 mb-4 text-xs">
+                                  <div className="flex justify-between p-2 bg-white/5 rounded">
+                                    <span className="text-white/60">Open:</span>
+                                    <span className="text-white font-medium">{candleData[i].open}</span>
                                   </div>
-                                  <div className="flex justify-between">
-                                    <span className="text-muted-foreground">High:</span>
+                                  <div className="flex justify-between p-2 bg-white/5 rounded">
+                                    <span className="text-white/60">High:</span>
                                     <span className="text-green-400 font-medium">{candleData[i].high}</span>
                                   </div>
-                                  <div className="flex justify-between">
-                                    <span className="text-muted-foreground">Low:</span>
+                                  <div className="flex justify-between p-2 bg-white/5 rounded">
+                                    <span className="text-white/60">Low:</span>
                                     <span className="text-red-400 font-medium">{candleData[i].low}</span>
                                   </div>
-                                  <div className="flex justify-between">
-                                    <span className="text-muted-foreground">Close:</span>
-                                    <span className="text-foreground font-medium">{candleData[i].close}</span>
+                                  <div className="flex justify-between p-2 bg-white/5 rounded">
+                                    <span className="text-white/60">Close:</span>
+                                    <span className="text-white font-medium">{candleData[i].close}</span>
                                   </div>
                                 </div>
                                 
-                                {/* AI Insight */}
-                                <div className="bg-pantone-298/10 rounded-lg p-3 mb-3">
-                                  <div className="flex items-start space-x-2">
-                                    <Brain className="h-4 w-4 text-pantone-298 mt-0.5 flex-shrink-0" />
+                                {/* Enhanced AI Insight */}
+                                <div className="bg-gradient-to-r from-pantone-298/20 to-pantone-298/10 rounded-lg p-4 mb-4 border border-pantone-298/30">
+                                  <div className="flex items-start space-x-3">
+                                    <Brain className="h-5 w-5 text-pantone-298 mt-0.5 flex-shrink-0 animate-pulse" />
                                     <div>
-                                      <p className="text-xs font-medium text-pantone-298 mb-1">AI Insight</p>
-                                      <p className="text-xs text-foreground/90 leading-relaxed">{candleData[i].insight}</p>
+                                      <p className="text-sm font-semibold text-pantone-298 mb-2">AI Insight</p>
+                                      <p className="text-xs text-white/90 leading-relaxed">{candleData[i].insight}</p>
                                     </div>
                                   </div>
                                 </div>
                                 
-                                {/* Trading Signal */}
-                                <div className="flex items-center justify-between">
-                                  <div className="flex items-center space-x-2">
-                                    <span className="text-xs text-muted-foreground">Volume:</span>
-                                    <span className="text-xs text-pantone-298 font-medium">{candleData[i].volume}</span>
+                                {/* Enhanced Trading Signal */}
+                                <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                                  <div className="flex items-center space-x-3">
+                                    <span className="text-xs text-white/60">Volume:</span>
+                                    <span className="text-xs text-pantone-298 font-bold">{candleData[i].volume.toLocaleString()}</span>
                                   </div>
-                                  <span className={`text-xs font-semibold px-3 py-1 rounded-full ${isDoji ? 'bg-pantone-298/20 text-pantone-298' : candleData[i].signal.includes('Strong') ? 'bg-green-500/20 text-green-400' : candleData[i].signal.includes('Buy') ? 'bg-green-400/20 text-green-300' : 'bg-yellow-500/20 text-yellow-400'}`}>
+                                  <span className={`text-xs font-bold px-4 py-2 rounded-full border ${isDoji ? 'bg-pantone-298/30 text-pantone-298 border-pantone-298/50' : candleData[i].signal.includes('Strong') ? 'bg-green-500/30 text-green-400 border-green-500/50' : candleData[i].signal.includes('Buy') ? 'bg-green-400/30 text-green-300 border-green-400/50' : 'bg-yellow-500/30 text-yellow-400 border-yellow-500/50'}`}>
                                     {candleData[i].signal}
                                   </span>
                                 </div>
@@ -242,7 +265,7 @@ const Solutions = () => {
                               
                               {/* Enhanced Tooltip Arrow */}
                               <div className="absolute top-full left-1/2 transform -translate-x-1/2">
-                                <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-transparent border-t-background/98"></div>
+                                <div className="w-0 h-0 border-l-6 border-r-6 border-t-8 border-transparent border-t-slate-900/98"></div>
                               </div>
                             </div>
                           </div>
@@ -250,12 +273,28 @@ const Solutions = () => {
                       })}
                     </div>
                     
-                    {/* Time Labels */}
-                    <div className="absolute bottom-2 left-12 right-8 flex justify-between text-xs text-white/40">
-                      <span>09:00</span>
-                      <span>12:00</span>
-                      <span>15:00</span>
-                      <span>18:00</span>
+                    {/* Enhanced Time Labels with Animation */}
+                    <div className="absolute bottom-2 left-12 right-8 flex justify-between text-xs text-white/50">
+                      {['09:00', '12:00', '15:00', '18:00'].map((time, i) => (
+                        <span 
+                          key={time}
+                          className="animate-fade-in"
+                          style={{ animationDelay: `${(i + 1) * 0.4}s` }}
+                        >
+                          {time}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* AI Processing Indicator */}
+                    <div className="absolute top-4 right-4 flex items-center space-x-2 bg-pantone-298/20 backdrop-blur-sm rounded-lg px-3 py-2 border border-pantone-298/30">
+                      <Brain className="h-4 w-4 text-pantone-298 animate-pulse" />
+                      <span className="text-xs text-pantone-298 font-medium">AI Processing...</span>
+                      <div className="flex space-x-1">
+                        <div className="w-1 h-1 bg-pantone-298 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+                        <div className="w-1 h-1 bg-pantone-298 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                        <div className="w-1 h-1 bg-pantone-298 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      </div>
                     </div>
                   </div>
                 </div>
