@@ -8,46 +8,22 @@ const FAQ = () => {
   const faqData = [
     {
       question: "How much does tracr AI cost?",
-      answer: (
-        <div className="space-y-4">
-          <p>We offer multiple ways to access tracr AI — including a free option.</p>
-          
-          <div>
-            <h4 className="font-semibold text-primary mb-2">Option 1 – Broker Deposit Access (Best Value)</h4>
-            <p className="mb-2">Get full platform access simply by opening a trading account with our partnered broker and making a deposit — no extra payment to tracr AI.</p>
-            <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-              <li>$500 Deposit → 1 year, Unlimited Insights</li>
-              <li>$1,000 Deposit → 1 year, Unlimited Insights and new features coming soon</li>
-              <li>Access remains active as long as your broker account stays funded.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-primary mb-2">Option 2 – Monthly Subscription</h4>
-            <p className="mb-2">Prefer a standard subscription without linking a broker account?</p>
-            <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-              <li>Free → 5 Credits a day</li>
-              <li>$25/month → Unlimited AI Insights</li>
-              <li>$49/month → Unlimited AI Insights and new features coming soon</li>
-            </ul>
-          </div>
-        </div>
-      )
+      answer: "We'll offer both free and paid plans starting from launch - with early waitlist members getting exclusive access offers."
     },
     {
       question: "Who can use tracr AI?",
-      answer: "Whether you're a beginner trying to understand the markets or an experienced trader refining complex strategies, tracr AI is designed to suit all skill levels."
+      answer: "tracr AI is built for anyone who wants to understand the markets better. Whether you're a beginner learning how markets work, an active trader testing strategies, an investor seeking clarity on price movements, or simply someone curious about why markets move the way they do, tracr AI helps you see behind the numbers and make more informed decisions."
     },
     {
-      question: "How is tracr AI different from other trading platforms?",
-      answer: "Unlike traditional platforms, tracr AI doesn't just provide charts — it explains why the market moves. With AI Candle Insights, tracr AI helps traders learn, optimise, and execute with confidence."
+      question: "How is tracr AI different from other platforms?",
+      answer: "Most platforms stop at showing you charts and data. tracr AI goes further, it explains why the market is moving. With AI Candle Insights, you don't just see the price action, you understand the story behind it. Whether you're trading, investing, or simply learning about the markets, tracr AI helps you gain clarity, improve decision-making, and grow with confidence."
     },
     {
-      question: "What markets can I trade or test on tracr AI?",
+      question: "What markets can I view on tracr AI?",
       answer: (
         <div className="space-y-3">
           <p>Currently, tracr AI supports:</p>
-          <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+          <ul className="list-disc list-inside space-y-1 text-white/70">
             <li><strong>US Stocks</strong> – full coverage of major listed companies</li>
             <li><strong>Major FX Pairs</strong> – the most liquid currency pairs in the world</li>
             <li><strong>Major Cryptocurrencies</strong> – including Bitcoin, Ethereum, and top market cap coins</li>
@@ -59,7 +35,7 @@ const FAQ = () => {
     },
     {
       question: "How do I join the waitlist?",
-      answer: "Simply enter your email on our website. We'll keep you updated with launch news, beta invites, and exclusive early-access opportunities."
+      answer: "Simply enter your email on our website and we'll keep you updated with launch news, beta invites, and exclusive early-access opportunities."
     }
   ];
 
