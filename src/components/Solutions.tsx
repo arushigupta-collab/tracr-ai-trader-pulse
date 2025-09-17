@@ -122,52 +122,104 @@ const Solutions = () => {
               </p>
 
               {/* Interactive Chart Animation */}
-              <div className="relative mb-8 rounded-2xl overflow-hidden animate-fade-in group cursor-pointer bg-background/95 h-80">
+              <div className="relative mb-8 rounded-2xl overflow-hidden animate-fade-in cursor-pointer bg-gradient-to-br from-background/95 to-background/90 h-80 border border-white/10">
                 {/* Animated Candlestick Chart Background */}
                 <div className="absolute inset-0 p-6">
                   {/* Chart Grid */}
                   <div className="w-full h-full relative">
-                    {/* Grid Lines */}
-                    <div className="absolute inset-0 grid grid-cols-12 grid-rows-8 opacity-20">
-                      {Array.from({ length: 96 }).map((_, i) => (
-                        <div key={i} className="border-r border-b border-white/10"></div>
+                    {/* Enhanced Grid Lines */}
+                    <div className="absolute inset-0">
+                      {/* Horizontal lines */}
+                      {Array.from({ length: 6 }).map((_, i) => (
+                        <div 
+                          key={`h-${i}`} 
+                          className="absolute w-full border-t border-white/5" 
+                          style={{ top: `${(i + 1) * 16.66}%` }}
+                        />
+                      ))}
+                      {/* Vertical lines */}
+                      {Array.from({ length: 11 }).map((_, i) => (
+                        <div 
+                          key={`v-${i}`} 
+                          className="absolute h-full border-l border-white/5" 
+                          style={{ left: `${(i + 1) * 8.33}%` }}
+                        />
                       ))}
                     </div>
                     
-                    {/* Interactive Candlesticks */}
-                    <div className="absolute bottom-16 left-8 right-8 flex items-end justify-between h-40">
+                    {/* Price Labels */}
+                    <div className="absolute left-2 top-0 bottom-0 flex flex-col justify-between text-xs text-white/40 py-4">
+                      <span>1.2600</span>
+                      <span>1.2550</span>
+                      <span>1.2500</span>
+                      <span>1.2450</span>
+                      <span>1.2400</span>
+                      <span>1.2350</span>
+                    </div>
+                    
+                    {/* Interactive Enhanced Candlesticks */}
+                    <div className="absolute bottom-16 left-12 right-8 flex items-end justify-between h-40">
                       {Array.from({ length: 12 }).map((_, i) => {
                         const heights = [60, 80, 45, 90, 70, 85, 55, 95, 75, 65, 88, 92];
-                        const colors = i === 7 ? 'bg-pantone-298' : (i % 3 === 0 ? 'bg-green-500' : 'bg-red-500');
+                        const isGreen = i % 3 === 0 || i === 8 || i === 10 || i === 11;
+                        const isDoji = i === 7;
+                        const colors = isDoji ? 'bg-pantone-298 shadow-lg shadow-pantone-298/20' : 
+                                      isGreen ? 'bg-green-500 shadow-md shadow-green-500/20' : 
+                                      'bg-red-500 shadow-md shadow-red-500/20';
+                        
                         const candleData = [
-                          { open: 1.2340, high: 1.2390, low: 1.2320, close: 1.2375, volume: 2450, trend: 'Bullish', signal: 'Buy Signal' },
-                          { open: 1.2375, high: 1.2420, low: 1.2360, close: 1.2415, volume: 3200, trend: 'Strong Bull', signal: 'Strong Buy' },
-                          { open: 1.2415, high: 1.2430, low: 1.2380, close: 1.2395, volume: 1800, trend: 'Neutral', signal: 'Hold' },
-                          { open: 1.2395, high: 1.2450, low: 1.2390, close: 1.2445, volume: 4100, trend: 'Bullish', signal: 'Buy Signal' },
-                          { open: 1.2445, high: 1.2470, low: 1.2420, close: 1.2460, volume: 2800, trend: 'Bullish', signal: 'Buy Signal' },
-                          { open: 1.2460, high: 1.2490, low: 1.2450, close: 1.2485, volume: 3600, trend: 'Strong Bull', signal: 'Strong Buy' },
-                          { open: 1.2485, high: 1.2500, low: 1.2465, close: 1.2475, volume: 2200, trend: 'Neutral', signal: 'Hold' },
-                          { open: 1.2475, high: 1.2520, low: 1.2470, close: 1.2515, volume: 5200, trend: 'Breakout', signal: 'AI DOJI ALERT' },
-                          { open: 1.2515, high: 1.2540, low: 1.2500, close: 1.2535, volume: 3800, trend: 'Strong Bull', signal: 'Strong Buy' },
-                          { open: 1.2535, high: 1.2550, low: 1.2520, close: 1.2545, volume: 2900, trend: 'Bullish', signal: 'Buy Signal' },
-                          { open: 1.2545, high: 1.2580, low: 1.2540, close: 1.2575, volume: 4500, trend: 'Strong Bull', signal: 'Strong Buy' },
-                          { open: 1.2575, high: 1.2595, low: 1.2565, close: 1.2590, volume: 3300, trend: 'Strong Bull', signal: 'Strong Buy' }
+                          { open: 1.2340, high: 1.2390, low: 1.2320, close: 1.2375, volume: 2450, trend: 'Bullish', signal: 'Buy Signal', insight: 'Strong buying pressure detected at support level' },
+                          { open: 1.2375, high: 1.2420, low: 1.2360, close: 1.2415, volume: 3200, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Volume surge confirms bullish momentum' },
+                          { open: 1.2415, high: 1.2430, low: 1.2380, close: 1.2395, volume: 1800, trend: 'Neutral', signal: 'Hold', insight: 'Consolidation phase - awaiting direction' },
+                          { open: 1.2395, high: 1.2450, low: 1.2390, close: 1.2445, volume: 4100, trend: 'Bullish', signal: 'Buy Signal', insight: 'Breakout above resistance confirmed' },
+                          { open: 1.2445, high: 1.2470, low: 1.2420, close: 1.2460, volume: 2800, trend: 'Bullish', signal: 'Buy Signal', insight: 'Sustained upward momentum with good volume' },
+                          { open: 1.2460, high: 1.2490, low: 1.2450, close: 1.2485, volume: 3600, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Higher highs pattern establishing new trend' },
+                          { open: 1.2485, high: 1.2500, low: 1.2465, close: 1.2475, volume: 2200, trend: 'Neutral', signal: 'Hold', insight: 'Minor pullback - healthy retracement' },
+                          { open: 1.2475, high: 1.2520, low: 1.2470, close: 1.2515, volume: 5200, trend: 'Breakout', signal: 'AI DOJI ALERT', insight: 'Doji formation signals market indecision - potential reversal point' },
+                          { open: 1.2515, high: 1.2540, low: 1.2500, close: 1.2535, volume: 3800, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Post-doji bullish continuation confirmed' },
+                          { open: 1.2535, high: 1.2550, low: 1.2520, close: 1.2545, volume: 2900, trend: 'Bullish', signal: 'Buy Signal', insight: 'Steady climb with institutional support' },
+                          { open: 1.2545, high: 1.2580, low: 1.2540, close: 1.2575, volume: 4500, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'Acceleration phase - momentum building' },
+                          { open: 1.2575, high: 1.2595, low: 1.2565, close: 1.2590, volume: 3300, trend: 'Strong Bull', signal: 'Strong Buy', insight: 'New highs reached - trend continuation likely' }
                         ];
                         
                         return (
-                          <div
-                            key={i}
-                            className={`relative w-3 ${colors} opacity-80 transition-all duration-300 ease-in-out hover:opacity-100 hover:scale-x-150 hover:z-20 cursor-pointer group`}
-                            style={{ 
-                              height: `${heights[i]}%`,
-                              animationDelay: `${i * 200}ms`,
-                              animation: `fade-in 0.8s ease-out ${i * 0.2}s forwards`
-                            }}
-                          >
-                            {/* Hover Tooltip */}
-                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-30">
-                              <div className="bg-background/95 backdrop-blur-md rounded-lg p-3 border border-pantone-298/30 shadow-lg min-w-48">
-                                <div className="space-y-2 text-xs">
+                          <div key={i} className="relative group">
+                            {/* Candlestick Body */}
+                            <div
+                              className={`relative w-4 ${colors} opacity-85 transition-all duration-300 ease-in-out hover:opacity-100 hover:scale-x-125 hover:z-20 cursor-pointer rounded-sm`}
+                              style={{ 
+                                height: `${heights[i]}%`,
+                                animationDelay: `${i * 150}ms`,
+                                animation: `fade-in 0.8s ease-out ${i * 0.15}s forwards`
+                              }}
+                            >
+                              {/* Wick lines */}
+                              <div className={`absolute left-1/2 transform -translate-x-1/2 w-0.5 ${isDoji ? 'bg-pantone-298' : isGreen ? 'bg-green-400' : 'bg-red-400'} opacity-60`}
+                                   style={{ 
+                                     height: '120%', 
+                                     top: '-10%' 
+                                   }}
+                              />
+                              
+                              {/* AI Indicator for special candles */}
+                              {isDoji && (
+                                <div className="absolute -top-2 -right-1 w-2 h-2 bg-pantone-298 rounded-full animate-pulse"></div>
+                              )}
+                            </div>
+
+                            {/* Enhanced Hover Tooltip with AI Insights */}
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-30 group-hover:scale-105">
+                              <div className="bg-background/98 backdrop-blur-lg rounded-xl p-4 border border-pantone-298/40 shadow-2xl min-w-64 max-w-80">
+                                {/* Header */}
+                                <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/10">
+                                  <span className="text-sm font-semibold text-pantone-298">Candle #{i + 1}</span>
+                                  <span className={`text-xs px-2 py-1 rounded-full ${isDoji ? 'bg-pantone-298/20 text-pantone-298' : isGreen ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`}>
+                                    {isDoji ? 'DOJI' : isGreen ? 'BULL' : 'BEAR'}
+                                  </span>
+                                </div>
+                                
+                                {/* OHLC Data */}
+                                <div className="grid grid-cols-2 gap-2 mb-3 text-xs">
                                   <div className="flex justify-between">
                                     <span className="text-muted-foreground">Open:</span>
                                     <span className="text-foreground font-medium">{candleData[i].open}</span>
@@ -184,48 +236,50 @@ const Solutions = () => {
                                     <span className="text-muted-foreground">Close:</span>
                                     <span className="text-foreground font-medium">{candleData[i].close}</span>
                                   </div>
-                                  <div className="border-t border-white/10 pt-2">
-                                    <div className="flex justify-between">
-                                      <span className="text-muted-foreground">Volume:</span>
-                                      <span className="text-pantone-298 font-medium">{candleData[i].volume}</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                      <span className="text-muted-foreground">Trend:</span>
-                                      <span className={`font-medium ${candleData[i].trend === 'Strong Bull' ? 'text-green-400' : candleData[i].trend === 'Bullish' ? 'text-green-300' : candleData[i].trend === 'Breakout' ? 'text-pantone-298' : 'text-yellow-400'}`}>
-                                        {candleData[i].trend}
-                                      </span>
-                                    </div>
-                                    <div className="mt-2 pt-2 border-t border-white/10">
-                                      <div className="text-center">
-                                        <span className={`text-xs font-semibold px-2 py-1 rounded ${i === 7 ? 'bg-pantone-298/20 text-pantone-298' : candleData[i].signal.includes('Strong') ? 'bg-green-500/20 text-green-400' : candleData[i].signal.includes('Buy') ? 'bg-green-400/20 text-green-300' : 'bg-yellow-500/20 text-yellow-400'}`}>
-                                          {candleData[i].signal}
-                                        </span>
-                                      </div>
+                                </div>
+                                
+                                {/* AI Insight */}
+                                <div className="bg-pantone-298/10 rounded-lg p-3 mb-3">
+                                  <div className="flex items-start space-x-2">
+                                    <Brain className="h-4 w-4 text-pantone-298 mt-0.5 flex-shrink-0" />
+                                    <div>
+                                      <p className="text-xs font-medium text-pantone-298 mb-1">AI Insight</p>
+                                      <p className="text-xs text-foreground/90 leading-relaxed">{candleData[i].insight}</p>
                                     </div>
                                   </div>
                                 </div>
+                                
+                                {/* Trading Signal */}
+                                <div className="flex items-center justify-between">
+                                  <div className="flex items-center space-x-2">
+                                    <span className="text-xs text-muted-foreground">Volume:</span>
+                                    <span className="text-xs text-pantone-298 font-medium">{candleData[i].volume}</span>
+                                  </div>
+                                  <span className={`text-xs font-semibold px-3 py-1 rounded-full ${isDoji ? 'bg-pantone-298/20 text-pantone-298' : candleData[i].signal.includes('Strong') ? 'bg-green-500/20 text-green-400' : candleData[i].signal.includes('Buy') ? 'bg-green-400/20 text-green-300' : 'bg-yellow-500/20 text-yellow-400'}`}>
+                                    {candleData[i].signal}
+                                  </span>
+                                </div>
                               </div>
-                              {/* Tooltip Arrow */}
-                              <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-background/95"></div>
+                              
+                              {/* Enhanced Tooltip Arrow */}
+                              <div className="absolute top-full left-1/2 transform -translate-x-1/2">
+                                <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-transparent border-t-background/98"></div>
+                              </div>
                             </div>
                           </div>
                         );
                       })}
                     </div>
                     
-                    {/* AI Analysis Cursor */}
-                    <div 
-                      className="absolute w-0.5 h-full bg-pantone-298/60 transition-all duration-3000 ease-in-out"
-                      style={{
-                        left: '8%',
-                        animation: 'slide-cursor 6s ease-in-out infinite'
-                      }}
-                    >
-                      <div className="absolute top-1/2 -translate-y-1/2 w-3 h-3 bg-pantone-298 rounded-full animate-pulse"></div>
+                    {/* Time Labels */}
+                    <div className="absolute bottom-2 left-12 right-8 flex justify-between text-xs text-white/40">
+                      <span>09:00</span>
+                      <span>12:00</span>
+                      <span>15:00</span>
+                      <span>18:00</span>
                     </div>
                   </div>
                 </div>
-                
               </div>
 
             </CardContent>
