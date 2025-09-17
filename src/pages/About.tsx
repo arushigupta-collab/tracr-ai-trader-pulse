@@ -132,7 +132,8 @@ const About = () => {
                     Ready to See Behind the Markets?
                   </h3>
                   <p className="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
-                    Join thousands of traders who are already on the waitlist. Be the first to experience the future of AI-powered trading analytics.
+                    Join the waitlist for early access to AI-powered market insights — and unlock an exclusive launch offer.
+                    Deposit $500 with Vantage today and receive lifetime access to tracr.
                   </p>
                 </div>
                 
