@@ -35,7 +35,7 @@ const About = () => {
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
                 About <span className="text-white">tracr ai</span>
               </h1>
-              <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto animate-fade-in animate-scale-in" style={{ animationDelay: '0.3s' }}>
                 AI-powered clarity for traders and investors.
               </p>
             </div>
