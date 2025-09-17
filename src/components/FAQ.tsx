@@ -68,14 +68,15 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 px-8 sm:px-12 lg:px-16">
-      <div className="max-w-5xl mx-auto">
+    <section id="faq" className="relative py-24 px-8 sm:px-12 lg:px-16">
+      <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in space-y-8">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-pantone-171 via-pantone-190 to-pantone-298 bg-clip-text text-transparent leading-tight">
-            Frequently Asked Questions
+        <div className="text-center mb-24 animate-fade-in space-y-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mx-auto whitespace-nowrap text-center">
+            FREQUENTLY ASKED{' '}
+            <span className="text-pantone-298">QUESTIONS</span>
           </h2>
-          <p className="text-xl text-pantone-426/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
             Get answers to common questions about tracr AI
           </p>
         </div>
