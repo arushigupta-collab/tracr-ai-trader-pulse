@@ -226,36 +226,6 @@ const Solutions = () => {
                   </div>
                 </div>
                 
-                {/* Real-time AI Insights */}
-                <div className="absolute top-6 left-6 right-6 space-y-3">
-                  {candleInsights.map((insight, index) => (
-                    <div 
-                      key={insight.id}
-                      className="bg-background/95 backdrop-blur-md rounded-xl p-4 border border-pantone-298/30 animate-fade-in transform translate-x-full opacity-0 shadow-lg"
-                      style={{ 
-                        animationDelay: `${index * 0.5}s`,
-                        animation: `fade-in 0.6s ease-out ${index * 2.5}s forwards, slide-in-right 0.6s ease-out ${index * 2.5}s forwards`
-                      }}
-                    >
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-pantone-298 rounded-full animate-pulse"></div>
-                        <p className="text-sm font-medium text-foreground">
-                          <span className="text-pantone-298 font-semibold">AI {insight.type}:</span> {insight.message}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                
-                {/* Interactive Hover Tooltip */}
-                <div className="absolute bottom-4 left-4 right-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-                  <div className="bg-pantone-298/20 backdrop-blur-sm rounded-lg p-3 border border-pantone-298/30">
-                    <p className="text-sm text-foreground">
-                      <span className="text-pantone-298 font-medium">Live Analysis:</span> AI scanning market patterns in real-time
-                      <span className="animate-pulse text-pantone-298 ml-2">●</span>
-                    </p>
-                  </div>
-                </div>
               </div>
 
             </CardContent>
