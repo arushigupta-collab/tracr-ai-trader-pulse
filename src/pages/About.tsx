@@ -51,7 +51,7 @@ const About = () => {
               </h2>
               <div className="max-w-4xl mx-auto">
                 <p className="text-xl text-white/90 leading-relaxed">
-                  At tracr ai, we believe trading should be smarter, simpler, and more accessible. Born from years of experience in the markets, our mission is to give traders the tools they need to cut through noise and trade with confidence. By combining AI-driven insights and powerful analytics, we empower traders to understand the 'why' behind every market move. Our vision is to shorten the learning curve, reduce costly mistakes, and help every trader — from beginner to advanced — to see behind the trade.
+                  At tracr AI, we believe market insight should be smarter, simpler, and accessible to everyone. Born from years of experience, our mission is to cut through the noise and deliver clarity. By combining AI-driven insights with powerful analytics, tracr AI explains the why behind every move - helping traders, investors, and learners shorten the learning curve, reduce costly mistakes, and make smarter decisions with confidence.
                 </p>
               </div>
             </div>
