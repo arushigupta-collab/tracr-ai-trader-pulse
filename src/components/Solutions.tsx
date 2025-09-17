@@ -6,15 +6,7 @@ import aiChatbotImage from '@/assets/ai-chatbot.jpg';
 import userProfileImage from '@/assets/user-profile.jpg';
 
 const Solutions = () => {
-  const [activeInsight, setActiveInsight] = useState(0);
   const [chatMessages, setChatMessages] = useState<Array<{id: number, sender: 'user' | 'AI', message: string, visible: boolean}>>([]);
-  const [candleInsights, setCandleInsights] = useState<Array<{id: number, type: string, message: string, visible: boolean}>>([]);
-
-  const insights = [
-    "JPY Bullish: BOJ's Kimino comments 'Appropriate to raise rates'",
-    "USD Strength: Fed signals hawkish stance on inflation",
-    "EUR Weakness: ECB maintains dovish policy outlook"
-  ];
 
   const chatConversation = [
     { id: 1, sender: 'user' as const, message: "What is a Doji candle?" },
@@ -22,21 +14,6 @@ const Solutions = () => {
     { id: 3, sender: 'user' as const, message: "Where did this happen on the chart?" },
     { id: 4, sender: 'AI' as const, message: "A Doji candle appeared on 24th August 2025." }
   ];
-
-  const candleInsightSequence = [
-    { id: 1, type: 'pattern', message: "Doji pattern detected - Market indecision" },
-    { id: 2, type: 'volume', message: "Volume spike confirms breakout potential" },
-    { id: 3, type: 'trend', message: "Bullish momentum building - RSI oversold" },
-    { id: 4, type: 'support', message: "Strong support at 1.2450 level" }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveInsight((prev) => (prev + 1) % insights.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     const startChatAnimation = () => {
@@ -49,38 +26,14 @@ const Solutions = () => {
       });
     };
 
-    // Start initial animation at the same time as candle animation
+    // Start initial animation
     setTimeout(() => {
       startChatAnimation();
-    }, 0);
-
-    // Reset and restart animation every 15 seconds (synchronized with candle insights)
-    const resetInterval = setInterval(() => {
-      startChatAnimation();
-    }, 15000);
-
-    return () => clearInterval(resetInterval);
-  }, []);
-
-  useEffect(() => {
-    const startCandleAnimation = () => {
-      setCandleInsights([]);
-      
-      candleInsightSequence.forEach((insight, index) => {
-        setTimeout(() => {
-          setCandleInsights(prev => [...prev, { ...insight, visible: true }]);
-        }, index * 2500);
-      });
-    };
-
-    // Start initial animation with slight delay to sync with chat
-    setTimeout(() => {
-      startCandleAnimation();
     }, 0);
 
     // Reset and restart animation every 15 seconds
     const resetInterval = setInterval(() => {
-      startCandleAnimation();
+      startChatAnimation();
     }, 15000);
 
     return () => clearInterval(resetInterval);
