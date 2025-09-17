@@ -134,21 +134,81 @@ const Solutions = () => {
                       ))}
                     </div>
                     
-                    {/* Animated Candlesticks */}
+                    {/* Interactive Candlesticks */}
                     <div className="absolute bottom-16 left-8 right-8 flex items-end justify-between h-40">
                       {Array.from({ length: 12 }).map((_, i) => {
                         const heights = [60, 80, 45, 90, 70, 85, 55, 95, 75, 65, 88, 92];
                         const colors = i === 7 ? 'bg-pantone-298' : (i % 3 === 0 ? 'bg-green-500' : 'bg-red-500');
+                        const candleData = [
+                          { open: 1.2340, high: 1.2390, low: 1.2320, close: 1.2375, volume: 2450, trend: 'Bullish', signal: 'Buy Signal' },
+                          { open: 1.2375, high: 1.2420, low: 1.2360, close: 1.2415, volume: 3200, trend: 'Strong Bull', signal: 'Strong Buy' },
+                          { open: 1.2415, high: 1.2430, low: 1.2380, close: 1.2395, volume: 1800, trend: 'Neutral', signal: 'Hold' },
+                          { open: 1.2395, high: 1.2450, low: 1.2390, close: 1.2445, volume: 4100, trend: 'Bullish', signal: 'Buy Signal' },
+                          { open: 1.2445, high: 1.2470, low: 1.2420, close: 1.2460, volume: 2800, trend: 'Bullish', signal: 'Buy Signal' },
+                          { open: 1.2460, high: 1.2490, low: 1.2450, close: 1.2485, volume: 3600, trend: 'Strong Bull', signal: 'Strong Buy' },
+                          { open: 1.2485, high: 1.2500, low: 1.2465, close: 1.2475, volume: 2200, trend: 'Neutral', signal: 'Hold' },
+                          { open: 1.2475, high: 1.2520, low: 1.2470, close: 1.2515, volume: 5200, trend: 'Breakout', signal: 'AI DOJI ALERT' },
+                          { open: 1.2515, high: 1.2540, low: 1.2500, close: 1.2535, volume: 3800, trend: 'Strong Bull', signal: 'Strong Buy' },
+                          { open: 1.2535, high: 1.2550, low: 1.2520, close: 1.2545, volume: 2900, trend: 'Bullish', signal: 'Buy Signal' },
+                          { open: 1.2545, high: 1.2580, low: 1.2540, close: 1.2575, volume: 4500, trend: 'Strong Bull', signal: 'Strong Buy' },
+                          { open: 1.2575, high: 1.2595, low: 1.2565, close: 1.2590, volume: 3300, trend: 'Strong Bull', signal: 'Strong Buy' }
+                        ];
+                        
                         return (
                           <div
                             key={i}
-                            className={`w-3 ${colors} opacity-80 transition-all duration-1000 ease-in-out`}
+                            className={`relative w-3 ${colors} opacity-80 transition-all duration-300 ease-in-out hover:opacity-100 hover:scale-x-150 hover:z-20 cursor-pointer group`}
                             style={{ 
                               height: `${heights[i]}%`,
                               animationDelay: `${i * 200}ms`,
                               animation: `fade-in 0.8s ease-out ${i * 0.2}s forwards`
                             }}
-                          ></div>
+                          >
+                            {/* Hover Tooltip */}
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-30">
+                              <div className="bg-background/95 backdrop-blur-md rounded-lg p-3 border border-pantone-298/30 shadow-lg min-w-48">
+                                <div className="space-y-2 text-xs">
+                                  <div className="flex justify-between">
+                                    <span className="text-muted-foreground">Open:</span>
+                                    <span className="text-foreground font-medium">{candleData[i].open}</span>
+                                  </div>
+                                  <div className="flex justify-between">
+                                    <span className="text-muted-foreground">High:</span>
+                                    <span className="text-green-400 font-medium">{candleData[i].high}</span>
+                                  </div>
+                                  <div className="flex justify-between">
+                                    <span className="text-muted-foreground">Low:</span>
+                                    <span className="text-red-400 font-medium">{candleData[i].low}</span>
+                                  </div>
+                                  <div className="flex justify-between">
+                                    <span className="text-muted-foreground">Close:</span>
+                                    <span className="text-foreground font-medium">{candleData[i].close}</span>
+                                  </div>
+                                  <div className="border-t border-white/10 pt-2">
+                                    <div className="flex justify-between">
+                                      <span className="text-muted-foreground">Volume:</span>
+                                      <span className="text-pantone-298 font-medium">{candleData[i].volume}</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                      <span className="text-muted-foreground">Trend:</span>
+                                      <span className={`font-medium ${candleData[i].trend === 'Strong Bull' ? 'text-green-400' : candleData[i].trend === 'Bullish' ? 'text-green-300' : candleData[i].trend === 'Breakout' ? 'text-pantone-298' : 'text-yellow-400'}`}>
+                                        {candleData[i].trend}
+                                      </span>
+                                    </div>
+                                    <div className="mt-2 pt-2 border-t border-white/10">
+                                      <div className="text-center">
+                                        <span className={`text-xs font-semibold px-2 py-1 rounded ${i === 7 ? 'bg-pantone-298/20 text-pantone-298' : candleData[i].signal.includes('Strong') ? 'bg-green-500/20 text-green-400' : candleData[i].signal.includes('Buy') ? 'bg-green-400/20 text-green-300' : 'bg-yellow-500/20 text-yellow-400'}`}>
+                                          {candleData[i].signal}
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* Tooltip Arrow */}
+                              <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-background/95"></div>
+                            </div>
+                          </div>
                         );
                       })}
                     </div>
