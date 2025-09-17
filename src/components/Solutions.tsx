@@ -135,13 +135,14 @@ const Solutions = () => {
                         ];
                         
                         return (
-                          <div key={i} className="relative group/candle">
-                            {/* Hover Area - Invisible expanded area for better hover detection */}
-                            <div className="absolute inset-0 -inset-x-2 -inset-y-4 z-10" />
-                            
-                            {/* Candlestick Body */}
+                          <div 
+                            key={i} 
+                            className="relative isolate"
+                            style={{ zIndex: 30 + i }}
+                          >
+                            {/* Candlestick Body with individual hover */}
                             <div
-                              className={`relative w-4 ${colors} opacity-90 transition-all duration-300 ease-in-out group-hover/candle:opacity-100 group-hover/candle:scale-x-125 cursor-pointer rounded-sm z-20`}
+                              className={`relative w-4 ${colors} opacity-90 transition-all duration-300 ease-in-out hover:opacity-100 hover:scale-x-125 cursor-pointer rounded-sm group`}
                               style={{ 
                                 height: `${heights[i]}%`,
                                 animationDelay: `${i * 150}ms`,
@@ -160,65 +161,65 @@ const Solutions = () => {
                               {isDoji && (
                                 <div className="absolute -top-2 -right-1 w-2 h-2 bg-pantone-298 rounded-full animate-pulse"></div>
                               )}
-                            </div>
-
-                            {/* Enhanced Hover Tooltip with AI Insights */}
-                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 opacity-0 group-hover/candle:opacity-100 transition-all duration-300 pointer-events-none z-[100] scale-95 group-hover/candle:scale-100">
-                              <div className="bg-slate-900/95 backdrop-blur-xl rounded-xl p-4 border border-pantone-298/50 shadow-2xl min-w-64 max-w-80">
-                                {/* Header */}
-                                <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/10">
-                                  <span className="text-sm font-semibold text-pantone-298">Candle #{i + 1}</span>
-                                  <span className={`text-xs px-2 py-1 rounded-full ${isDoji ? 'bg-pantone-298/20 text-pantone-298' : isGreen ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`}>
-                                    {isDoji ? 'DOJI' : isGreen ? 'BULL' : 'BEAR'}
-                                  </span>
-                                </div>
-                                
-                                {/* OHLC Data */}
-                                <div className="grid grid-cols-2 gap-2 mb-3 text-xs">
-                                  <div className="flex justify-between">
-                                    <span className="text-muted-foreground">Open:</span>
-                                    <span className="text-foreground font-medium">{candleData[i].open}</span>
+                              
+                              {/* Individual Tooltip for this candle only */}
+                              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none scale-95 group-hover:scale-100" style={{ zIndex: 1000 + i }}>
+                                <div className="bg-slate-900/95 backdrop-blur-xl rounded-xl p-4 border border-pantone-298/50 shadow-2xl min-w-64 max-w-80">
+                                  {/* Header */}
+                                  <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/10">
+                                    <span className="text-sm font-semibold text-pantone-298">Candle #{i + 1}</span>
+                                    <span className={`text-xs px-2 py-1 rounded-full ${isDoji ? 'bg-pantone-298/20 text-pantone-298' : isGreen ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`}>
+                                      {isDoji ? 'DOJI' : isGreen ? 'BULL' : 'BEAR'}
+                                    </span>
                                   </div>
-                                  <div className="flex justify-between">
-                                    <span className="text-muted-foreground">High:</span>
-                                    <span className="text-green-400 font-medium">{candleData[i].high}</span>
-                                  </div>
-                                  <div className="flex justify-between">
-                                    <span className="text-muted-foreground">Low:</span>
-                                    <span className="text-red-400 font-medium">{candleData[i].low}</span>
-                                  </div>
-                                  <div className="flex justify-between">
-                                    <span className="text-muted-foreground">Close:</span>
-                                    <span className="text-foreground font-medium">{candleData[i].close}</span>
-                                  </div>
-                                </div>
-                                
-                                {/* AI Insight */}
-                                <div className="bg-pantone-298/10 rounded-lg p-3 mb-3">
-                                  <div className="flex items-start space-x-2">
-                                    <Brain className="h-4 w-4 text-pantone-298 mt-0.5 flex-shrink-0" />
-                                    <div>
-                                      <p className="text-xs font-medium text-pantone-298 mb-1">AI Insight</p>
-                                      <p className="text-xs text-foreground/90 leading-relaxed">{candleData[i].insight}</p>
+                                  
+                                  {/* OHLC Data */}
+                                  <div className="grid grid-cols-2 gap-2 mb-3 text-xs">
+                                    <div className="flex justify-between">
+                                      <span className="text-muted-foreground">Open:</span>
+                                      <span className="text-foreground font-medium">{candleData[i].open}</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                      <span className="text-muted-foreground">High:</span>
+                                      <span className="text-green-400 font-medium">{candleData[i].high}</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                      <span className="text-muted-foreground">Low:</span>
+                                      <span className="text-red-400 font-medium">{candleData[i].low}</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                      <span className="text-muted-foreground">Close:</span>
+                                      <span className="text-foreground font-medium">{candleData[i].close}</span>
                                     </div>
                                   </div>
+                                  
+                                  {/* AI Insight */}
+                                  <div className="bg-pantone-298/10 rounded-lg p-3 mb-3">
+                                    <div className="flex items-start space-x-2">
+                                      <Brain className="h-4 w-4 text-pantone-298 mt-0.5 flex-shrink-0" />
+                                      <div>
+                                        <p className="text-xs font-medium text-pantone-298 mb-1">AI Insight</p>
+                                        <p className="text-xs text-foreground/90 leading-relaxed">{candleData[i].insight}</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                  {/* Trading Signal */}
+                                  <div className="flex items-center justify-between">
+                                    <div className="flex items-center space-x-2">
+                                      <span className="text-xs text-muted-foreground">Volume:</span>
+                                      <span className="text-xs text-pantone-298 font-medium">{candleData[i].volume}</span>
+                                    </div>
+                                    <span className={`text-xs font-semibold px-3 py-1 rounded-full ${isDoji ? 'bg-pantone-298/20 text-pantone-298' : candleData[i].signal.includes('Strong') ? 'bg-green-500/20 text-green-400' : candleData[i].signal.includes('Buy') ? 'bg-green-400/20 text-green-300' : 'bg-yellow-500/20 text-yellow-400'}`}>
+                                      {candleData[i].signal}
+                                    </span>
+                                  </div>
                                 </div>
                                 
-                                {/* Trading Signal */}
-                                <div className="flex items-center justify-between">
-                                  <div className="flex items-center space-x-2">
-                                    <span className="text-xs text-muted-foreground">Volume:</span>
-                                    <span className="text-xs text-pantone-298 font-medium">{candleData[i].volume}</span>
-                                  </div>
-                                  <span className={`text-xs font-semibold px-3 py-1 rounded-full ${isDoji ? 'bg-pantone-298/20 text-pantone-298' : candleData[i].signal.includes('Strong') ? 'bg-green-500/20 text-green-400' : candleData[i].signal.includes('Buy') ? 'bg-green-400/20 text-green-300' : 'bg-yellow-500/20 text-yellow-400'}`}>
-                                    {candleData[i].signal}
-                                  </span>
+                                {/* Enhanced Tooltip Arrow */}
+                                <div className="absolute top-full left-1/2 transform -translate-x-1/2">
+                                  <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-transparent border-t-background/98"></div>
                                 </div>
-                              </div>
-                              
-                              {/* Enhanced Tooltip Arrow */}
-                              <div className="absolute top-full left-1/2 transform -translate-x-1/2">
-                                <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-transparent border-t-background/98"></div>
                               </div>
                             </div>
                           </div>
