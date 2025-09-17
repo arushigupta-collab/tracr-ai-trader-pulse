@@ -44,7 +44,7 @@ const Hero = () => {
 
           {/* Subheading */}
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-light max-w-3xl mx-auto leading-relaxed tracking-wide">
-            See behind the trade. Trade ahead of the market.
+            Trade ahead of the market.
           </p>
           
           {/* CTA Buttons */}

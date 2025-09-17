@@ -77,7 +77,7 @@ const Navbar = () => {
                 <div className="w-px h-10 bg-foreground/20 mr-4"></div>
                 
                 {/* Partnership Text and Logo */}
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
                   <span className="text-sm text-foreground/80 font-normal whitespace-nowrap">
                     Proudly partnered with
                   </span>
